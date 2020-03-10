@@ -2129,6 +2129,78 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2146,7 +2218,7 @@ __webpack_require__.r(__webpack_exports__);
       evt.preventDefault();
       var app = this;
       var token = localStorage.getItem('token');
-      axois.post('/api/courses', {
+      axios.post('/api/courses', {
         title: app.form.title,
         code: app.form.code,
         description: app.form.description,
@@ -2157,6 +2229,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }).then(function (response) {
         console.log(response);
+        app.$router.push('/courses');
       })["catch"](function (error) {
         console.log(error);
       });
@@ -75417,9 +75490,152 @@ var render = function() {
                 "b-form",
                 { on: { submit: _vm.onSubmit } },
                 [
-                  _c("b-form-group", {
-                    attrs: { id: "input-group-1", label: "Title", for: "title" }
-                  }),
+                  _c(
+                    "b-form-group",
+                    {
+                      attrs: {
+                        id: "input-group-1",
+                        label: "Title",
+                        "label-for": "input-1"
+                      }
+                    },
+                    [
+                      _c("b-form-input", {
+                        attrs: {
+                          id: "input-1",
+                          type: "text",
+                          placeholder: "Title",
+                          required: ""
+                        },
+                        model: {
+                          value: _vm.form.title,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "title", $$v)
+                          },
+                          expression: "form.title"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-form-group",
+                    {
+                      attrs: {
+                        id: "input-group-2",
+                        label: "Code",
+                        "label-for": "input-2"
+                      }
+                    },
+                    [
+                      _c("b-form-input", {
+                        attrs: {
+                          id: "input-2",
+                          type: "text",
+                          placeholder: "Code",
+                          required: ""
+                        },
+                        model: {
+                          value: _vm.form.code,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "code", $$v)
+                          },
+                          expression: "form.code"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-form-group",
+                    {
+                      attrs: {
+                        id: "input-group-3",
+                        label: "Description",
+                        "label-for": "input-3"
+                      }
+                    },
+                    [
+                      _c("b-form-input", {
+                        attrs: {
+                          id: "input-3",
+                          type: "textarea",
+                          rows: "4",
+                          "max-rows": "8",
+                          placeholder: "Description",
+                          required: ""
+                        },
+                        model: {
+                          value: _vm.form.description,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "description", $$v)
+                          },
+                          expression: "form.description"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-form-group",
+                    {
+                      attrs: {
+                        id: "input-group-4",
+                        label: "Points",
+                        "label-for": "input-4"
+                      }
+                    },
+                    [
+                      _c("b-form-input", {
+                        attrs: {
+                          id: "input-4",
+                          type: "number",
+                          placeholder: "Points",
+                          required: ""
+                        },
+                        model: {
+                          value: _vm.form.points,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "points", $$v)
+                          },
+                          expression: "form.points"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-form-group",
+                    {
+                      attrs: {
+                        id: "input-group-5",
+                        label: "Level",
+                        "label-for": "input-5"
+                      }
+                    },
+                    [
+                      _c("b-form-input", {
+                        attrs: {
+                          id: "input-5",
+                          type: "number",
+                          placeholder: "Level",
+                          required: ""
+                        },
+                        model: {
+                          value: _vm.form.level,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "level", $$v)
+                          },
+                          expression: "form.level"
+                        }
+                      })
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c(
                     "b-button",
