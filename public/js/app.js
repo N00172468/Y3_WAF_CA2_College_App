@@ -2119,7 +2119,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {};
+  },
+  methods: {}
+});
 
 /***/ }),
 
@@ -75365,7 +75374,27 @@ var render = function() {
       _c(
         "b-col",
         { attrs: { cols: "8" } },
-        [_c("b-card", { attrs: { title: "Add Course", tag: "article" } })],
+        [
+          _c(
+            "b-card",
+            { attrs: { title: "Add Course", tag: "article" } },
+            [
+              _c(
+                "b-form",
+                { on: { submit: _vm.onSubmit } },
+                [
+                  _c(
+                    "b-button",
+                    { attrs: { type: "submit", variant: "primary" } },
+                    [_vm._v("\n                    Submit\n                ")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
         1
       )
     ],
