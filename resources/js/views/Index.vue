@@ -13,8 +13,23 @@ export default {
     return {
 
     }
+  },
+  methods: {
+    login() {
+      let app = this;
+      axios.post('/api/login', {
+        email: app.email,
+        password: app.password
+      })
+      .then(function(response) {
+        console.log(response.data);
+        app.name = response.data.name;
+        localStorage.setItem('token', response.data.token);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    },
   }
 }
 </script>
-<style>
-</style>

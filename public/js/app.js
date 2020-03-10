@@ -2095,6 +2095,21 @@ __webpack_require__.r(__webpack_exports__);
   components: {},
   data: function data() {
     return {};
+  },
+  methods: {
+    login: function login() {
+      var app = this;
+      axios.post('/api/login', {
+        email: app.email,
+        password: app.password
+      }).then(function (response) {
+        console.log(response.data);
+        app.name = response.data.name;
+        localStorage.setItem('token', response.data.token);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
   }
 });
 
