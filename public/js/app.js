@@ -2219,6 +2219,7 @@ __webpack_require__.r(__webpack_exports__);
       this.loggedIn = true;
     } else {
       this.loggedIn = false;
+      app.$router.push('/');
     }
   },
   methods: {

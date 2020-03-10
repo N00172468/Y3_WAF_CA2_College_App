@@ -111,6 +111,7 @@ export default {
             this.loggedIn = true;
         } else {
             this.loggedIn = false;
+            app.$router.push('/');
         }
     },
     methods: {
