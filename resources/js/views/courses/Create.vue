@@ -3,6 +3,12 @@
         <b-col cols="8">
             <b-card title="Add Course" tag="article">
                 <b-form @submit="onSubmit">
+                    <!-- Input -->
+                    <b-form-group id="input-group-1" label="Title" for="title">
+
+                    </b-form-group>
+
+                    <!-- Submit Button -->
                     <b-button type="submit" variant="primary">
                         Submit
                     </b-button>
@@ -18,7 +24,13 @@
 export default {
     data() {
         return {
-
+            form: {
+                title: "",
+                code: "",
+                description: "",
+                points: "",
+                level: ""
+            }
         }
     },
     methods: {
@@ -28,7 +40,13 @@ export default {
             let app = this;
             let token = localStorage.getItem('token');
             
-            axois.post('/api/courses', {}, {}, {
+            axois.post('/api/courses', {
+                title: app.form.title,
+                code: app.form.code,
+                description: app.form.description,
+                points: app.form.points,
+                level: app.form.level,
+
                 headers: { Authorization: `Bearer ${token}` }
             })
             .then(function(response) {

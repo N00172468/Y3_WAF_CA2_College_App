@@ -2123,16 +2123,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      form: {
+        title: "",
+        code: "",
+        description: "",
+        points: "",
+        level: ""
+      }
+    };
   },
   methods: {
     onSubmit: function onSubmit(evt) {
       evt.preventDefault();
       var app = this;
       var token = localStorage.getItem('token');
-      axois.post('/api/courses', {}, {}, {
+      axois.post('/api/courses', {
+        title: app.form.title,
+        code: app.form.code,
+        description: app.form.description,
+        points: app.form.points,
+        level: app.form.level,
         headers: {
           Authorization: "Bearer ".concat(token)
         }
@@ -75398,6 +75417,10 @@ var render = function() {
                 "b-form",
                 { on: { submit: _vm.onSubmit } },
                 [
+                  _c("b-form-group", {
+                    attrs: { id: "input-group-1", label: "Title", for: "title" }
+                  }),
+                  _vm._v(" "),
                   _c(
                     "b-button",
                     { attrs: { type: "submit", variant: "primary" } },
