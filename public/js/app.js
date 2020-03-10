@@ -2090,6 +2090,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'index',
   components: {},
@@ -75480,7 +75509,66 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n  This is the Index page\n")])
+  return _c(
+    "b-form",
+    { on: { submit: _vm.onSubmit } },
+    [
+      _c(
+        "b-form-group",
+        {
+          attrs: { id: "input-group-1", label: "Email", "label-for": "input-1" }
+        },
+        [
+          _c("b-form-input", {
+            attrs: {
+              id: "input-1",
+              type: "email",
+              placeholder: "Email",
+              required: ""
+            },
+            model: {
+              value: _vm.form.email,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "email", $$v)
+              },
+              expression: "form.email"
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-form-group",
+        {
+          attrs: {
+            id: "input-group-2",
+            label: "Password",
+            "label-for": "input-2"
+          }
+        },
+        [
+          _c("b-form-input", {
+            attrs: {
+              id: "input-2",
+              type: "password",
+              placeholder: "Password",
+              required: ""
+            },
+            model: {
+              value: _vm.form.password,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "password", $$v)
+              },
+              expression: "form.password"
+            }
+          })
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
