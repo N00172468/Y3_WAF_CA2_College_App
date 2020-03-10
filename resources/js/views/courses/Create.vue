@@ -31,6 +31,14 @@
                             placeholder="Code"
                             required>
                         </b-form-input>
+
+                        <!-- Validation -->
+                        <b-form-invalid-feedback :state="codeValid">
+                            Code cannot be above 5 characters!
+                        </b-form-invalid-feedback>
+                        <b-form-valid-feedback :state="codeValid">
+                            Good to go!
+                        </b-form-valid-feedback>
                     </b-form-group>
 
                     <!-- Description -->
@@ -103,7 +111,13 @@ export default {
                 points: "",
                 level: ""
             },
-            loggedIn: false
+            loggedIn: false,
+            errors: []
+        }
+    },
+    computed: {
+        codeValid() {
+            return this.form.code.length <= 5 && this.form.code.length > 0
         }
     },
     created() {
@@ -136,7 +150,9 @@ export default {
                 app.$router.push('/courses');
             })
             .catch(function(error) {
-                console.log(error);
+                console.log(error.response.data);
+
+                app.errors = errors.response.data.errors
             })
         }
     }

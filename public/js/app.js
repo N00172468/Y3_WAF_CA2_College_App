@@ -2268,6 +2268,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2278,8 +2286,14 @@ __webpack_require__.r(__webpack_exports__);
         points: "",
         level: ""
       },
-      loggedIn: false
+      loggedIn: false,
+      errors: []
     };
+  },
+  computed: {
+    codeValid: function codeValid() {
+      return this.form.code.length <= 5 && this.form.code.length > 0;
+    }
   },
   created: function created() {
     if (localStorage.getItem('token')) {
@@ -2308,7 +2322,8 @@ __webpack_require__.r(__webpack_exports__);
         console.log(response);
         app.$router.push('/courses');
       })["catch"](function (error) {
-        console.log(error);
+        console.log(error.response.data);
+        app.errors = errors.response.data.errors;
       });
     }
   }
@@ -75697,7 +75712,27 @@ var render = function() {
                           },
                           expression: "form.code"
                         }
-                      })
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "b-form-invalid-feedback",
+                        { attrs: { state: _vm.codeValid } },
+                        [
+                          _vm._v(
+                            "\n                        Code cannot be above 5 characters!\n                    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-form-valid-feedback",
+                        { attrs: { state: _vm.codeValid } },
+                        [
+                          _vm._v(
+                            "\n                        Good to go!\n                    "
+                          )
+                        ]
+                      )
                     ],
                     1
                   ),
