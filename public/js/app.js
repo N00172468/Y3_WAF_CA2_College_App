@@ -2127,7 +2127,18 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  methods: {}
+  methods: {
+    onSubmit: function onSubmit(evt) {
+      evt.preventDefault();
+      var app = this;
+      var token = localStorage.getItem('token');
+      axois.post('/api/courses', {}, {});
+
+      headers: {
+        Authorization: "Bearer ".concat(token);
+      }
+    }
+  }
 });
 
 /***/ }),

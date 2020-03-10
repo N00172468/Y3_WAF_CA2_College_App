@@ -22,7 +22,16 @@ export default {
         }
     },
     methods: {
-        
+        onSubmit(evt) {
+            evt.preventDefault()
+
+            let app = this;
+            let token = localStorage.getItem('token');
+            
+            axois.post('/api/courses', {}, {})
+
+            headers: { Authorization: `Bearer ${token}` }
+        }
     }
 }
 </script>
