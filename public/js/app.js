@@ -2210,8 +2210,16 @@ __webpack_require__.r(__webpack_exports__);
         description: "",
         points: "",
         level: ""
-      }
+      },
+      loggedIn: false
     };
+  },
+  created: function created() {
+    if (localStorage.getItem('token')) {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+    }
   },
   methods: {
     onSubmit: function onSubmit(evt) {

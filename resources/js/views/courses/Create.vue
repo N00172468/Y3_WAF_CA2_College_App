@@ -102,7 +102,15 @@ export default {
                 description: "",
                 points: "",
                 level: ""
-            }
+            },
+            loggedIn: false
+        }
+    },
+    created() {
+        if(localStorage.getItem('token')) {
+            this.loggedIn = true;
+        } else {
+            this.loggedIn = false;
         }
     },
     methods: {
