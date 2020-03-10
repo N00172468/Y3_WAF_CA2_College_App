@@ -15,21 +15,23 @@ export default {
     }
   },
   methods: {
-    login() {
+    onSubmit(evt) {
+      evt.preventDefault();
+
       let app = this;
+
       axios.post('/api/login', {
-        email: app.email,
-        password: app.password
+        email: app.form.email,
+        password: app.form.password
       })
       .then(function(response) {
-        console.log(response.data);
-        app.name = response.data.name;
-        localStorage.setItem('token', response.data.token);
+        console.log(response);
+        localStorage.setItem('token', response.data.token)
       })
-      .catch(function (error) {
+      .catch(function(error) {
         console.log(error);
-      });
-    },
+      })
+    }
   }
 }
 </script>

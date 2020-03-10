@@ -2097,14 +2097,14 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   methods: {
-    login: function login() {
+    onSubmit: function onSubmit(evt) {
+      evt.preventDefault();
       var app = this;
       axios.post('/api/login', {
-        email: app.email,
-        password: app.password
+        email: app.form.email,
+        password: app.form.password
       }).then(function (response) {
-        console.log(response.data);
-        app.name = response.data.name;
+        console.log(response);
         localStorage.setItem('token', response.data.token);
       })["catch"](function (error) {
         console.log(error);
