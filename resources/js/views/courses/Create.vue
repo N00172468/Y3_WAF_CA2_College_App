@@ -28,9 +28,15 @@ export default {
             let app = this;
             let token = localStorage.getItem('token');
             
-            axois.post('/api/courses', {}, {})
-
-            headers: { Authorization: `Bearer ${token}` }
+            axois.post('/api/courses', {}, {}, {
+                headers: { Authorization: `Bearer ${token}` }
+            })
+            .then(function(response) {
+                console.log(response);
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
         }
     }
 }

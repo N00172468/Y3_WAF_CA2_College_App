@@ -2132,11 +2132,15 @@ __webpack_require__.r(__webpack_exports__);
       evt.preventDefault();
       var app = this;
       var token = localStorage.getItem('token');
-      axois.post('/api/courses', {}, {});
-
-      headers: {
-        Authorization: "Bearer ".concat(token);
-      }
+      axois.post('/api/courses', {}, {}, {
+        headers: {
+          Authorization: "Bearer ".concat(token)
+        }
+      }).then(function (response) {
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error);
+      });
     }
   }
 });
