@@ -2119,6 +2119,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'index',
   components: {},
@@ -2127,8 +2136,17 @@ __webpack_require__.r(__webpack_exports__);
       form: {
         email: "",
         password: ""
-      }
+      },
+      loggedIn: false
     };
+  },
+  created: function created() {
+    if (localStorage.getItem('token')) {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+      app.$router.push('/');
+    }
   },
   methods: {
     onSubmit: function onSubmit(evt) {
@@ -2281,7 +2299,8 @@ __webpack_require__.r(__webpack_exports__);
         code: app.form.code,
         description: app.form.description,
         points: app.form.points,
-        level: app.form.level,
+        level: app.form.level
+      }, {
         headers: {
           Authorization: "Bearer ".concat(token)
         }
@@ -75510,62 +75529,80 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-form",
-    { on: { submit: _vm.onSubmit } },
+    "div",
     [
-      _c(
-        "b-form-group",
-        {
-          attrs: { id: "input-group-1", label: "Email", "label-for": "input-1" }
-        },
-        [
-          _c("b-form-input", {
-            attrs: {
-              id: "input-1",
-              type: "email",
-              placeholder: "Email",
-              required: ""
-            },
-            model: {
-              value: _vm.form.email,
-              callback: function($$v) {
-                _vm.$set(_vm.form, "email", $$v)
-              },
-              expression: "form.email"
-            }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-form-group",
-        {
-          attrs: {
-            id: "input-group-2",
-            label: "Password",
-            "label-for": "input-2"
-          }
-        },
-        [
-          _c("b-form-input", {
-            attrs: {
-              id: "input-2",
-              type: "password",
-              placeholder: "Password",
-              required: ""
-            },
-            model: {
-              value: _vm.form.password,
-              callback: function($$v) {
-                _vm.$set(_vm.form, "password", $$v)
-              },
-              expression: "form.password"
-            }
-          })
-        ],
-        1
-      )
+      _vm.loggedIn
+        ? _c("h1", [_vm._v("You are Logged In!")])
+        : _c(
+            "b-form",
+            { on: { submit: _vm.onSubmit } },
+            [
+              _c(
+                "b-form-group",
+                {
+                  attrs: {
+                    id: "input-group-1",
+                    label: "Email",
+                    "label-for": "input-1"
+                  }
+                },
+                [
+                  _c("b-form-input", {
+                    attrs: {
+                      id: "input-1",
+                      type: "email",
+                      placeholder: "Email",
+                      required: ""
+                    },
+                    model: {
+                      value: _vm.form.email,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "email", $$v)
+                      },
+                      expression: "form.email"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-form-group",
+                {
+                  attrs: {
+                    id: "input-group-2",
+                    label: "Password",
+                    "label-for": "input-2"
+                  }
+                },
+                [
+                  _c("b-form-input", {
+                    attrs: {
+                      id: "input-2",
+                      type: "password",
+                      placeholder: "Password",
+                      required: ""
+                    },
+                    model: {
+                      value: _vm.form.password,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "password", $$v)
+                      },
+                      expression: "form.password"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-button",
+                { attrs: { type: "submit", variant: "primary" } },
+                [_vm._v("\r\n        Submit\r\n    ")]
+              )
+            ],
+            1
+          )
     ],
     1
   )
@@ -91529,14 +91566,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************!*\
   !*** ./resources/js/views/Index.vue ***!
   \**************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Index_vue_vue_type_template_id_494d9643___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=494d9643& */ "./resources/js/views/Index.vue?vue&type=template&id=494d9643&");
 /* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/views/Index.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -91566,7 +91604,7 @@ component.options.__file = "resources/js/views/Index.vue"
 /*!***************************************************************!*\
   !*** ./resources/js/views/Index.vue?vue&type=script&lang=js& ***!
   \***************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

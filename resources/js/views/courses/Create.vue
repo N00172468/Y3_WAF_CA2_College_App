@@ -127,7 +127,8 @@ export default {
                 description: app.form.description,
                 points: app.form.points,
                 level: app.form.level,
-
+            },
+            {
                 headers: { Authorization: `Bearer ${token}` }
             })
             .then(function(response) {

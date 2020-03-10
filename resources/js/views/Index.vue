@@ -1,5 +1,8 @@
 <template>
-  <b-form @submit="onSubmit">
+<div>
+  <h1 v-if="loggedIn">You are Logged In!</h1>
+  
+  <b-form v-else @submit="onSubmit">
     <!-- Email -->
     <b-form-group 
         id="input-group-1" 
@@ -29,7 +32,13 @@
             required>
         </b-form-input>
     </b-form-group>
+
+    <!-- Submit Button -->
+    <b-button type="submit" variant="primary">
+        Submit
+    </b-button>
   </b-form>
+</div>
 </template>
 
 <script>
@@ -43,7 +52,16 @@ export default {
       form: {
         email: "",
         password: ""
-      }
+      },
+      loggedIn: false
+    }
+  },
+  created() {
+    if(localStorage.getItem('token')) {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+      app.$router.push('/');
     }
   },
   methods: {
