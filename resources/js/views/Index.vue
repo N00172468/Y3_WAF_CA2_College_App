@@ -11,7 +11,10 @@ export default {
   },
   data() {
     return {
-
+      form: {
+        email: "",
+        password: ""
+      }
     }
   },
   methods: {

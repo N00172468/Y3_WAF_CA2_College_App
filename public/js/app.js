@@ -2094,7 +2094,12 @@ __webpack_require__.r(__webpack_exports__);
   name: 'index',
   components: {},
   data: function data() {
-    return {};
+    return {
+      form: {
+        email: "",
+        password: ""
+      }
+    };
   },
   methods: {
     onSubmit: function onSubmit(evt) {
