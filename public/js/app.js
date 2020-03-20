@@ -2572,7 +2572,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      form: {
+        date: "",
+        time: "",
+        status: "",
+        course_id: "",
+        lecturer_id: ""
+      },
+      loggedIn: false,
+      errors: []
+    };
+  },
+  computed: {
+    codeValid: function codeValid() {
+      return this.form.code.length <= 5 && this.form.code.length > 0;
+    }
+  },
+  created: function created() {
+    if (localStorage.getItem('token')) {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+      app.$router.push('/');
+    }
+  },
+  methods: {
+    onSubmit: function onSubmit(evt) {
+      evt.preventDefault();
+      var app = this;
+      var token = localStorage.getItem('token');
+      axios.post('/api/courses', {
+        title: app.form.title,
+        code: app.form.code,
+        description: app.form.description,
+        points: app.form.points,
+        level: app.form.level
+      }, {
+        headers: {
+          Authorization: "Bearer ".concat(token)
+        }
+      }).then(function (response) {
+        console.log(response);
+        app.$router.push('/courses');
+      })["catch"](function (error) {
+        console.log(error.response.data);
+        app.errors = errors.response.data.errors;
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -2585,6 +2636,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -76723,6 +76775,8 @@ var render = function() {
                       _c("b-td", [_vm._v(_vm._s(item.date))]),
                       _vm._v(" "),
                       _c("b-td", [_vm._v(_vm._s(item.time))]),
+                      _vm._v(" "),
+                      _c("b-td", [_vm._v(_vm._s(item.status))]),
                       _vm._v(" "),
                       _c("b-td", [_vm._v(_vm._s(item.course_id))]),
                       _vm._v(" "),

@@ -17,6 +17,7 @@
                 <b-tr v-for="item in items" :key="item.id">
                     <b-td>{{ item.date }}</b-td>
                     <b-td>{{ item.time }}</b-td>
+                    <b-td>{{ item.status }}</b-td>
                     <b-td>{{ item.course_id }}</b-td>
                     <b-td>{{ item.lecturer_id }}</b-td>
                     <b-td><router-link :to="`/enrolments/edit/${item.id}`">Edit</router-link></b-td>
