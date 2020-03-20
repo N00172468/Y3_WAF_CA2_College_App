@@ -2572,7 +2572,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      items: []
+    };
+  },
+  created: function created() {
+    var app = this;
+    var token = localStorage.getItem('token');
+    axios.get('/api/enrolments', {
+      headers: {
+        Authorization: "Bearer " + token
+      }
+    }).then(function (response) {
+      console.log(response.data);
+      app.items = response.data.data;
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  }
+});
 
 /***/ }),
 
