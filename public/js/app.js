@@ -2572,6 +2572,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -76611,7 +76636,83 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "b-row",
+    { attrs: { "align-h": "center" } },
+    [
+      _c(
+        "b-col",
+        { attrs: { cols: "12" } },
+        [
+          _c(
+            "b-table-simple",
+            { attrs: { hover: "", responsive: "" } },
+            [
+              _c(
+                "b-head",
+                [
+                  _c(
+                    "b-tr",
+                    [
+                      _c("b-th", [_vm._v("Date")]),
+                      _vm._v(" "),
+                      _c("b-th", [_vm._v("Time")]),
+                      _vm._v(" "),
+                      _c("b-th", [_vm._v("Status")]),
+                      _vm._v(" "),
+                      _c("b-th", [_vm._v("Course I.D")]),
+                      _vm._v(" "),
+                      _c("b-th", [_vm._v("Lecturer I.D")])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "b-body",
+                _vm._l(_vm.items, function(item) {
+                  return _c(
+                    "b-tr",
+                    { key: item.id },
+                    [
+                      _c("b-td", [_vm._v(_vm._s(item.date))]),
+                      _vm._v(" "),
+                      _c("b-td", [_vm._v(_vm._s(item.time))]),
+                      _vm._v(" "),
+                      _c("b-td", [_vm._v(_vm._s(item.course_id))]),
+                      _vm._v(" "),
+                      _c("b-td", [_vm._v(_vm._s(item.lecturer_id))]),
+                      _vm._v(" "),
+                      _c(
+                        "b-td",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/enrolments/edit/" + item.id } },
+                            [_vm._v("Edit")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                }),
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
