@@ -76291,6 +76291,8 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
               _c(
                 "b-body",
                 _vm._l(_vm.items, function(item) {

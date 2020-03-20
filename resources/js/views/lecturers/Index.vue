@@ -12,7 +12,7 @@
                         <b-th>Phone</b-th>
                     </b-tr>
                 </b-head>
-
+                <br/>
                 <!-- Body -->
                 <b-body>
                     <b-tr v-for="item in items" :key="item.id">
