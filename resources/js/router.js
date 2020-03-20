@@ -8,6 +8,10 @@ import CoursesIndex from './views/courses/Index'
 import CoursesEdit from './views/courses/Edit'
 import CoursesCreate from './views/courses/Create'
 
+import LecturersIndex from './views/lecturers/Index'
+import LecturersEdit from './views/lecturers/Edit'
+import LecturersCreate from './views/lecturers/Create'
+
 Vue.use(Router)
 
 export default new Router({
