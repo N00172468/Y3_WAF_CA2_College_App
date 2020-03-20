@@ -91535,7 +91535,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     path: '/example',
     name: 'example',
     component: _views_Example__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }, {
+  }, // Courses
+  {
     path: '/courses',
     name: 'coursesIndex',
     component: _views_courses_Index__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -91547,6 +91548,19 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     path: '/courses/create',
     name: 'coursesCreate',
     component: _views_courses_Create__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }, // Lecturers
+  {
+    path: '/lecturers',
+    name: 'lecturersIndex',
+    component: LecturersIndex
+  }, {
+    path: '/lecturers/edit/:id',
+    name: 'lecturersEdit',
+    component: LecturersEdit
+  }, {
+    path: '/lecturers/create',
+    name: 'lecturersCreate',
+    component: LecturersCreate
   }]
 }));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))

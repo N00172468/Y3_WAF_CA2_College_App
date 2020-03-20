@@ -24,6 +24,8 @@ export default new Router({
       name: 'example',
       component: Example
     },
+
+    // Courses
     {
       path: '/courses',
       name: 'coursesIndex',
@@ -38,6 +40,23 @@ export default new Router({
       path: '/courses/create',
       name: 'coursesCreate',
       component: CoursesCreate
-    }
+    },
+
+    // Lecturers
+    {
+      path: '/lecturers',
+      name: 'lecturersIndex',
+      component: LecturersIndex
+    },
+    {
+      path: '/lecturers/edit/:id',
+      name: 'lecturersEdit',
+      component: LecturersEdit
+    },
+    {
+      path: '/lecturers/create',
+      name: 'lecturersCreate',
+      component: LecturersCreate
+    },
   ]
 })
