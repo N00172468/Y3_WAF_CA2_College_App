@@ -2001,6 +2001,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "myNavbar",
   methods: {}
@@ -75782,6 +75788,23 @@ var render = function() {
                       )
                     ],
                     1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-nav-item-dropdown",
+                    { attrs: { text: "Enrolments", left: "" } },
+                    [
+                      _c("b-dropdown-item", { attrs: { to: "/enrolments" } }, [
+                        _vm._v("View All")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "b-dropdown-item",
+                        { attrs: { to: "/enrolments/create" } },
+                        [_vm._v("Create")]
+                      )
+                    ],
+                    1
                   )
                 ],
                 1
@@ -92403,11 +92426,11 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, {
     path: '/enrolments/edit/:id',
     name: 'enrolmentsEdit',
-    component: enrolmentsEdit
+    component: _views_enrolments_Edit__WEBPACK_IMPORTED_MODULE_11__["default"]
   }, {
     path: '/enrolments/create',
     name: 'enrolmentsCreate',
-    component: enrolmentsCreate
+    component: _views_enrolments_Create__WEBPACK_IMPORTED_MODULE_12__["default"]
   }]
 }));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))

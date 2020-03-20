@@ -18,6 +18,12 @@
         <b-dropdown-item to="/lecturers">View All</b-dropdown-item>
         <b-dropdown-item to="/lecturers/create">Create</b-dropdown-item>
       </b-nav-item-dropdown>
+
+      <!-- Enrolments Dropdown Nav Link -->
+      <b-nav-item-dropdown text="Enrolments" left>
+        <b-dropdown-item to="/enrolments">View All</b-dropdown-item>
+        <b-dropdown-item to="/enrolments/create">Create</b-dropdown-item>
+      </b-nav-item-dropdown>
     </b-navbar-nav>
 
     <!-- Right aligned nav items -->

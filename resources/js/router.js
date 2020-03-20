@@ -76,12 +76,12 @@ export default new Router({
     {
       path: '/enrolments/edit/:id',
       name: 'enrolmentsEdit',
-      component: enrolmentsEdit
+      component: EnrolmentsEdit
     },
     {
       path: '/enrolments/create',
       name: 'enrolmentsCreate',
-      component: enrolmentsCreate
+      component: EnrolmentsCreate
     }
   ]
 })
