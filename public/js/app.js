@@ -2712,6 +2712,87 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -76661,7 +76742,161 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "b-row",
+    { attrs: { "align-h": "center" } },
+    [
+      _c(
+        "b-col",
+        { attrs: { cols: "8" } },
+        [
+          !_vm.loggedIn
+            ? _c("h3", [_vm._v("You are not logged in!")])
+            : _c(
+                "b-card",
+                { attrs: { title: "Edit Lecture", tag: "article" } },
+                [
+                  _c(
+                    "b-form",
+                    { on: { submit: _vm.onSubmit } },
+                    [
+                      _c(
+                        "b-form-group",
+                        {
+                          attrs: {
+                            id: "input-group-1",
+                            label: "Name",
+                            "label-for": "input-1"
+                          }
+                        },
+                        [
+                          _c("b-form-input", {
+                            attrs: {
+                              id: "input-1",
+                              type: "text",
+                              placeholder: "Name",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.lecture.name,
+                              callback: function($$v) {
+                                _vm.$set(_vm.lecture, "name", $$v)
+                              },
+                              expression: "lecture.name"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-form-group",
+                        {
+                          attrs: {
+                            id: "input-group-2",
+                            label: "Address",
+                            "label-for": "input-2"
+                          }
+                        },
+                        [
+                          _c("b-form-input", {
+                            attrs: {
+                              id: "input-2",
+                              type: "text",
+                              placeholder: "Address",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.lecture.address,
+                              callback: function($$v) {
+                                _vm.$set(_vm.lecture, "address", $$v)
+                              },
+                              expression: "lecture.address"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-form-group",
+                        {
+                          attrs: {
+                            id: "input-group-3",
+                            label: "Email",
+                            "label-for": "input-3"
+                          }
+                        },
+                        [
+                          _c("b-form-input", {
+                            attrs: {
+                              id: "input-3",
+                              type: "email",
+                              placeholder: "Email",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.lecture.email,
+                              callback: function($$v) {
+                                _vm.$set(_vm.lecture, "email", $$v)
+                              },
+                              expression: "lecture.email"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-form-group",
+                        {
+                          attrs: {
+                            id: "input-group-4",
+                            label: "Phone Number",
+                            "label-for": "input-4"
+                          }
+                        },
+                        [
+                          _c("b-form-input", {
+                            attrs: {
+                              id: "input-4",
+                              type: "text",
+                              placeholder: "Phone Number",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.lecture.phone,
+                              callback: function($$v) {
+                                _vm.$set(_vm.lecture, "phone", $$v)
+                              },
+                              expression: "lecture.phone"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-button",
+                        { attrs: { type: "submit", variant: "primary" } },
+                        [
+                          _vm._v(
+                            "\n                    Submit\n                "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
