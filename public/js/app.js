@@ -2712,7 +2712,55 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      lecture: {},
+      show: true,
+      loggedIn: false
+    };
+  },
+  created: function created() {
+    if (localStorage.getItem('token')) {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+    }
+
+    var app = this;
+    var token = localStorage.getItem('token');
+    axios.get("/api/lecturers/".concat(app.$route.params.id), {
+      headers: {
+        Authorization: "Bearer " + token
+      }
+    }).then(function (response) {
+      app.lecture = response.data.data;
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  },
+  methods: {
+    onSubmit: function onSubmit(evt) {
+      evt.preventDefault();
+      var app = this;
+      var token = localStorage.getItem('token');
+      axios.put("/api/lecturers/".concat(app.$route.params.id), {
+        name: app.lecture.name,
+        address: app.lecture.address,
+        email: app.lecture.email,
+        phone: app.lecture.phone
+      }, {
+        headers: {
+          Authorization: "Bearer " + token
+        }
+      }).then(function (response) {
+        app.$router.push('/lecturers');
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  }
+});
 
 /***/ }),
 
