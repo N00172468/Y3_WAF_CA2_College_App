@@ -2586,11 +2586,11 @@ __webpack_require__.r(__webpack_exports__);
       errors: []
     };
   },
-  computed: {
-    codeValid: function codeValid() {
-      return this.form.code.length <= 5 && this.form.code.length > 0;
-    }
-  },
+  // computed: {
+  //     codeValid() {
+  //         return this.form.code.length <= 5 && this.form.code.length > 0
+  //     }
+  // },
   created: function created() {
     if (localStorage.getItem('token')) {
       this.loggedIn = true;
@@ -2604,19 +2604,19 @@ __webpack_require__.r(__webpack_exports__);
       evt.preventDefault();
       var app = this;
       var token = localStorage.getItem('token');
-      axios.post('/api/courses', {
-        title: app.form.title,
-        code: app.form.code,
-        description: app.form.description,
-        points: app.form.points,
-        level: app.form.level
+      axios.post('/api/enrolments', {
+        date: app.form.date,
+        time: app.form.time,
+        status: app.form.status,
+        course_id: app.form.course_id,
+        lecturer_id: app.form.lecturer_id
       }, {
         headers: {
           Authorization: "Bearer ".concat(token)
         }
       }).then(function (response) {
         console.log(response);
-        app.$router.push('/courses');
+        app.$router.push('/enrolments');
       })["catch"](function (error) {
         console.log(error.response.data);
         app.errors = errors.response.data.errors;

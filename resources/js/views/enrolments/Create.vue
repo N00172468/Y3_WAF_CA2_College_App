@@ -17,11 +17,13 @@ export default {
             errors: []
         }
     },
-    computed: {
-        codeValid() {
-            return this.form.code.length <= 5 && this.form.code.length > 0
-        }
-    },
+
+    // computed: {
+    //     codeValid() {
+    //         return this.form.code.length <= 5 && this.form.code.length > 0
+    //     }
+    // },
+
     created() {
         if(localStorage.getItem('token')) {
             this.loggedIn = true;
@@ -30,6 +32,7 @@ export default {
             app.$router.push('/');
         }
     },
+
     methods: {
         onSubmit(evt) {
             evt.preventDefault()
@@ -37,19 +40,19 @@ export default {
             let app = this;
             let token = localStorage.getItem('token');
             
-            axios.post('/api/courses', {
-                title: app.form.title,
-                code: app.form.code,
-                description: app.form.description,
-                points: app.form.points,
-                level: app.form.level,
+            axios.post('/api/enrolments', {
+                date: app.form.date,
+                time: app.form.time,
+                status: app.form.status,
+                course_id: app.form.course_id,
+                lecturer_id: app.form.lecturer_id,
             },
             {
                 headers: { Authorization: `Bearer ${token}` }
             })
             .then(function(response) {
                 console.log(response);
-                app.$router.push('/courses');
+                app.$router.push('/enrolments');
             })
             .catch(function(error) {
                 console.log(error.response.data);
