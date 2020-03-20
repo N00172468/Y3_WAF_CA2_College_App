@@ -2641,6 +2641,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2683,7 +2688,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }).then(function (response) {
         console.log(response);
-        app.$router.push('/courses');
+        app.$router.push('/lecturers');
       })["catch"](function (error) {
         console.log(error.response.data);
         app.errors = errors.response.data.errors;
@@ -76549,6 +76554,12 @@ var render = function() {
                       )
                     ],
                     1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-button",
+                    { attrs: { type: "submit", variant: "primary" } },
+                    [_vm._v("\n                    Submit\n                ")]
                   )
                 ],
                 1

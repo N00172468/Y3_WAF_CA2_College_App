@@ -71,6 +71,11 @@
                             Good to go!
                         </b-form-valid-feedback>
                     </b-form-group>
+
+                    <!-- Submit Button -->
+                    <b-button type="submit" variant="primary">
+                        Submit
+                    </b-button>
                 </b-form>
             </b-card>
         </b-col>
@@ -125,7 +130,7 @@ export default {
             })
             .then(function(response) {
                 console.log(response);
-                app.$router.push('/courses');
+                app.$router.push('/lecturers');
             })
             .catch(function(error) {
                 console.log(error.response.data);
