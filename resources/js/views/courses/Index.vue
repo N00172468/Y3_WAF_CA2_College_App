@@ -5,11 +5,16 @@
     <!-- Card -->
     <el-card class="box-card">
 
+      <!-- Card Title -->
+        <div slot="header" class="clearfix">
+            <span>Courses</span>
+        </div>
+
       <!-- Table -->
       <el-table
         :data="items"
         style="width:100%;"
-        max-height="600"
+        max-height="550"
         router="true"
         stripe="true"
         border="true">

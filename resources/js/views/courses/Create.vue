@@ -1,10 +1,68 @@
 <template>
-    <b-row>
+<el-row>
+    <el-col :span="24" :offset="2">
+
+        <!-- Card -->
+    <el-card class="box-card">
+        <!-- Card Title -->
+        <div slot="header" class="clearfix">
+            <span>Add a Course</span>
+        </div>
+
+        <!-- Form -->
+        <el-form 
+            @submit="onSubmit"
+            :model="form" 
+            ref="form" 
+            class="demo-ruleForm">
+
+            <!-- Row 1 -->
+            <el-row :gutter="50">
+                <!-- Title -->
+                <el-col :span="12">
+                    <el-form-item 
+                        id="input-group-1"
+                        label-for="input-1" 
+                        prop="title" 
+                        label="Title">
+                        
+                        <el-input 
+                            id="input-1"
+                            type="text"
+                            placeholder="Title" 
+                            v-model="form.title">
+                        </el-input>
+                    </el-form-item>
+                </el-col>
+
+                <!-- Code -->
+                <el-col :span="12">
+                    <el-form-item prop="code" label="Code">
+                        <el-input 
+                            placeholder="Code" 
+                            v-model="form.code">
+                        </el-input>
+                    </el-form-item>
+                </el-col>
+            </el-row>
+
+            <!-- Row 2 -->
+            <el-row>
+                <el-col :span="24">
+
+                </el-col>
+            </el-row>
+        </el-form>
+    </el-card>
+
+    </el-col>
+</el-row>
+    <!-- <b-row>
         <b-col cols="8">
             <b-card title="Add Course" tag="article">
-                <b-form @submit="onSubmit">
+                <b-form @submit="onSubmit"> -->
                     <!-- Title -->
-                    <b-form-group 
+                    <!-- <b-form-group 
                         id="input-group-1" 
                         label="Title" 
                         label-for="input-1">
@@ -16,10 +74,10 @@
                             placeholder="Title"
                             required>
                         </b-form-input>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Code -->
-                    <b-form-group 
+                    <!-- <b-form-group 
                         id="input-group-2" 
                         label="Code" 
                         label-for="input-2">
@@ -30,19 +88,19 @@
                             type="text"
                             placeholder="Code"
                             required>
-                        </b-form-input>
+                        </b-form-input> -->
 
                         <!-- Validation -->
-                        <b-form-invalid-feedback :state="codeValid">
+                        <!-- <b-form-invalid-feedback :state="codeValid">
                             Code cannot be above 5 characters!
                         </b-form-invalid-feedback>
                         <b-form-valid-feedback :state="codeValid">
                             Good to go!
                         </b-form-valid-feedback>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Description -->
-                    <b-form-group 
+                    <!-- <b-form-group 
                         id="input-group-3" 
                         label="Description" 
                         label-for="input-3">
@@ -56,10 +114,10 @@
                             placeholder="Description"
                             required>
                         </b-form-input>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Points -->
-                    <b-form-group 
+                    <!-- <b-form-group 
                         id="input-group-4" 
                         label="Points" 
                         label-for="input-4">
@@ -71,10 +129,10 @@
                             placeholder="Points"
                             required>
                         </b-form-input>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Level -->
-                    <b-form-group 
+                    <!-- <b-form-group 
                         id="input-group-5" 
                         label="Level" 
                         label-for="input-5">
@@ -86,16 +144,16 @@
                             placeholder="Level"
                             required>
                         </b-form-input>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Submit Button -->
-                    <b-button type="submit" variant="primary">
+                    <!-- <b-button type="submit" variant="primary">
                         Submit
                     </b-button>
                 </b-form>
             </b-card>
         </b-col>
-    </b-row>
+    </b-row> -->
 </template>
 
 <script>
