@@ -3731,7 +3731,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "myNavbar",
   methods: {
@@ -101534,7 +101533,6 @@ var render = function() {
             {
               staticClass: "el-menu",
               attrs: {
-                "default-active": "/",
                 mode: "horizontal",
                 "background-color": "#545c64",
                 "text-color": "#fff",
