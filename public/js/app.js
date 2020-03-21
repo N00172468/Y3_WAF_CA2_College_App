@@ -4327,6 +4327,136 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4336,7 +4466,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    // console.log(localStorage.getItem('token'));
     if (localStorage.getItem('token')) {
       this.loggedIn = true;
     } else {
@@ -102356,172 +102485,266 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-row",
-    { attrs: { "align-h": "center" } },
+    "el-row",
     [
       _c(
-        "b-col",
-        { attrs: { cols: "8" } },
+        "el-col",
+        { attrs: { span: 24, offset: 10 } },
         [
           !_vm.loggedIn
             ? _c("h3", [_vm._v("You are not logged in!!")])
             : _c(
-                "b-card",
-                { attrs: { title: "Edit Course", tag: "article" } },
+                "el-card",
+                { staticClass: "box-card" },
                 [
                   _c(
-                    "b-form",
-                    { on: { submit: _vm.onSubmit } },
+                    "div",
+                    {
+                      staticClass: "clearfix",
+                      attrs: { slot: "header" },
+                      slot: "header"
+                    },
+                    [_c("span", [_vm._v("Edit Course")])]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-form",
+                    {
+                      ref: "form",
+                      staticClass: "demo-ruleForm",
+                      attrs: { model: _vm.form, rules: _vm.rules },
+                      on: { submit: _vm.onSubmit }
+                    },
                     [
                       _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-1",
-                            label: "Title:",
-                            "label-for": "input-1"
-                          }
-                        },
+                        "el-row",
+                        { attrs: { gutter: 50 } },
                         [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "input-1",
-                              type: "text",
-                              required: "",
-                              placeholder: "Enter title"
-                            },
-                            model: {
-                              value: _vm.course.title,
-                              callback: function($$v) {
-                                _vm.$set(_vm.course, "title", $$v)
-                              },
-                              expression: "course.title"
-                            }
-                          })
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-1",
+                                    "label-for": "input-1",
+                                    prop: "title",
+                                    label: "Title"
+                                  }
+                                },
+                                [
+                                  _c("el-input", {
+                                    staticStyle: { width: "350px" },
+                                    attrs: {
+                                      id: "input-1",
+                                      type: "text",
+                                      placeholder: "Title"
+                                    },
+                                    model: {
+                                      value: _vm.course.title,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.course, "title", $$v)
+                                      },
+                                      expression: "course.title"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-2",
+                                    "label-for": "input-2",
+                                    prop: "code",
+                                    label: "Code"
+                                  }
+                                },
+                                [
+                                  _c("el-input", {
+                                    staticStyle: { width: "350px" },
+                                    attrs: {
+                                      id: "input-2",
+                                      type: "text",
+                                      placeholder: "Code"
+                                    },
+                                    model: {
+                                      value: _vm.course.code,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.course, "code", $$v)
+                                      },
+                                      expression: "course.code"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-2",
-                            label: "Code:",
-                            "label-for": "input-2"
-                          }
-                        },
+                        "el-row",
                         [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "input-2",
-                              type: "text",
-                              required: "",
-                              placeholder: "Enter code"
-                            },
-                            model: {
-                              value: _vm.course.code,
-                              callback: function($$v) {
-                                _vm.$set(_vm.course, "code", $$v)
-                              },
-                              expression: "course.code"
-                            }
-                          })
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-3",
+                                    "label-for": "input-3",
+                                    prop: "description",
+                                    label: "Description"
+                                  }
+                                },
+                                [
+                                  _c("el-input", {
+                                    attrs: {
+                                      id: "input-3",
+                                      type: "textarea",
+                                      placeholder: "Description"
+                                    },
+                                    model: {
+                                      value: _vm.course.description,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.course, "description", $$v)
+                                      },
+                                      expression: "course.description"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-3",
-                            label: "Description:",
-                            "label-for": "input-3"
-                          }
-                        },
+                        "el-row",
                         [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "input-3",
-                              type: "text",
-                              required: "",
-                              placeholder: "Enter description"
-                            },
-                            model: {
-                              value: _vm.course.description,
-                              callback: function($$v) {
-                                _vm.$set(_vm.course, "description", $$v)
-                              },
-                              expression: "course.description"
-                            }
-                          })
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-4",
+                                    "label-for": "input-4",
+                                    prop: "points",
+                                    label: "Points"
+                                  }
+                                },
+                                [
+                                  _c("el-input-number", {
+                                    staticStyle: { width: "350px" },
+                                    attrs: { id: "input-4" },
+                                    model: {
+                                      value: _vm.course.points,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.course,
+                                          "points",
+                                          _vm._n($$v)
+                                        )
+                                      },
+                                      expression: "course.points"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-5",
+                                    "label-for": "input-5",
+                                    prop: "level",
+                                    label: "Level"
+                                  }
+                                },
+                                [
+                                  _c("el-input-number", {
+                                    staticStyle: { width: "350px" },
+                                    attrs: { id: "input-5" },
+                                    model: {
+                                      value: _vm.course.level,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.course,
+                                          "level",
+                                          _vm._n($$v)
+                                        )
+                                      },
+                                      expression: "course.level"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-4",
-                            label: "Points:",
-                            "label-for": "input-4"
-                          }
-                        },
+                        "el-row",
                         [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "input-4",
-                              type: "number",
-                              required: "",
-                              placeholder: "Enter points"
-                            },
-                            model: {
-                              value: _vm.course.points,
-                              callback: function($$v) {
-                                _vm.$set(_vm.course, "points", $$v)
-                              },
-                              expression: "course.points"
-                            }
-                          })
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                [
+                                  _c(
+                                    "el-button",
+                                    {
+                                      attrs: { type: "primary" },
+                                      on: { click: _vm.onSubmit }
+                                    },
+                                    [_vm._v("Save")]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-5",
-                            label: "Level:",
-                            "label-for": "input-5"
-                          }
-                        },
-                        [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "input-5",
-                              type: "number",
-                              required: "",
-                              placeholder: "Enter level"
-                            },
-                            model: {
-                              value: _vm.course.level,
-                              callback: function($$v) {
-                                _vm.$set(_vm.course, "level", $$v)
-                              },
-                              expression: "course.level"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-button",
-                        { attrs: { type: "submit", variant: "primary" } },
-                        [_vm._v("Submit")]
                       )
                     ],
                     1
