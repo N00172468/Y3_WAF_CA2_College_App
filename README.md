@@ -31,3 +31,4 @@ Set your own remote git repo and push your commits
 
 - `npm i element-ui -S`
 - Once installed, import `import ElementUI from 'element-ui';`, `import 'element-ui/lib/theme-chalk/index.css';` (For full import. On Demand import available) and `Vue.use(ElementUI);` within main/app.js file to globalise the component library for the project.
+- Default language will be in Mandarin. To translate it to English, import `import locale from 'element-ui/lib/locale/lang/en'` and update `Vue.use(ElementUI)` to `Vue.use(ElementUI, { locale })`.
