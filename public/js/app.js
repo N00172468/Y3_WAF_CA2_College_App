@@ -4263,6 +4263,85 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -102255,73 +102334,107 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-row",
-    { attrs: { "align-h": "center" } },
+    "el-row",
     [
       _c(
-        "b-col",
-        { attrs: { cols: "12" } },
+        "el-col",
+        { attrs: { span: 24, offset: 1 } },
         [
           _c(
-            "b-table-simple",
-            { attrs: { hover: "", responsive: "" } },
+            "el-card",
+            { staticClass: "box-card" },
             [
               _c(
-                "b-head",
+                "el-table",
+                {
+                  staticStyle: { width: "100%" },
+                  attrs: {
+                    data: _vm.items,
+                    "max-height": "600",
+                    router: "true",
+                    stripe: "true",
+                    border: "true"
+                  }
+                },
                 [
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "title",
+                      label: "Title",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: { prop: "code", label: "Code", width: "120" }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      prop: "description",
+                      label: "Description",
+                      width: "720"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: { prop: "points", label: "Points", width: "100" }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: { prop: "level", label: "Level", width: "60" }
+                  }),
+                  _vm._v(" "),
                   _c(
-                    "b-tr",
+                    "el-table-column",
+                    {
+                      attrs: {
+                        fixed: "right",
+                        label: "Operations",
+                        width: "120",
+                        router: "true"
+                      }
+                    },
                     [
-                      _c("b-th", [_vm._v("Title")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Code")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Description")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Points")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Level")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Actions")])
+                      [
+                        _c(
+                          "el-button",
+                          {
+                            attrs: {
+                              index: "`/courses/edit/${items.id}`",
+                              type: "warning"
+                            },
+                            on: {
+                              click: function($event) {
+                                "/courses/edit/" + _vm.items.id
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticStyle: {
+                                  "text-decoration": "none",
+                                  color: "white"
+                                },
+                                attrs: { to: "/courses/edit/" + _vm.items.id }
+                              },
+                              [
+                                _vm._v(
+                                  "\r\n                    Edit\r\n                "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ]
                     ],
-                    1
+                    2
                   )
                 ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-body",
-                _vm._l(_vm.items, function(item) {
-                  return _c(
-                    "b-tr",
-                    { key: item.id },
-                    [
-                      _c("b-td", [_vm._v(_vm._s(item.title))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.code))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.description))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.level))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.points))]),
-                      _vm._v(" "),
-                      _c(
-                        "b-td",
-                        [
-                          _c(
-                            "router-link",
-                            { attrs: { to: "/courses/edit/" + item.id } },
-                            [_vm._v("Edit")]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                }),
                 1
               )
             ],

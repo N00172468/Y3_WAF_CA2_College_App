@@ -1,5 +1,83 @@
 <template>
-  <b-row align-h="center">
+<el-row>
+  <el-col :span="24" :offset="1">
+
+    <!-- Card -->
+    <el-card class="box-card">
+
+      <!-- Table -->
+      <el-table
+        :data="items"
+        style="width:100%;"
+        max-height="600"
+        router="true"
+        stripe="true"
+        border="true">
+
+        <!-- Title -->
+        <el-table-column
+          fixed
+          prop="title"
+          label="Title"
+          width="240">
+        </el-table-column>
+
+        <!-- Code -->
+        <el-table-column
+          prop="code"
+          label="Code"
+          width="120">
+        </el-table-column>
+
+        <!-- Description -->
+        <el-table-column
+          prop="description"
+          label="Description"
+          width="720">
+        </el-table-column>
+
+        <!-- Points -->
+        <el-table-column
+          prop="points"
+          label="Points"
+          width="100">
+        </el-table-column>
+
+        <!-- Level -->
+        <el-table-column
+          prop="level"
+          label="Level"
+          width="60">
+        </el-table-column>
+
+        <!-- Buttons -->
+        <el-table-column
+          fixed="right"
+          label="Operations"
+          width="120"
+          router="true">
+
+          <template>
+            <el-button
+              @click="`/courses/edit/${items.id}`"
+              index="`/courses/edit/${items.id}`"
+              type="warning">
+                
+                <router-link 
+                  style="text-decoration:none; color:white;" 
+                  :to="`/courses/edit/${items.id}`">
+                    Edit
+                </router-link>
+            </el-button>
+          </template>
+        </el-table-column>
+      </el-table>
+    
+    </el-card>
+
+  </el-col>
+</el-row>
+  <!-- <b-row align-h="center">
     <b-col cols="12">
 
       <b-table-simple hover responsive>
@@ -25,8 +103,9 @@
         </b-body>
       </b-table-simple>
     </b-col>
-  </b-row>
+  </b-row> -->
 </template>
+
 <script>
 export default {
   data() {
@@ -34,24 +113,25 @@ export default {
       items: []
     }
   },
+
   created(){
     let app = this;
     let token = localStorage.getItem('token');
+    
     axios.get('/api/courses', {
       headers: { Authorization: "Bearer " + token}
     })
     .then(function (response) {
-       console.log(response.data);
-       app.items = response.data.data;
+      console.log(response.data);
+      app.items = response.data.data;
     })
     .catch(function (error) {
-       console.log(error);
+      console.log(error);
     })
   },
+
   methods: {
 
   }
 }
 </script>
-<style>
-</style>
