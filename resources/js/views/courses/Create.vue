@@ -4,6 +4,7 @@
 
         <!-- Card -->
     <el-card class="box-card">
+        
         <!-- Card Title -->
         <div slot="header" class="clearfix">
             <span>Add a Course</span>
@@ -37,8 +38,15 @@
 
                 <!-- Code -->
                 <el-col :span="12">
-                    <el-form-item prop="code" label="Code">
+                    <el-form-item 
+                        id="input-group-2"
+                        label-for="input-2"
+                        prop="code" 
+                        label="Code">
+                        
                         <el-input 
+                            id="input-2"
+                            type="text"
                             placeholder="Code" 
                             v-model="form.code">
                         </el-input>
@@ -48,11 +56,68 @@
 
             <!-- Row 2 -->
             <el-row>
+                <!-- Description -->
                 <el-col :span="24">
+                    <el-form-item
+                        id="input-group-3"
+                        label-for="input-3"
+                        prop="description" 
+                        label="Description">
 
+                        <el-input
+                            id="input-3"
+                            type="textarea"
+                            placeholder="Description" 
+                            v-model="form.description">
+
+                        </el-input>
+                    </el-form-item>
+                </el-col>
+            </el-row>
+
+            <!-- Row 3 -->
+            <el-row>
+                <!-- Points -->
+                <el-col :span="12">
+                    <el-form-item 
+                        id="input-group-4"
+                        label-for="input-4"
+                        prop="points" 
+                        label="Points">
+                        
+                        <el-input-number
+                            id="input-4"
+                            v-model="form.points">
+                        </el-input-number>
+                    </el-form-item>
+                </el-col>
+
+                <!-- Level -->
+                <el-col :span="12">
+                    <el-form-item 
+                        id="input-group-5"
+                        label-for="input-5"
+                        prop="level" 
+                        label="Level">
+                        
+                        <el-input-number
+                            id="input-5"
+                            v-model="form.level">
+                        </el-input-number>
+                    </el-form-item>
+                </el-col>
+            </el-row>
+
+            <!-- Row 4 -->
+            <el-row>
+                <el-col :span="24">
+                    <el-form-item>
+                        <el-button type="primary">Submit</el-button>
+                    </el-form-item>
                 </el-col>
             </el-row>
         </el-form>
+
     </el-card>
 
     </el-col>

@@ -4076,6 +4076,71 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -102045,10 +102110,21 @@ var render = function() {
                         [
                           _c(
                             "el-form-item",
-                            { attrs: { prop: "code", label: "Code" } },
+                            {
+                              attrs: {
+                                id: "input-group-2",
+                                "label-for": "input-2",
+                                prop: "code",
+                                label: "Code"
+                              }
+                            },
                             [
                               _c("el-input", {
-                                attrs: { placeholder: "Code" },
+                                attrs: {
+                                  id: "input-2",
+                                  type: "text",
+                                  placeholder: "Code"
+                                },
                                 model: {
                                   value: _vm.form.code,
                                   callback: function($$v) {
@@ -102067,7 +102143,140 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c("el-row", [_c("el-col", { attrs: { span: 24 } })], 1)
+                  _c(
+                    "el-row",
+                    [
+                      _c(
+                        "el-col",
+                        { attrs: { span: 24 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-3",
+                                "label-for": "input-3",
+                                prop: "description",
+                                label: "Description"
+                              }
+                            },
+                            [
+                              _c("el-input", {
+                                attrs: {
+                                  id: "input-3",
+                                  type: "textarea",
+                                  placeholder: "Description"
+                                },
+                                model: {
+                                  value: _vm.form.description,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "description", $$v)
+                                  },
+                                  expression: "form.description"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-row",
+                    [
+                      _c(
+                        "el-col",
+                        { attrs: { span: 12 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-4",
+                                "label-for": "input-4",
+                                prop: "points",
+                                label: "Points"
+                              }
+                            },
+                            [
+                              _c("el-input-number", {
+                                attrs: { id: "input-4" },
+                                model: {
+                                  value: _vm.form.points,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "points", $$v)
+                                  },
+                                  expression: "form.points"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "el-col",
+                        { attrs: { span: 12 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-5",
+                                "label-for": "input-5",
+                                prop: "level",
+                                label: "Level"
+                              }
+                            },
+                            [
+                              _c("el-input-number", {
+                                attrs: { id: "input-5" },
+                                model: {
+                                  value: _vm.form.level,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "level", $$v)
+                                  },
+                                  expression: "form.level"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-row",
+                    [
+                      _c(
+                        "el-col",
+                        { attrs: { span: 24 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            [
+                              _c("el-button", { attrs: { type: "primary" } }, [
+                                _vm._v("Submit")
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ],
                 1
               )
