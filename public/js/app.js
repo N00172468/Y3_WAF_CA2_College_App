@@ -102265,9 +102265,14 @@ var render = function() {
                           _c(
                             "el-form-item",
                             [
-                              _c("el-button", { attrs: { type: "primary" } }, [
-                                _vm._v("Submit")
-                              ])
+                              _c(
+                                "el-button",
+                                {
+                                  attrs: { type: "primary" },
+                                  on: { click: _vm.onSubmit }
+                                },
+                                [_vm._v("Submit")]
+                              )
                             ],
                             1
                           )
