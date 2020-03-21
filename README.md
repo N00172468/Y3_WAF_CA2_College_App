@@ -26,3 +26,8 @@ And then initialise, add, and commit to Git:
 - `git commit -am "Initial commit"`
 
 Set your own remote git repo and push your commits
+
+# Element UI - Component Library Installation Instructions
+
+- `npm i element-ui -S`
+- Once installed, import `import ElementUI from 'element-ui';`, `import 'element-ui/lib/theme-chalk/index.css';` (For full import. On Demand import available) and `Vue.use(ElementUI);` within main/app.js file to globalise the component library for the project.
