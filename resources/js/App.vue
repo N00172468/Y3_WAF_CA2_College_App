@@ -1,9 +1,9 @@
 <template>
   <div>
     <MyNavbar />
-    <b-container>
+    <el-container>
       <router-view />
-    </b-container>
+    </el-container>
   </div>
 </template>
 <script>
