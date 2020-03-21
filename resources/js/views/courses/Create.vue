@@ -1,6 +1,6 @@
 <template>
 <el-row>
-    <el-col :span="24" :offset="2">
+    <el-col :span="24" :offset="10">
 
         <!-- Card -->
     <el-card class="box-card">
@@ -14,6 +14,7 @@
         <el-form 
             @submit="onSubmit"
             :model="form" 
+            :rules="rules"
             ref="form" 
             class="demo-ruleForm">
 
@@ -28,6 +29,7 @@
                         label="Title">
                         
                         <el-input 
+                            style="width:350px;"
                             id="input-1"
                             type="text"
                             placeholder="Title" 
@@ -45,6 +47,7 @@
                         label="Code">
                         
                         <el-input 
+                            style="width:350px;"
                             id="input-2"
                             type="text"
                             placeholder="Code" 
@@ -86,8 +89,9 @@
                         label="Points">
                         
                         <el-input-number
+                            style="width:350px;"
                             id="input-4"
-                            v-model="form.points">
+                            v-model.number="form.points">
                         </el-input-number>
                     </el-form-item>
                 </el-col>
@@ -101,8 +105,9 @@
                         label="Level">
                         
                         <el-input-number
+                            style="width:350px;"
                             id="input-5"
-                            v-model="form.level">
+                            v-model.number="form.level">
                         </el-input-number>
                     </el-form-item>
                 </el-col>
@@ -233,6 +238,45 @@ export default {
                 description: "",
                 points: "",
                 level: ""
+            },
+            rules: {
+                title: [
+                    { 
+                        required: true, 
+                        messgae: 'Please input Title', 
+                        trigger: 'blur' 
+                    }
+                ],
+                code: [
+                    { 
+                        required: true, 
+                        messgae: 'Please input Code. Code must be less than 5 characters!', 
+                        trigger: 'blur' 
+                    }
+                ],
+                description: [
+                    { 
+                        required: true, 
+                        messgae: 'Please input Description', 
+                        trigger: 'blur' 
+                    }
+                ],
+                points: [
+                    { 
+                        type: 'number',
+                        required: true, 
+                        messgae: 'Please input Points', 
+                        trigger: 'blur' 
+                    }
+                ],
+                level: [
+                    { 
+                        type: 'number',
+                        required: true, 
+                        messgae: 'Please input Level', 
+                        trigger: 'blur' 
+                    }
+                ],
             },
             loggedIn: false,
             errors: []

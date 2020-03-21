@@ -4141,6 +4141,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4150,6 +4155,35 @@ __webpack_require__.r(__webpack_exports__);
         description: "",
         points: "",
         level: ""
+      },
+      rules: {
+        title: [{
+          required: true,
+          messgae: 'Please input Title',
+          trigger: 'blur'
+        }],
+        code: [{
+          required: true,
+          messgae: 'Please input Code. Code must be less than 5 characters!',
+          trigger: 'blur'
+        }],
+        description: [{
+          required: true,
+          messgae: 'Please input Description',
+          trigger: 'blur'
+        }],
+        points: [{
+          type: 'number',
+          required: true,
+          messgae: 'Please input Points',
+          trigger: 'blur'
+        }],
+        level: [{
+          type: 'number',
+          required: true,
+          messgae: 'Please input Level',
+          trigger: 'blur'
+        }]
       },
       loggedIn: false,
       errors: []
@@ -102039,7 +102073,7 @@ var render = function() {
     [
       _c(
         "el-col",
-        { attrs: { span: 24, offset: 2 } },
+        { attrs: { span: 24, offset: 10 } },
         [
           _c(
             "el-card",
@@ -102060,7 +102094,7 @@ var render = function() {
                 {
                   ref: "form",
                   staticClass: "demo-ruleForm",
-                  attrs: { model: _vm.form },
+                  attrs: { model: _vm.form, rules: _vm.rules },
                   on: { submit: _vm.onSubmit }
                 },
                 [
@@ -102084,6 +102118,7 @@ var render = function() {
                             },
                             [
                               _c("el-input", {
+                                staticStyle: { width: "350px" },
                                 attrs: {
                                   id: "input-1",
                                   type: "text",
@@ -102120,6 +102155,7 @@ var render = function() {
                             },
                             [
                               _c("el-input", {
+                                staticStyle: { width: "350px" },
                                 attrs: {
                                   id: "input-2",
                                   type: "text",
@@ -102204,11 +102240,12 @@ var render = function() {
                             },
                             [
                               _c("el-input-number", {
+                                staticStyle: { width: "350px" },
                                 attrs: { id: "input-4" },
                                 model: {
                                   value: _vm.form.points,
                                   callback: function($$v) {
-                                    _vm.$set(_vm.form, "points", $$v)
+                                    _vm.$set(_vm.form, "points", _vm._n($$v))
                                   },
                                   expression: "form.points"
                                 }
@@ -102236,11 +102273,12 @@ var render = function() {
                             },
                             [
                               _c("el-input-number", {
+                                staticStyle: { width: "350px" },
                                 attrs: { id: "input-5" },
                                 model: {
                                   value: _vm.form.level,
                                   callback: function($$v) {
-                                    _vm.$set(_vm.form, "level", $$v)
+                                    _vm.$set(_vm.form, "level", _vm._n($$v))
                                   },
                                   expression: "form.level"
                                 }
