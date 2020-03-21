@@ -1,6 +1,6 @@
 <p align="center"><img src="https://miro.medium.com/max/984/1*IHI90aWzUnrcfHDuh08YTg.png" width="400"></p>
 
-## Installation Instructions
+# Installation Instructions
 
 Follow these steps to install the application:
 
@@ -27,7 +27,7 @@ And then initialise, add, and commit to Git:
 
 Set your own remote git repo and push your commits
 
-# Element UI - Component Library Installation Instructions
+## Element UI - Component Library Installation Instructions
 
 - `npm i element-ui -S`
 - Once installed, import `import ElementUI from 'element-ui';`, `import 'element-ui/lib/theme-chalk/index.css';` (For full import. On Demand import available) and `Vue.use(ElementUI);` within main/app.js file to globalise the component library for the project.
