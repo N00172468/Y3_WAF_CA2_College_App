@@ -4634,6 +4634,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -103550,12 +103584,12 @@ var render = function() {
                     attrs: {
                       prop: "description",
                       label: "Description",
-                      width: "720"
+                      width: "520"
                     }
                   }),
                   _vm._v(" "),
                   _c("el-table-column", {
-                    attrs: { prop: "points", label: "Points", width: "100" }
+                    attrs: { prop: "points", label: "Points", width: "70" }
                   }),
                   _vm._v(" "),
                   _c("el-table-column", {
@@ -103568,40 +103602,130 @@ var render = function() {
                       attrs: {
                         fixed: "right",
                         label: "Operations",
-                        width: "120",
+                        width: "300",
                         router: "true"
                       }
                     },
                     [
                       [
                         _c(
-                          "el-button",
-                          {
-                            attrs: {
-                              index: "`/courses/edit/${items.id}`",
-                              type: "warning"
-                            },
-                            on: {
-                              click: function($event) {
-                                "/courses/edit/" + _vm.items.id
-                              }
-                            }
-                          },
+                          "el-col",
+                          { attrs: { span: 8 } },
                           [
                             _c(
-                              "router-link",
+                              "el-button",
                               {
-                                staticStyle: {
-                                  "text-decoration": "none",
-                                  color: "white"
+                                attrs: {
+                                  index: "`/courses/edit/${items.id}`",
+                                  type: "primary"
                                 },
-                                attrs: { to: "/courses/edit/" + _vm.items.id }
+                                on: {
+                                  click: function($event) {
+                                    "/courses/edit/" + _vm.items.id
+                                  }
+                                }
                               },
                               [
-                                _vm._v(
-                                  "\r\n                    Edit\r\n                "
+                                _c(
+                                  "router-link",
+                                  {
+                                    staticStyle: {
+                                      "text-decoration": "none",
+                                      color: "white"
+                                    },
+                                    attrs: {
+                                      to: "/courses/edit/" + _vm.items.id
+                                    }
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "el-icon-data-line"
+                                    }),
+                                    _vm._v(" View\r\n                  ")
+                                  ]
                                 )
-                              ]
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-col",
+                          { attrs: { span: 8 } },
+                          [
+                            _c(
+                              "el-button",
+                              {
+                                attrs: {
+                                  index: "`/courses/edit/${items.id}`",
+                                  type: "warning"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    "/courses/edit/" + _vm.items.id
+                                  }
+                                }
+                              },
+                              [
+                                _c(
+                                  "router-link",
+                                  {
+                                    staticStyle: {
+                                      "text-decoration": "none",
+                                      color: "white"
+                                    },
+                                    attrs: {
+                                      to: "/courses/edit/" + _vm.items.id
+                                    }
+                                  },
+                                  [
+                                    _c("i", { staticClass: "el-icon-edit" }),
+                                    _vm._v(" Edit\r\n                  ")
+                                  ]
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-col",
+                          { attrs: { span: 8 } },
+                          [
+                            _c(
+                              "el-button",
+                              {
+                                attrs: {
+                                  index: "`/courses/edit/${items.id}`",
+                                  type: "danger",
+                                  circle: ""
+                                },
+                                on: {
+                                  click: function($event) {
+                                    "/courses/edit/" + _vm.items.id
+                                  }
+                                }
+                              },
+                              [
+                                _c(
+                                  "router-link",
+                                  {
+                                    staticStyle: {
+                                      "text-decoration": "none",
+                                      color: "white"
+                                    },
+                                    attrs: {
+                                      to: "/courses/edit/" + _vm.items.id
+                                    }
+                                  },
+                                  [_c("i", { staticClass: "el-icon-delete" })]
+                                )
+                              ],
+                              1
                             )
                           ],
                           1

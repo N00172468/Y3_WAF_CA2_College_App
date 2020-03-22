@@ -38,14 +38,14 @@
         <el-table-column
           prop="description"
           label="Description"
-          width="720">
+          width="520">
         </el-table-column>
 
         <!-- Points -->
         <el-table-column
           prop="points"
           label="Points"
-          width="100">
+          width="70">
         </el-table-column>
 
         <!-- Level -->
@@ -59,21 +59,55 @@
         <el-table-column
           fixed="right"
           label="Operations"
-          width="120"
+          width="300"
           router="true">
 
           <template>
-            <el-button
-              @click="`/courses/edit/${items.id}`"
-              index="`/courses/edit/${items.id}`"
-              type="warning">
-                
-                <router-link 
-                  style="text-decoration:none; color:white;" 
-                  :to="`/courses/edit/${items.id}`">
-                    Edit
-                </router-link>
-            </el-button>
+            <!-- View -->
+            <el-col :span="8">
+              <el-button
+                @click="`/courses/edit/${items.id}`"
+                index="`/courses/edit/${items.id}`"
+                type="primary">
+                  
+                  <router-link 
+                    style="text-decoration:none; color:white;" 
+                    :to="`/courses/edit/${items.id}`">
+                      <i class="el-icon-data-line"></i> View
+                  </router-link>
+              </el-button>
+            </el-col>
+
+            <!-- Edit -->
+            <el-col :span="8">
+              <el-button
+                @click="`/courses/edit/${items.id}`"
+                index="`/courses/edit/${items.id}`"
+                type="warning">
+                  
+                  <router-link 
+                    style="text-decoration:none; color:white;" 
+                    :to="`/courses/edit/${items.id}`">
+                      <i class="el-icon-edit"></i> Edit
+                  </router-link>
+              </el-button>
+            </el-col>
+
+            <!-- Delete -->
+            <el-col :span="8">
+              <el-button
+                @click="`/courses/edit/${items.id}`"
+                index="`/courses/edit/${items.id}`"
+                type="danger"
+                circle>
+                  
+                  <router-link 
+                    style="text-decoration:none; color:white;" 
+                    :to="`/courses/edit/${items.id}`">
+                      <i class="el-icon-delete"></i>
+                  </router-link>
+              </el-button>
+            </el-col>
           </template>
         </el-table-column>
       </el-table>
