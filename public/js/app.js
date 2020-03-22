@@ -5064,6 +5064,135 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -103482,170 +103611,267 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-row",
-    { attrs: { "align-h": "center" } },
+    "el-row",
+    { staticStyle: { margin: "auto" } },
     [
       _c(
-        "b-col",
-        { attrs: { cols: "8" } },
+        "el-col",
+        { attrs: { span: 24 } },
         [
           !_vm.loggedIn
-            ? _c("h3", [_vm._v("You are not logged in!")])
+            ? _c("h3", [_vm._v("You are not logged in!!")])
             : _c(
-                "b-card",
-                { attrs: { title: "Edit Enrolment", tag: "article" } },
+                "el-card",
+                { staticClass: "box-card" },
                 [
                   _c(
-                    "b-form",
-                    { on: { submit: _vm.onSubmit } },
+                    "div",
+                    {
+                      staticClass: "clearfix",
+                      attrs: { slot: "header" },
+                      slot: "header"
+                    },
+                    [_c("span", [_vm._v("Edit Enrolment")])]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-form",
+                    {
+                      ref: "form",
+                      staticClass: "demo-ruleForm",
+                      attrs: { model: _vm.form, rules: _vm.rules },
+                      on: { submit: _vm.onSubmit }
+                    },
                     [
                       _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-1",
-                            label: "Date",
-                            "label-for": "input-1"
-                          }
-                        },
+                        "el-row",
+                        { attrs: { gutter: 50 } },
                         [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "input-1",
-                              type: "date",
-                              placeholder: "Date",
-                              required: ""
-                            },
-                            model: {
-                              value: _vm.enrolment.date,
-                              callback: function($$v) {
-                                _vm.$set(_vm.enrolment, "date", $$v)
-                              },
-                              expression: "enrolment.date"
-                            }
-                          })
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-1",
+                                    "label-for": "input-1",
+                                    prop: "date",
+                                    label: "Date"
+                                  }
+                                },
+                                [
+                                  _c("el-date-picker", {
+                                    staticStyle: { width: "350px" },
+                                    attrs: {
+                                      id: "input-1",
+                                      type: "date",
+                                      placeholder: "Date"
+                                    },
+                                    model: {
+                                      value: _vm.enrolment.date,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.enrolment, "date", $$v)
+                                      },
+                                      expression: "enrolment.date"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-2",
+                                    "label-for": "input-2",
+                                    prop: "time",
+                                    label: "Time"
+                                  }
+                                },
+                                [
+                                  _c("el-time-picker", {
+                                    staticStyle: { width: "350px" },
+                                    attrs: {
+                                      id: "input-2",
+                                      type: "time",
+                                      placeholder: "Time"
+                                    },
+                                    model: {
+                                      value: _vm.enrolment.time,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.enrolment, "time", $$v)
+                                      },
+                                      expression: "enrolment.time"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-2",
-                            label: "Time",
-                            "label-for": "input-2"
-                          }
-                        },
+                        "el-row",
                         [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "input-2",
-                              type: "time",
-                              placeholder: "Time",
-                              required: ""
-                            },
-                            model: {
-                              value: _vm.enrolment.time,
-                              callback: function($$v) {
-                                _vm.$set(_vm.enrolment, "time", $$v)
-                              },
-                              expression: "enrolment.time"
-                            }
-                          })
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-3",
+                                    "label-for": "input-3",
+                                    prop: "status",
+                                    label: "Status"
+                                  }
+                                },
+                                [
+                                  _c("el-input", {
+                                    attrs: {
+                                      id: "input-3",
+                                      type: "text",
+                                      placeholder: "Status"
+                                    },
+                                    model: {
+                                      value: _vm.enrolment.status,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.enrolment, "status", $$v)
+                                      },
+                                      expression: "enrolment.status"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-3",
-                            label: "Status",
-                            "label-for": "input-3"
-                          }
-                        },
+                        "el-row",
                         [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "input-3",
-                              type: "text",
-                              placeholder: "Status",
-                              required: ""
-                            },
-                            model: {
-                              value: _vm.enrolment.status,
-                              callback: function($$v) {
-                                _vm.$set(_vm.enrolment, "status", $$v)
-                              },
-                              expression: "enrolment.status"
-                            }
-                          })
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-4",
+                                    "label-for": "input-4",
+                                    prop: "course_id",
+                                    label: "Course I.D"
+                                  }
+                                },
+                                [
+                                  _c("el-input-number", {
+                                    staticStyle: { width: "350px" },
+                                    attrs: { id: "input-4" },
+                                    model: {
+                                      value: _vm.enrolment.course_id,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.enrolment,
+                                          "course_id",
+                                          _vm._n($$v)
+                                        )
+                                      },
+                                      expression: "enrolment.course_id"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-5",
+                                    "label-for": "input-5",
+                                    prop: "lecturer_id",
+                                    label: "Lecturer I.D"
+                                  }
+                                },
+                                [
+                                  _c("el-input-number", {
+                                    staticStyle: { width: "350px" },
+                                    attrs: { id: "input-5" },
+                                    model: {
+                                      value: _vm.enrolment.lecturer_id,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.enrolment,
+                                          "lecturer_id",
+                                          _vm._n($$v)
+                                        )
+                                      },
+                                      expression: "enrolment.lecturer_id"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-4",
-                            label: "Course I.D",
-                            "label-for": "input-4"
-                          }
-                        },
+                        "el-row",
                         [
-                          _c("b-form-select", {
-                            attrs: {
-                              id: "input-4",
-                              placeholder: "Select Course",
-                              required: ""
-                            },
-                            model: {
-                              value: _vm.enrolment.course_id,
-                              callback: function($$v) {
-                                _vm.$set(_vm.enrolment, "course_id", $$v)
-                              },
-                              expression: "enrolment.course_id"
-                            }
-                          })
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                [
+                                  _c(
+                                    "el-button",
+                                    {
+                                      attrs: { type: "primary" },
+                                      on: { click: _vm.onSubmit }
+                                    },
+                                    [_vm._v("Save")]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            id: "input-group-5",
-                            label: "Lecture I.D",
-                            "label-for": "input-5"
-                          }
-                        },
-                        [
-                          _c("b-form-select", {
-                            attrs: {
-                              id: "input-5",
-                              placeholder: "Select Lecture",
-                              required: ""
-                            },
-                            model: {
-                              value: _vm.enrolment.lecture_id,
-                              callback: function($$v) {
-                                _vm.$set(_vm.enrolment, "lecture_id", $$v)
-                              },
-                              expression: "enrolment.lecture_id"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-button",
-                        { attrs: { type: "submit", variant: "primary" } },
-                        [_vm._v("Submit")]
                       )
                     ],
                     1
