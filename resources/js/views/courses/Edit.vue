@@ -1,6 +1,6 @@
 <template>
-<el-row>
-  <el-col :span="24" :offset="10">
+<el-row style="margin:auto;">
+  <el-col :span="24">
   
     <h3 v-if="!loggedIn">You are not logged in!!</h3>
 

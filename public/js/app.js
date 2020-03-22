@@ -102498,10 +102498,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "el-row",
+    { staticStyle: { margin: "auto" } },
     [
       _c(
         "el-col",
-        { attrs: { span: 24, offset: 10 } },
+        { attrs: { span: 24 } },
         [
           !_vm.loggedIn
             ? _c("h3", [_vm._v("You are not logged in!!")])
