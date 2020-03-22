@@ -102649,7 +102649,7 @@ var render = function() {
                 { attrs: { index: "2" } },
                 [
                   _c("template", { slot: "title" }, [
-                    _c("i", { staticClass: "el-icon-document" }),
+                    _c("i", { staticClass: "el-icon-s-management" }),
                     _vm._v(" "),
                     _c("span", [_vm._v("Courses")])
                   ]),
@@ -102686,7 +102686,7 @@ var render = function() {
                 { attrs: { index: "3" } },
                 [
                   _c("template", { slot: "title" }, [
-                    _c("i", { staticClass: "el-icon-document" }),
+                    _c("i", { staticClass: "el-icon-s-custom" }),
                     _vm._v(" "),
                     _c("span", [_vm._v("Lecturers")])
                   ]),
@@ -102723,7 +102723,7 @@ var render = function() {
                 { attrs: { index: "4" } },
                 [
                   _c("template", { slot: "title" }, [
-                    _c("i", { staticClass: "el-icon-document" }),
+                    _c("i", { staticClass: "el-icon-s-claim" }),
                     _vm._v(" "),
                     _c("span", [_vm._v("Enrolments")])
                   ]),

@@ -20,7 +20,7 @@
       <!-- Courses -->
       <el-submenu index="2">
         <template slot="title">
-          <i class="el-icon-document"></i>
+          <i class="el-icon-s-management"></i>
           <span>Courses</span>
         </template>
 
@@ -38,7 +38,7 @@
       <!-- Lecturers -->
       <el-submenu index="3">
         <template slot="title">
-          <i class="el-icon-document"></i>
+          <i class="el-icon-s-custom"></i>
           <span>Lecturers</span>
         </template>
 
@@ -56,7 +56,7 @@
       <!-- Enrolments -->
       <el-submenu index="4">
         <template slot="title">
-          <i class="el-icon-document"></i>
+          <i class="el-icon-s-claim"></i>
           <span>Enrolments</span>
         </template>
 
