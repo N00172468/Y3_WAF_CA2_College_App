@@ -102210,10 +102210,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "el-row",
+    { staticStyle: { margin: "auto" } },
     [
       _c(
         "el-col",
-        { attrs: { span: 24, offset: 10 } },
+        { attrs: { span: 24 } },
         [
           _c(
             "el-card",
