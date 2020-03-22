@@ -4998,6 +4998,93 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -103338,73 +103425,136 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-row",
-    { attrs: { "align-h": "center" } },
+    "el-row",
+    { staticStyle: { margin: "auto" } },
     [
       _c(
-        "b-col",
-        { attrs: { cols: "12" } },
+        "el-col",
+        { attrs: { span: 24, xs: 24, sm: 24, md: 24, lg: 24, xl: 24 } },
         [
           _c(
-            "b-table-simple",
-            { attrs: { hover: "", responsive: "" } },
+            "el-card",
+            { staticClass: "box-card" },
             [
               _c(
-                "b-head",
-                [
-                  _c(
-                    "b-tr",
-                    [
-                      _c("b-th", [_vm._v("Date")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Time")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Status")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Course I.D")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Lecturer I.D")])
-                    ],
-                    1
-                  )
-                ],
-                1
+                "div",
+                {
+                  staticClass: "clearfix",
+                  attrs: { slot: "header" },
+                  slot: "header"
+                },
+                [_c("span", [_vm._v("Enrolments")])]
               ),
               _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
               _c(
-                "b-body",
-                _vm._l(_vm.items, function(item) {
-                  return _c(
-                    "b-tr",
-                    { key: item.id },
+                "el-table",
+                {
+                  staticStyle: { width: "100%" },
+                  attrs: {
+                    data: _vm.items,
+                    "max-height": "550",
+                    router: "true",
+                    stripe: "true",
+                    border: "true"
+                  }
+                },
+                [
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "date",
+                      label: "Date",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "time",
+                      label: "Time",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "status",
+                      label: "Status",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "course_id",
+                      label: "Course I.D",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "lecturer_id",
+                      label: "Lecturer I.D",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "el-table-column",
+                    {
+                      attrs: {
+                        fixed: "right",
+                        label: "Operations",
+                        width: "120",
+                        router: "true"
+                      }
+                    },
                     [
-                      _c("b-td", [_vm._v(_vm._s(item.date))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.time))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.status))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.course_id))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.lecturer_id))]),
-                      _vm._v(" "),
-                      _c(
-                        "b-td",
-                        [
-                          _c(
-                            "router-link",
-                            { attrs: { to: "/enrolments/edit/" + item.id } },
-                            [_vm._v("Edit")]
-                          )
-                        ],
-                        1
-                      )
+                      [
+                        _c(
+                          "el-button",
+                          {
+                            attrs: {
+                              index: "`/enrolments/edit/${items.id}`",
+                              type: "warning"
+                            },
+                            on: {
+                              click: function($event) {
+                                "/enrolments/edit/" + _vm.items.id
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticStyle: {
+                                  "text-decoration": "none",
+                                  color: "white"
+                                },
+                                attrs: {
+                                  to: "/enrolments/edit/" + _vm.items.id
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\r\n                                    Edit\r\n                            "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ]
                     ],
-                    1
+                    2
                   )
-                }),
+                ],
                 1
               )
             ],
