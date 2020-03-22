@@ -5727,6 +5727,85 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -104443,69 +104522,125 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-row",
-    { attrs: { "align-h": "center" } },
+    "el-row",
+    { staticStyle: { margin: "auto" } },
     [
       _c(
-        "b-col",
-        { attrs: { cols: "12" } },
+        "el-col",
+        { attrs: { span: 24, xs: 24, sm: 24, md: 24, lg: 24, xl: 24 } },
         [
           _c(
-            "b-table-simple",
-            { attrs: { hover: "", responsive: "" } },
+            "el-card",
+            { staticClass: "box-card" },
             [
               _c(
-                "b-head",
-                [
-                  _c(
-                    "b-tr",
-                    [
-                      _c("b-th", [_vm._v("Name")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Address")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Email")]),
-                      _vm._v(" "),
-                      _c("b-th", [_vm._v("Phone")])
-                    ],
-                    1
-                  )
-                ],
-                1
+                "div",
+                {
+                  staticClass: "clearfix",
+                  attrs: { slot: "header" },
+                  slot: "header"
+                },
+                [_c("span", [_vm._v("Lecturers")])]
               ),
               _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
               _c(
-                "b-body",
-                _vm._l(_vm.items, function(item) {
-                  return _c(
-                    "b-tr",
-                    { key: item.id },
+                "el-table",
+                {
+                  staticStyle: { width: "100%" },
+                  attrs: {
+                    data: _vm.items,
+                    "max-height": "550",
+                    router: "true",
+                    stripe: "true",
+                    border: "true"
+                  }
+                },
+                [
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "name",
+                      label: "Name",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "address",
+                      label: "Address",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "email",
+                      label: "Email",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "",
+                      prop: "phone",
+                      label: "Phone Number",
+                      width: "240"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "el-table-column",
+                    {
+                      attrs: {
+                        fixed: "right",
+                        label: "Operations",
+                        width: "120",
+                        router: "true"
+                      }
+                    },
                     [
-                      _c("b-td", [_vm._v(_vm._s(item.name))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.address))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.email))]),
-                      _vm._v(" "),
-                      _c("b-td", [_vm._v(_vm._s(item.phone))]),
-                      _vm._v(" "),
-                      _c(
-                        "b-td",
-                        [
-                          _c(
-                            "router-link",
-                            { attrs: { to: "/lecturers/edit/" + item.id } },
-                            [_vm._v("Edit")]
-                          )
-                        ],
-                        1
-                      )
+                      [
+                        _c(
+                          "el-button",
+                          {
+                            attrs: {
+                              index: "`/lecturers/edit/${items.id}`",
+                              type: "warning"
+                            },
+                            on: {
+                              click: function($event) {
+                                "/lecturers/edit/" + _vm.items.id
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticStyle: {
+                                  "text-decoration": "none",
+                                  color: "white"
+                                },
+                                attrs: { to: "/lecturers/edit/" + _vm.items.id }
+                              },
+                              [
+                                _vm._v(
+                                  "\r\n                                Edit\r\n                            "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ]
                     ],
-                    1
+                    2
                   )
-                }),
+                ],
                 1
               )
             ],
