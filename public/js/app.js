@@ -4751,6 +4751,133 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4760,6 +4887,37 @@ __webpack_require__.r(__webpack_exports__);
         status: "",
         course_id: "",
         lecturer_id: ""
+      },
+      rules: {
+        date: [{
+          type: 'date',
+          required: true,
+          messgae: 'Please input Date',
+          trigger: 'blur'
+        }],
+        time: [{
+          type: 'time',
+          required: true,
+          messgae: 'Please input Time.',
+          trigger: 'blur'
+        }],
+        status: [{
+          required: true,
+          messgae: 'Please input Status',
+          trigger: 'blur'
+        }],
+        course_id: [{
+          type: 'number',
+          required: true,
+          messgae: 'Please input Course I.D',
+          trigger: 'blur'
+        }],
+        lecture_id: [{
+          type: 'number',
+          required: true,
+          messgae: 'Please input Lecturer I.D',
+          trigger: 'blur'
+        }]
       },
       loggedIn: false,
       errors: []
@@ -103032,159 +103190,259 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-row",
+    "el-row",
+    { staticStyle: { margin: "auto" } },
     [
       _c(
-        "b-col",
-        { attrs: { cols: "8" } },
+        "el-col",
+        { attrs: { span: 24 } },
         [
           _c(
-            "b-card",
-            { attrs: { title: "Add Enrolment", tag: "article" } },
+            "el-card",
+            { staticClass: "box-card" },
             [
               _c(
-                "b-form",
-                { on: { submit: _vm.onSubmit } },
+                "div",
+                {
+                  staticClass: "clearfix",
+                  attrs: { slot: "header" },
+                  slot: "header"
+                },
+                [_c("span", [_vm._v("Add an Enrolment")])]
+              ),
+              _vm._v(" "),
+              _c(
+                "el-form",
+                {
+                  ref: "form",
+                  staticClass: "demo-ruleForm",
+                  attrs: { model: _vm.form, rules: _vm.rules },
+                  on: { submit: _vm.onSubmit }
+                },
                 [
                   _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-1",
-                        label: "Date",
-                        "label-for": "input-1"
-                      }
-                    },
+                    "el-row",
+                    { attrs: { gutter: 50 } },
                     [
-                      _c("b-form-input", {
-                        attrs: {
-                          id: "input-1",
-                          type: "date",
-                          placeholder: "Date",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.date,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "date", $$v)
-                          },
-                          expression: "form.date"
-                        }
-                      })
+                      _c(
+                        "el-col",
+                        { attrs: { span: 12 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-1",
+                                "label-for": "input-1",
+                                prop: "date",
+                                label: "Date"
+                              }
+                            },
+                            [
+                              _c("el-date-picker", {
+                                staticStyle: { width: "350px" },
+                                attrs: {
+                                  id: "input-1",
+                                  type: "date",
+                                  placeholder: "Date"
+                                },
+                                model: {
+                                  value: _vm.form.date,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "date", $$v)
+                                  },
+                                  expression: "form.date"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "el-col",
+                        { attrs: { span: 12 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-2",
+                                "label-for": "input-2",
+                                prop: "time",
+                                label: "Time"
+                              }
+                            },
+                            [
+                              _c("el-time-picker", {
+                                staticStyle: { width: "350px" },
+                                attrs: {
+                                  id: "input-2",
+                                  type: "time",
+                                  placeholder: "Time"
+                                },
+                                model: {
+                                  value: _vm.form.time,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "time", $$v)
+                                  },
+                                  expression: "form.time"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
                     ],
                     1
                   ),
                   _vm._v(" "),
                   _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-2",
-                        label: "Time",
-                        "label-for": "input-2"
-                      }
-                    },
+                    "el-row",
                     [
-                      _c("b-form-input", {
-                        attrs: {
-                          id: "input-2",
-                          type: "time",
-                          placeholder: "Time",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.time,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "time", $$v)
-                          },
-                          expression: "form.time"
-                        }
-                      })
+                      _c(
+                        "el-col",
+                        { attrs: { span: 24 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-3",
+                                "label-for": "input-3",
+                                prop: "status",
+                                label: "Status"
+                              }
+                            },
+                            [
+                              _c("el-input", {
+                                attrs: {
+                                  id: "input-3",
+                                  type: "text",
+                                  placeholder: "Status"
+                                },
+                                model: {
+                                  value: _vm.form.status,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "status", $$v)
+                                  },
+                                  expression: "form.status"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
                     ],
                     1
                   ),
                   _vm._v(" "),
                   _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-3",
-                        label: "Status",
-                        "label-for": "input-3"
-                      }
-                    },
+                    "el-row",
                     [
-                      _c("b-form-input", {
-                        attrs: {
-                          id: "input-3",
-                          type: "text",
-                          placeholder: "Status",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.status,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "status", $$v)
-                          },
-                          expression: "form.status"
-                        }
-                      })
+                      _c(
+                        "el-col",
+                        { attrs: { span: 12 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-4",
+                                "label-for": "input-4",
+                                prop: "course_id",
+                                label: "Course I.D"
+                              }
+                            },
+                            [
+                              _c("el-input-number", {
+                                staticStyle: { width: "350px" },
+                                attrs: { id: "input-4" },
+                                model: {
+                                  value: _vm.form.course_id,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "course_id", _vm._n($$v))
+                                  },
+                                  expression: "form.course_id"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "el-col",
+                        { attrs: { span: 12 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-5",
+                                "label-for": "input-5",
+                                prop: "lecturer_id",
+                                label: "Lecturer I.D"
+                              }
+                            },
+                            [
+                              _c("el-input-number", {
+                                staticStyle: { width: "350px" },
+                                attrs: { id: "input-5" },
+                                model: {
+                                  value: _vm.form.lecturer_id,
+                                  callback: function($$v) {
+                                    _vm.$set(
+                                      _vm.form,
+                                      "lecturer_id",
+                                      _vm._n($$v)
+                                    )
+                                  },
+                                  expression: "form.lecturer_id"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
                     ],
                     1
                   ),
                   _vm._v(" "),
                   _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-4",
-                        label: "Course I.D",
-                        "label-for": "input-4"
-                      }
-                    },
+                    "el-row",
                     [
-                      _c("b-form-select", {
-                        attrs: {
-                          id: "input-4",
-                          placeholder: "Select Course",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.course_id,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "course_id", $$v)
-                          },
-                          expression: "form.course_id"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-5",
-                        label: "Lecture I.D",
-                        "label-for": "input-5"
-                      }
-                    },
-                    [
-                      _c("b-form-select", {
-                        attrs: {
-                          id: "input-5",
-                          placeholder: "Select Lecture",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.lecture_id,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "lecture_id", $$v)
-                          },
-                          expression: "form.lecture_id"
-                        }
-                      })
+                      _c(
+                        "el-col",
+                        { attrs: { span: 24 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            [
+                              _c(
+                                "el-button",
+                                {
+                                  attrs: { type: "primary" },
+                                  on: { click: _vm.onSubmit }
+                                },
+                                [_vm._v("Submit")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
                     ],
                     1
                   )
