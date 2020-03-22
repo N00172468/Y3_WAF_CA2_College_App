@@ -72,24 +72,26 @@
       </el-submenu>
 
       <!-- User Menu -->
-      <el-col :span="3" :offset="12">
-      <el-submenu index="5">
-        <template slot="title">
-          <i class="el-icon-setting"></i>
-          <span>Options</span>
-        </template>
+      <el-row type="flex" justify="end">
+        <el-col :span="4" :xl="3" :lg="4" :md="6" :sm="12" :xs="24">
+          <el-submenu index="5">
+            <template slot="title">
+              <i class="el-icon-setting"></i>
+              <span>Options</span>
+            </template>
 
-        <!-- Profile -->
-        <el-menu-item-group title="View Your Profile">
-          <el-menu-item index="`/users/1`">Profile</el-menu-item>
-        </el-menu-item-group>
+            <!-- Profile -->
+            <el-menu-item-group title="View Your Profile">
+              <el-menu-item index="`/users/1`">Profile</el-menu-item>
+            </el-menu-item-group>
 
-        <!-- Logout -->
-        <el-menu-item-group title="Goodbye For Now">
-          <el-menu-item @click="logout">Logout</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-      </el-col>
+            <!-- Logout -->
+            <el-menu-item-group title="Goodbye For Now">
+              <el-menu-item @click="logout">Logout</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+        </el-col>
+      </el-row>
     </el-menu>
   
   </el-col>

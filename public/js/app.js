@@ -3731,6 +3731,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "myNavbar",
   methods: {
@@ -101951,44 +101953,53 @@ var render = function() {
               ),
               _vm._v(" "),
               _c(
-                "el-col",
-                { attrs: { span: 3, offset: 12 } },
+                "el-row",
+                { attrs: { type: "flex", justify: "end" } },
                 [
                   _c(
-                    "el-submenu",
-                    { attrs: { index: "5" } },
+                    "el-col",
+                    { attrs: { span: 4, xl: 3, lg: 4, md: 6, sm: 12, xs: 24 } },
                     [
-                      _c("template", { slot: "title" }, [
-                        _c("i", { staticClass: "el-icon-setting" }),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("Options")])
-                      ]),
-                      _vm._v(" "),
                       _c(
-                        "el-menu-item-group",
-                        { attrs: { title: "View Your Profile" } },
+                        "el-submenu",
+                        { attrs: { index: "5" } },
                         [
+                          _c("template", { slot: "title" }, [
+                            _c("i", { staticClass: "el-icon-setting" }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("Options")])
+                          ]),
+                          _vm._v(" "),
                           _c(
-                            "el-menu-item",
-                            { attrs: { index: "`/users/1`" } },
-                            [_vm._v("Profile")]
+                            "el-menu-item-group",
+                            { attrs: { title: "View Your Profile" } },
+                            [
+                              _c(
+                                "el-menu-item",
+                                { attrs: { index: "`/users/1`" } },
+                                [_vm._v("Profile")]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-menu-item-group",
+                            { attrs: { title: "Goodbye For Now" } },
+                            [
+                              _c(
+                                "el-menu-item",
+                                { on: { click: _vm.logout } },
+                                [_vm._v("Logout")]
+                              )
+                            ],
+                            1
                           )
                         ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "el-menu-item-group",
-                        { attrs: { title: "Goodbye For Now" } },
-                        [
-                          _c("el-menu-item", { on: { click: _vm.logout } }, [
-                            _vm._v("Logout")
-                          ])
-                        ],
-                        1
+                        2
                       )
                     ],
-                    2
+                    1
                   )
                 ],
                 1
