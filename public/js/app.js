@@ -5489,6 +5489,118 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5497,6 +5609,28 @@ __webpack_require__.r(__webpack_exports__);
         address: "",
         email: "",
         phone: ""
+      },
+      rules: {
+        name: [{
+          required: true,
+          messgae: 'Please input Name',
+          trigger: 'blur'
+        }],
+        address: [{
+          required: true,
+          messgae: 'Please input Address',
+          trigger: 'blur'
+        }],
+        email: [{
+          required: true,
+          messgae: 'Please input Email',
+          trigger: 'blur'
+        }],
+        phone: [{
+          required: true,
+          messgae: 'Please input Phone Number. Number must be less than 12 characters!',
+          trigger: 'blur'
+        }]
       },
       loggedIn: false,
       errors: []
@@ -104153,160 +104287,227 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-row",
+    "el-row",
+    { staticStyle: { margin: "auto" } },
     [
       _c(
-        "b-col",
-        { attrs: { cols: "8" } },
+        "el-col",
+        { attrs: { span: 24 } },
         [
           _c(
-            "b-card",
-            { attrs: { title: "Add Lecture", tag: "article" } },
+            "el-card",
+            { staticClass: "box-card" },
             [
               _c(
-                "b-form",
-                { on: { submit: _vm.onSubmit } },
+                "div",
+                {
+                  staticClass: "clearfix",
+                  attrs: { slot: "header" },
+                  slot: "header"
+                },
+                [_c("span", [_vm._v("Add a Lecturer")])]
+              ),
+              _vm._v(" "),
+              _c(
+                "el-form",
+                {
+                  ref: "form",
+                  staticClass: "demo-ruleForm",
+                  attrs: { model: _vm.form, rules: _vm.rules },
+                  on: { submit: _vm.onSubmit }
+                },
                 [
                   _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-1",
-                        label: "Name",
-                        "label-for": "input-1"
-                      }
-                    },
+                    "el-row",
                     [
-                      _c("b-form-input", {
-                        attrs: {
-                          id: "input-1",
-                          type: "text",
-                          placeholder: "Name",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.name,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "name", $$v)
-                          },
-                          expression: "form.name"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-2",
-                        label: "Address",
-                        "label-for": "input-2"
-                      }
-                    },
-                    [
-                      _c("b-form-input", {
-                        attrs: {
-                          id: "input-2",
-                          type: "text",
-                          placeholder: "Address",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.address,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "address", $$v)
-                          },
-                          expression: "form.address"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-3",
-                        label: "Email",
-                        "label-for": "input-3"
-                      }
-                    },
-                    [
-                      _c("b-form-input", {
-                        attrs: {
-                          id: "input-3",
-                          type: "email",
-                          placeholder: "Email",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.email,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "email", $$v)
-                          },
-                          expression: "form.email"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-form-group",
-                    {
-                      attrs: {
-                        id: "input-group-4",
-                        label: "Phone Number",
-                        "label-for": "input-4"
-                      }
-                    },
-                    [
-                      _c("b-form-input", {
-                        attrs: {
-                          id: "input-4",
-                          type: "text",
-                          placeholder: "Phone Number",
-                          required: ""
-                        },
-                        model: {
-                          value: _vm.form.phone,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "phone", $$v)
-                          },
-                          expression: "form.phone"
-                        }
-                      }),
-                      _vm._v(" "),
                       _c(
-                        "b-form-invalid-feedback",
-                        { attrs: { state: _vm.phoneValid } },
+                        "el-col",
+                        { attrs: { span: 24 } },
                         [
-                          _vm._v(
-                            "\n                        Phone Number cannot be above 11 characters!\n                    "
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-1",
+                                "label-for": "input-1",
+                                prop: "name",
+                                label: "Name"
+                              }
+                            },
+                            [
+                              _c("el-input", {
+                                attrs: {
+                                  id: "input-1",
+                                  type: "text",
+                                  placeholder: "Name"
+                                },
+                                model: {
+                                  value: _vm.form.name,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "name", $$v)
+                                  },
+                                  expression: "form.name"
+                                }
+                              })
+                            ],
+                            1
                           )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-form-valid-feedback",
-                        { attrs: { state: _vm.phoneValid } },
-                        [
-                          _vm._v(
-                            "\n                        Good to go!\n                    "
-                          )
-                        ]
+                        ],
+                        1
                       )
                     ],
                     1
                   ),
                   _vm._v(" "),
                   _c(
-                    "b-button",
-                    { attrs: { type: "submit", variant: "primary" } },
-                    [_vm._v("\n                    Submit\n                ")]
+                    "el-row",
+                    [
+                      _c(
+                        "el-col",
+                        { attrs: { span: 24 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-2",
+                                "label-for": "input-2",
+                                prop: "address",
+                                label: "Address"
+                              }
+                            },
+                            [
+                              _c("el-input", {
+                                attrs: {
+                                  id: "input-2",
+                                  type: "textarea",
+                                  placeholder: "Address"
+                                },
+                                model: {
+                                  value: _vm.form.address,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "address", $$v)
+                                  },
+                                  expression: "form.address"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-row",
+                    { attrs: { gutter: 50 } },
+                    [
+                      _c(
+                        "el-col",
+                        { attrs: { span: 12 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-3",
+                                "label-for": "input-3",
+                                prop: "email",
+                                label: "Email"
+                              }
+                            },
+                            [
+                              _c("el-input", {
+                                staticStyle: { width: "350px" },
+                                attrs: {
+                                  id: "input-3",
+                                  type: "email",
+                                  placeholder: "Email"
+                                },
+                                model: {
+                                  value: _vm.form.email,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "email", $$v)
+                                  },
+                                  expression: "form.email"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "el-col",
+                        { attrs: { span: 12 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            {
+                              attrs: {
+                                id: "input-group-4",
+                                "label-for": "input-4",
+                                prop: "phone",
+                                label: "Phone Number"
+                              }
+                            },
+                            [
+                              _c("el-input", {
+                                staticStyle: { width: "350px" },
+                                attrs: {
+                                  id: "input-4",
+                                  type: "text",
+                                  placeholder: "Phone Number"
+                                },
+                                model: {
+                                  value: _vm.form.phone,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.form, "phone", $$v)
+                                  },
+                                  expression: "form.phone"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-row",
+                    [
+                      _c(
+                        "el-col",
+                        { attrs: { span: 24 } },
+                        [
+                          _c(
+                            "el-form-item",
+                            [
+                              _c(
+                                "el-button",
+                                {
+                                  attrs: { type: "primary" },
+                                  on: { click: _vm.onSubmit }
+                                },
+                                [_vm._v("Submit")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
                   )
                 ],
                 1

@@ -1,11 +1,123 @@
 <template>
-    <b-row>
-        <b-col cols="8">
-            <b-card title="Add Lecture" tag="article">
-                <!-- Form -->
-                <b-form @submit="onSubmit">
+<el-row style="margin:auto;">
+    <el-col :span="24">
+
+        <!-- Card -->
+        <el-card class="box-card">
+        
+            <!-- Card Title -->
+            <div slot="header" class="clearfix">
+                <span>Add a Lecturer</span>
+            </div>
+        
+            <!-- Form -->
+            <el-form 
+                @submit="onSubmit"
+                :model="form" 
+                :rules="rules"
+                ref="form" 
+                class="demo-ruleForm">
+
+                <!-- Row 1 -->
+                <el-row>
                     <!-- Name -->
-                    <b-form-group
+                    <el-col :span="24">
+                        <el-form-item 
+                            id="input-group-1"
+                            label-for="input-1" 
+                            prop="name" 
+                            label="Name">
+                            
+                            <el-input 
+                                id="input-1"
+                                type="text"
+                                placeholder="Name" 
+                                v-model="form.name">
+                            </el-input>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+
+                <!-- Row 2 -->
+                <el-row>
+                    <!-- Address -->
+                    <el-col :span="24">
+                        <el-form-item 
+                            id="input-group-2"
+                            label-for="input-2" 
+                            prop="address" 
+                            label="Address">
+                            
+                            <el-input 
+                                id="input-2"
+                                type="textarea"
+                                placeholder="Address" 
+                                v-model="form.address">
+                            </el-input>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+
+                <!-- Row 3 -->
+                <el-row :gutter="50">
+                    <!-- Email -->
+                    <el-col :span="12">
+                        <el-form-item 
+                            id="input-group-3"
+                            label-for="input-3" 
+                            prop="email" 
+                            label="Email">
+                            
+                            <el-input 
+                                style="width:350px;"
+                                id="input-3"
+                                type="email"
+                                placeholder="Email" 
+                                v-model="form.email">
+                            </el-input>
+                        </el-form-item>
+                    </el-col>
+
+                    <!-- Phone -->
+                    <el-col :span="12">
+                        <el-form-item 
+                            id="input-group-4"
+                            label-for="input-4"
+                            prop="phone" 
+                            label="Phone Number">
+                            
+                            <el-input 
+                                style="width:350px;"
+                                id="input-4"
+                                type="text"
+                                placeholder="Phone Number" 
+                                v-model="form.phone">
+                            </el-input>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+
+                <!-- Row 4 -->
+                <el-row>
+                    <el-col :span="24">
+                        <el-form-item>
+                            <el-button @click="onSubmit" type="primary">Submit</el-button>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+            </el-form>
+
+        </el-card>
+    
+    </el-col>
+</el-row>
+    <!-- <b-row>
+        <b-col cols="8">
+            <b-card title="Add Lecture" tag="article"> -->
+                <!-- Form -->
+                <!-- <b-form @submit="onSubmit"> -->
+                    <!-- Name -->
+                    <!-- <b-form-group
                         id="input-group-1"
                         label="Name"
                         label-for="input-1">
@@ -17,10 +129,10 @@
                             placeholder="Name"
                             required>
                         </b-form-input>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Address -->
-                    <b-form-group
+                    <!-- <b-form-group
                         id="input-group-2"
                         label="Address"
                         label-for="input-2">
@@ -32,10 +144,10 @@
                             placeholder="Address"
                             required>
                         </b-form-input>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Email -->
-                    <b-form-group
+                    <!-- <b-form-group
                         id="input-group-3"
                         label="Email"
                         label-for="input-3">
@@ -47,10 +159,10 @@
                             placeholder="Email"
                             required>
                         </b-form-input>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Phone -->
-                    <b-form-group
+                    <!-- <b-form-group
                         id="input-group-4"
                         label="Phone Number"
                         label-for="input-4">
@@ -61,25 +173,25 @@
                             type="text"
                             placeholder="Phone Number"
                             required>
-                        </b-form-input>
+                        </b-form-input> -->
 
                         <!-- Validation -->
-                        <b-form-invalid-feedback :state="phoneValid">
+                        <!-- <b-form-invalid-feedback :state="phoneValid">
                             Phone Number cannot be above 11 characters!
                         </b-form-invalid-feedback>
                         <b-form-valid-feedback :state="phoneValid">
                             Good to go!
                         </b-form-valid-feedback>
-                    </b-form-group>
+                    </b-form-group> -->
 
                     <!-- Submit Button -->
-                    <b-button type="submit" variant="primary">
+                    <!-- <b-button type="submit" variant="primary">
                         Submit
                     </b-button>
                 </b-form>
             </b-card>
         </b-col>
-    </b-row>
+    </b-row> -->
 </template>
 
 <script>
@@ -91,6 +203,36 @@ export default {
                 address: "",
                 email: "",
                 phone: "",
+            },
+            rules: {
+                name: [
+                    { 
+                        required: true, 
+                        messgae: 'Please input Name', 
+                        trigger: 'blur' 
+                    }
+                ],
+                address: [
+                    { 
+                        required: true, 
+                        messgae: 'Please input Address', 
+                        trigger: 'blur' 
+                    }
+                ],
+                email: [
+                    { 
+                        required: true, 
+                        messgae: 'Please input Email', 
+                        trigger: 'blur' 
+                    }
+                ],
+                phone: [
+                    { 
+                        required: true, 
+                        messgae: 'Please input Phone Number. Number must be less than 12 characters!', 
+                        trigger: 'blur' 
+                    }
+                ]
             },
             loggedIn: false,
             errors: []
