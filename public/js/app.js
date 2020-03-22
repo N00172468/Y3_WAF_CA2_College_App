@@ -104771,7 +104771,7 @@ var render = function() {
                       fixed: "",
                       prop: "address",
                       label: "Address",
-                      width: "240"
+                      width: "320"
                     }
                   }),
                   _vm._v(" "),
@@ -104780,7 +104780,7 @@ var render = function() {
                       fixed: "",
                       prop: "email",
                       label: "Email",
-                      width: "240"
+                      width: "260"
                     }
                   }),
                   _vm._v(" "),
@@ -104789,7 +104789,7 @@ var render = function() {
                       fixed: "",
                       prop: "phone",
                       label: "Phone Number",
-                      width: "240"
+                      width: "150"
                     }
                   }),
                   _vm._v(" "),
