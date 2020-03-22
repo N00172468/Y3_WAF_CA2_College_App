@@ -24,7 +24,7 @@
                     fixed
                     prop="date"
                     label="Date"
-                    width="240">
+                    width="140">
                 </el-table-column>
 
                 <!-- Time -->
@@ -32,7 +32,7 @@
                     fixed
                     prop="time"
                     label="Time"
-                    width="240">
+                    width="120">
                 </el-table-column>
 
                 <!-- Status -->
@@ -40,7 +40,7 @@
                     fixed
                     prop="status"
                     label="Status"
-                    width="240">
+                    width="160">
                 </el-table-column>
 
                 <!-- Course ID -->
@@ -48,7 +48,7 @@
                     fixed
                     prop="course_id"
                     label="Course I.D"
-                    width="240">
+                    width="90">
                 </el-table-column>
 
                 <!-- Lect ID -->
@@ -56,28 +56,62 @@
                     fixed
                     prop="lecturer_id"
                     label="Lecturer I.D"
-                    width="240">
+                    width="100">
                 </el-table-column>    
 
                 <!-- Buttons -->
                 <el-table-column
                     fixed="right"
                     label="Operations"
-                    width="120"
+                    width="300"
                     router="true">
 
                     <template>
-                        <el-button
-                            @click="`/enrolments/edit/${items.id}`"
-                            index="`/enrolments/edit/${items.id}`"
-                            type="warning">
-                            
-                            <router-link 
-                                style="text-decoration:none; color:white;" 
-                                :to="`/enrolments/edit/${items.id}`">
-                                    Edit
-                            </router-link>
-                        </el-button>
+                        <!-- View -->
+                        <el-col :span="8">
+                            <el-button
+                                @click="`/enrolments/edit/${items.id}`"
+                                index="`/enrolments/edit/${items.id}`"
+                                type="primary">
+                                
+                                <router-link 
+                                    style="text-decoration:none; color:white;" 
+                                    :to="`/enrolments/edit/${items.id}`">
+                                    <i class="el-icon-data-line"></i> View
+                                </router-link>
+                            </el-button>
+                        </el-col>
+
+                        <!-- Edit -->
+                        <el-col :span="8">
+                            <el-button
+                                @click="`/enrolments/edit/${items.id}`"
+                                index="`/enrolments/edit/${items.id}`"
+                                type="warning">
+                                
+                                <router-link 
+                                    style="text-decoration:none; color:white;" 
+                                    :to="`/enrolments/edit/${items.id}`">
+                                    <i class="el-icon-edit"></i> Edit
+                                </router-link>
+                            </el-button>
+                        </el-col>
+
+                        <!-- Delete -->
+                        <el-col :span="8">
+                            <el-button
+                                @click="`/enrolments/edit/${items.id}`"
+                                index="`/enrolments/edit/${items.id}`"
+                                type="danger"
+                                circle>
+                                
+                                <router-link 
+                                    style="text-decoration:none; color:white;" 
+                                    :to="`/enrolments/edit/${items.id}`">
+                                    <i class="el-icon-delete"></i>
+                                </router-link>
+                            </el-button>
+                        </el-col>
                     </template>
                 </el-table-column>
             </el-table>
