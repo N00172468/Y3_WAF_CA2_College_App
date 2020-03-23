@@ -103701,12 +103701,12 @@ var render = function() {
                               "el-button",
                               {
                                 attrs: {
-                                  index: "`/courses/edit/${items.id}`",
+                                  index: "`/courses/show/${items.id}`",
                                   type: "primary"
                                 },
                                 on: {
                                   click: function($event) {
-                                    "/courses/edit/" + _vm.items.id
+                                    "/courses/show/" + _vm.items.id
                                   }
                                 }
                               },
@@ -103719,7 +103719,7 @@ var render = function() {
                                       color: "white"
                                     },
                                     attrs: {
-                                      to: "/courses/edit/" + _vm.items.id
+                                      to: "/courses/show/" + _vm.items.id
                                     }
                                   },
                                   [

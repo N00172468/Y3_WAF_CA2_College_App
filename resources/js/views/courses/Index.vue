@@ -66,13 +66,13 @@
             <!-- View -->
             <el-col :span="8">
               <el-button
-                @click="`/courses/edit/${items.id}`"
-                index="`/courses/edit/${items.id}`"
+                @click="`/courses/show/${items.id}`"
+                index="`/courses/show/${items.id}`"
                 type="primary">
                   
                   <router-link 
                     style="text-decoration:none; color:white;" 
-                    :to="`/courses/edit/${items.id}`">
+                    :to="`/courses/show/${items.id}`">
                       <i class="el-icon-data-line"></i> View
                   </router-link>
               </el-button>
