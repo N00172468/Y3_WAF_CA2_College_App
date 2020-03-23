@@ -11,12 +11,16 @@ import CoursesEdit from './views/courses/Edit'
 import CoursesDelete from './views/courses/Delete'
 
 import LecturersIndex from './views/lecturers/Index'
-import LecturersEdit from './views/lecturers/Edit'
 import LecturersCreate from './views/lecturers/Create'
+import LecturersShow from './views/lecturers/Show'
+import LecturersEdit from './views/lecturers/Edit'
+import LecturersDelete from './views/lecturers/Delete'
 
 import EnrolmentsIndex from './views/enrolments/Index'
-import EnrolmentsEdit from './views/enrolments/Edit'
 import EnrolmentsCreate from './views/enrolments/Create'
+import EnrolmentsShow from './views/enrolments/Show'
+import EnrolmentsEdit from './views/enrolments/Edit'
+import EnrolmentsDelete from './views/enrolments/Delete'
 
 Vue.use(Router)
 
@@ -69,14 +73,24 @@ export default new Router({
       component: LecturersIndex
     },
     {
+      path: '/lecturers/create',
+      name: 'lecturersCreate',
+      component: LecturersCreate
+    },
+    {
       path: '/lecturers/edit/:id',
       name: 'lecturersEdit',
       component: LecturersEdit
     },
     {
-      path: '/lecturers/create',
-      name: 'lecturersCreate',
-      component: LecturersCreate
+      path: '/lecturers/show/:id',
+      name: 'lecturersShow',
+      component: LecturersShow
+    },
+    {
+      path: '/lecturers/delete/:id',
+      name: 'lecturersDelete',
+      component: LecturersDelete
     },
 
     // Enrolments
@@ -86,14 +100,24 @@ export default new Router({
       component: EnrolmentsIndex
     },
     {
+      path: '/enrolments/create',
+      name: 'enrolmentsCreate',
+      component: EnrolmentsCreate
+    },
+    {
       path: '/enrolments/edit/:id',
       name: 'enrolmentsEdit',
       component: EnrolmentsEdit
     },
     {
-      path: '/enrolments/create',
-      name: 'enrolmentsCreate',
-      component: EnrolmentsCreate
-    }
+      path: '/enrolments/show/:id',
+      name: 'enrolmentsShow',
+      component: EnrolmentsShow
+    },
+    {
+      path: '/enrolments/delete/:id',
+      name: 'enrolmentsDelete',
+      component: EnrolmentsDelete
+    },
   ]
 })
