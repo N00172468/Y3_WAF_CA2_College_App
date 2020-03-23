@@ -6,6 +6,7 @@ import Example from './views/Example'
 
 import CoursesIndex from './views/courses/Index'
 import CoursesEdit from './views/courses/Edit'
+import CoursesShow from './views/courses/Show'
 import CoursesCreate from './views/courses/Create'
 
 import LecturersIndex from './views/lecturers/Index'
