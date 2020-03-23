@@ -5510,6 +5510,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Delete__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Delete */ "./resources/js/views/enrolments/Delete.vue");
 //
 //
 //
@@ -5650,17 +5651,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5680,6 +5671,9 @@ __webpack_require__.r(__webpack_exports__);
     })["catch"](function (error) {
       console.log(error);
     });
+  },
+  components: {
+    Delete: _Delete__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -105174,12 +105168,12 @@ var render = function() {
                               "el-button",
                               {
                                 attrs: {
-                                  index: "`/enrolments/edit/${items.id}`",
+                                  index: "`/enrolments/show/${items.id}`",
                                   type: "primary"
                                 },
                                 on: {
                                   click: function($event) {
-                                    "/enrolments/edit/" + _vm.items.id
+                                    "/enrolments/show/" + _vm.items.id
                                   }
                                 }
                               },
@@ -105192,7 +105186,7 @@ var render = function() {
                                       color: "white"
                                     },
                                     attrs: {
-                                      to: "/enrolments/edit/" + _vm.items.id
+                                      to: "/enrolments/show/" + _vm.items.id
                                     }
                                   },
                                   [
@@ -105254,44 +105248,7 @@ var render = function() {
                           1
                         ),
                         _vm._v(" "),
-                        _c(
-                          "el-col",
-                          { attrs: { span: 8 } },
-                          [
-                            _c(
-                              "el-button",
-                              {
-                                attrs: {
-                                  index: "`/enrolments/edit/${items.id}`",
-                                  type: "danger",
-                                  circle: ""
-                                },
-                                on: {
-                                  click: function($event) {
-                                    "/enrolments/edit/" + _vm.items.id
-                                  }
-                                }
-                              },
-                              [
-                                _c(
-                                  "router-link",
-                                  {
-                                    staticStyle: {
-                                      "text-decoration": "none",
-                                      color: "white"
-                                    },
-                                    attrs: {
-                                      to: "/enrolments/edit/" + _vm.items.id
-                                    }
-                                  },
-                                  [_c("i", { staticClass: "el-icon-delete" })]
-                                )
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        )
+                        _c("el-col", { attrs: { span: 8 } }, [_c("Delete")], 1)
                       ]
                     ],
                     2
