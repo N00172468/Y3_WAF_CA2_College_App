@@ -5,14 +5,15 @@
         <!-- Card -->
         <el-card class="box-card">
         
-            <!-- Card Title and Edit Button -->
+            <!-- Card Title and Buttons -->
             <div>
-                <el-row :gutter="50">
-                    <el-col :span="20">
+                <el-row>
+                    <el-col :span="16">
                         <h1 style="text-transform:uppercase;">{{ course.title }}</h1>
                     </el-col>
 
-                    <el-col :span="4">
+                    <!-- Edit -->
+                    <el-col :span="7">
                         <el-button
                             style="float:right;"
                             type="warning">
@@ -21,6 +22,21 @@
                                 style="text-decoration:none; color:white;" 
                                 :to="`/courses/edit/${ course.id }`">
                                     <i class="el-icon-edit"></i> Edit
+                            </router-link>
+                        </el-button>
+                    </el-col>
+
+                    <!-- Delete -->
+                    <el-col :span="1">
+                        <el-button
+                            style="float:right;"
+                            type="danger"
+                            circle>
+
+                            <router-link
+                                style="text-decoration:none; color:white;" 
+                                :to="`/courses/edit/${ course.id }`">
+                                    <i class="el-icon-delete"></i>
                             </router-link>
                         </el-button>
                     </el-col>

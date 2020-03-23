@@ -4804,6 +4804,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -103993,9 +104009,8 @@ var render = function() {
               [
                 _c(
                   "el-row",
-                  { attrs: { gutter: 50 } },
                   [
-                    _c("el-col", { attrs: { span: 20 } }, [
+                    _c("el-col", { attrs: { span: 16 } }, [
                       _c(
                         "h1",
                         { staticStyle: { "text-transform": "uppercase" } },
@@ -104005,7 +104020,7 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "el-col",
-                      { attrs: { span: 4 } },
+                      { attrs: { span: 7 } },
                       [
                         _c(
                           "el-button",
@@ -104027,6 +104042,35 @@ var render = function() {
                                 _c("i", { staticClass: "el-icon-edit" }),
                                 _vm._v(" Edit\r\n                            ")
                               ]
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "el-col",
+                      { attrs: { span: 1 } },
+                      [
+                        _c(
+                          "el-button",
+                          {
+                            staticStyle: { float: "right" },
+                            attrs: { type: "danger", circle: "" }
+                          },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticStyle: {
+                                  "text-decoration": "none",
+                                  color: "white"
+                                },
+                                attrs: { to: "/courses/edit/" + _vm.course.id }
+                              },
+                              [_c("i", { staticClass: "el-icon-delete" })]
                             )
                           ],
                           1
