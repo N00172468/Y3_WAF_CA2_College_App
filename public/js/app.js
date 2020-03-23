@@ -5232,7 +5232,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  // props: ['id'],
+  data: function data() {
+    return {
+      enrolment: [],
+      show: true,
+      loggedIn: false
+    };
+  },
+  created: function created() {
+    if (localStorage.getItem('token')) {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+    }
+
+    var app = this;
+    var token = localStorage.getItem('token');
+    axios.get("/api/enrolments/".concat(app.$route.params.id), {
+      headers: {
+        Authorization: "Bearer " + token
+      }
+    }).then(function (response) {
+      app.course = response.data.data;
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  },
+  methods: {
+    open: function open() {
+      var _this = this;
+
+      this.$confirm('This will permanently delete the Enrolment. Continue?', 'Warning', {
+        confrimButtonText: 'OK',
+        cancelButtonText: 'Cancel',
+        type: 'warning'
+      }).then(function () {
+        axios["delete"]("/api/enrolments/".concat(_this.id));
+      }).then(function () {
+        // app.$router.push('/courses');
+        _this.$message({
+          type: 'success',
+          message: 'Delete Completed'
+        });
+      })["catch"](function () {
+        _this.$message({
+          type: 'info',
+          message: 'Delete cancelled'
+        });
+      });
+    }
+  }
+});
 
 /***/ }),
 
