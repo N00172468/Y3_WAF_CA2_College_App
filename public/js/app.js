@@ -4252,21 +4252,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  // props: ['id'],
+  data: function data() {
+    return {
+      course: [],
+      show: true,
+      loggedIn: false
+    };
+  },
+  created: function created() {
+    if (localStorage.getItem('token')) {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+    }
+
+    var app = this;
+    var token = localStorage.getItem('token');
+    axios.get("/api/courses/".concat(app.$route.params.id), {
+      headers: {
+        Authorization: "Bearer " + token
+      }
+    }).then(function (response) {
+      app.course = response.data.data;
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  },
   methods: {
     open: function open() {
       var _this = this;
 
-      this.$confirm('This will permanently delete the file. Continue?', 'Warning', {
+      this.$confirm('This will permanently delete the Course. Continue?', 'Warning', {
         confrimButtonText: 'OK',
         cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(function () {
+        axios["delete"]("/api/courses/".concat(_this.id));
+      }).then(function () {
+        // app.$router.push('/courses');
         _this.$message({
           type: 'success',
           message: 'Delete Completed'
