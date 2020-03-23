@@ -4245,7 +4245,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    open: function open() {
+      var _this = this;
+
+      this.$confirm('This will permanently delete the file. Continue?', 'Warning', {
+        confrimButtonText: 'OK',
+        cancelButtonText: 'Cancel',
+        type: 'warning'
+      }).then(function () {
+        _this.$message({
+          type: 'success',
+          message: 'Delete Completed'
+        });
+      })["catch"](function () {
+        _this.$message({
+          type: 'info',
+          message: 'Delete cancelled'
+        });
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -103474,7 +103508,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "el-button",
+    {
+      staticStyle: { float: "right" },
+      attrs: { type: "danger", circle: "" },
+      on: { click: _vm.open }
+    },
+    [_c("i", { staticClass: "el-icon-delete" })]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
