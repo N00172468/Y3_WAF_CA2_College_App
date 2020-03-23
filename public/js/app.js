@@ -6404,10 +6404,101 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Delete__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Delete */ "./resources/js/views/lecturers/Delete.vue");
 //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6434,6 +6525,9 @@ __webpack_require__.r(__webpack_exports__);
     })["catch"](function (error) {
       console.log(error);
     });
+  },
+  components: {
+    Delete: _Delete__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -105890,7 +105984,182 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "el-row",
+    { staticStyle: { width: "95%", margin: "auto" } },
+    [
+      _c(
+        "el-col",
+        { attrs: { span: 24, xs: 24, sm: 24, md: 24, lg: 24, xl: 24 } },
+        [
+          _c("el-card", { staticClass: "box-card" }, [
+            _c(
+              "div",
+              [
+                _c(
+                  "el-row",
+                  [
+                    _c("el-col", { attrs: { span: 16 } }, [
+                      _c(
+                        "h1",
+                        { staticStyle: { "text-transform": "uppercase" } },
+                        [_vm._v(_vm._s(_vm.lecture.name))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "el-col",
+                      { attrs: { span: 7 } },
+                      [
+                        _c(
+                          "el-button",
+                          {
+                            staticStyle: { float: "right" },
+                            attrs: { type: "warning" }
+                          },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticStyle: {
+                                  "text-decoration": "none",
+                                  color: "white"
+                                },
+                                attrs: { to: "/courses/edit/" + _vm.lecture.id }
+                              },
+                              [
+                                _c("i", { staticClass: "el-icon-edit" }),
+                                _vm._v(" Edit\r\n                            ")
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("el-col", { attrs: { span: 1 } }, [_c("Delete")], 1)
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              [
+                _c("el-divider", [
+                  _c(
+                    "span",
+                    { staticStyle: { color: "#409EFF", "font-size": "1.6em" } },
+                    [_vm._v("Address")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "el-row",
+                  { staticStyle: { padding: "1%" } },
+                  [
+                    _c("el-col", { attrs: { span: 24 } }, [
+                      _c("h4", { staticStyle: { "text-align": "center" } }, [
+                        _vm._v(_vm._s(_vm.lecture.address))
+                      ])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("el-divider", [
+                  _c(
+                    "span",
+                    { staticStyle: { color: "#409EFF", "font-size": "1.6em" } },
+                    [_vm._v("Email")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "el-row",
+                  { staticStyle: { padding: "1%" } },
+                  [
+                    _c("el-col", { attrs: { span: 24 } }, [
+                      _c("h4", { staticStyle: { "text-align": "center" } }, [
+                        _vm._v(_vm._s(_vm.lecture.email))
+                      ])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("el-divider", [
+                  _c(
+                    "span",
+                    { staticStyle: { color: "#409EFF", "font-size": "1.6em" } },
+                    [_vm._v("Phone Number")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "el-row",
+                  { staticStyle: { padding: "1%" } },
+                  [
+                    _c("el-col", { attrs: { span: 24 } }, [
+                      _c("h4", { staticStyle: { "text-align": "center" } }, [
+                        _vm._v(_vm._s(_vm.lecture.phone))
+                      ])
+                    ])
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "el-row",
+            [
+              _c(
+                "el-col",
+                { attrs: { span: 24 } },
+                [
+                  _c(
+                    "el-button",
+                    {
+                      staticStyle: { width: "100%" },
+                      attrs: { type: "primary" }
+                    },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticStyle: {
+                            "text-decoration": "none",
+                            color: "white"
+                          },
+                          attrs: { to: "/lecturers" }
+                        },
+                        [
+                          _c("i", { staticClass: "el-icon-s-custom" }),
+                          _vm._v(" Show More Lecturers\r\n                    ")
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
