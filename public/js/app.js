@@ -121229,7 +121229,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_enrolments_Create__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/enrolments/Create */ "./resources/js/views/enrolments/Create.vue");
 /* harmony import */ var _views_enrolments_Show__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/enrolments/Show */ "./resources/js/views/enrolments/Show.vue");
 /* harmony import */ var _views_enrolments_Edit__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./views/enrolments/Edit */ "./resources/js/views/enrolments/Edit.vue");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './views/enrolments/Delete'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _views_enrolments_Delete__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./views/enrolments/Delete */ "./resources/js/views/enrolments/Delete.vue");
 
 
 
@@ -121323,7 +121323,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, {
     path: '/enrolments/delete/:id',
     name: 'enrolmentsDelete',
-    component: !(function webpackMissingModule() { var e = new Error("Cannot find module './views/enrolments/Delete'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    component: _views_enrolments_Delete__WEBPACK_IMPORTED_MODULE_19__["default"]
   }]
 }));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
@@ -121879,6 +121879,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Create_vue_vue_type_template_id_60c7c02d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/views/enrolments/Delete.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/views/enrolments/Delete.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/views/enrolments/Delete.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
