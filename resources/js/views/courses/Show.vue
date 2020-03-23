@@ -28,7 +28,8 @@
 
                     <!-- Delete -->
                     <el-col :span="1">
-                        <el-button
+                        <Delete />
+                        <!-- <el-button
                             style="float:right;"
                             type="danger"
                             circle>
@@ -38,7 +39,7 @@
                                 :to="`/courses/edit/${ course.id }`">
                                     <i class="el-icon-delete"></i>
                             </router-link>
-                        </el-button>
+                        </el-button> -->
                     </el-col>
                 </el-row>
             </div>
@@ -117,6 +118,8 @@
 </template>
 
 <script>
+import Delete from './Delete'
+
 export default {
     data() {
         return {
@@ -147,5 +150,9 @@ export default {
             console.log(error);
         });
     },
+
+    components: {
+        Delete
+    }
 }
 </script>
