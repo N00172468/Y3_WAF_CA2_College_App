@@ -45,6 +45,11 @@ export default new Router({
       component: CoursesEdit
     },
     {
+      path: '/courses/show/:id',
+      name: 'coursesShow',
+      component: CoursesShow
+    },
+    {
       path: '/courses/create',
       name: 'coursesCreate',
       component: CoursesCreate

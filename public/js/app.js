@@ -120819,6 +120819,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     name: 'coursesEdit',
     component: _views_courses_Edit__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
+    path: '/courses/show/:id',
+    name: 'coursesShow',
+    component: CoursesShow
+  }, {
     path: '/courses/create',
     name: 'coursesCreate',
     component: _views_courses_Create__WEBPACK_IMPORTED_MODULE_6__["default"]
