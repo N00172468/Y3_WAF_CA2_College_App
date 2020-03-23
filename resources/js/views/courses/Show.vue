@@ -29,17 +29,6 @@
                     <!-- Delete -->
                     <el-col :span="1">
                         <Delete />
-                        <!-- <el-button
-                            style="float:right;"
-                            type="danger"
-                            circle>
-
-                            <router-link
-                                style="text-decoration:none; color:white;" 
-                                :to="`/courses/edit/${ course.id }`">
-                                    <i class="el-icon-delete"></i>
-                            </router-link>
-                        </el-button> -->
                     </el-col>
                 </el-row>
             </div>

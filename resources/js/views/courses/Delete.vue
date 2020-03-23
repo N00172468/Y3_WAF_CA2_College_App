@@ -1,7 +1,6 @@
 <template>
     <el-button
         @click="open"
-        style="float:right;"
         type="danger"
         circle>
 

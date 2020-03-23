@@ -95,18 +95,7 @@
 
             <!-- Delete -->
             <el-col :span="8">
-              <el-button
-                @click="`/courses/edit/${items.id}`"
-                index="`/courses/edit/${items.id}`"
-                type="danger"
-                circle>
-                  
-                  <router-link 
-                    style="text-decoration:none; color:white;" 
-                    :to="`/courses/edit/${items.id}`">
-                      <i class="el-icon-delete"></i>
-                  </router-link>
-              </el-button>
+              <Delete/>
             </el-col>
           </template>
         </el-table-column>
@@ -146,6 +135,8 @@
 </template>
 
 <script>
+import Delete from './Delete'
+
 export default {
   data() {
     return {
@@ -169,8 +160,8 @@ export default {
     })
   },
 
-  methods: {
-
+  components: {
+    Delete
   }
 }
 </script>

@@ -4251,7 +4251,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   // props: ['id'],
   data: function data() {
@@ -4597,6 +4596,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Delete__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Delete */ "./resources/js/views/courses/Delete.vue");
 //
 //
 //
@@ -4733,17 +4733,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4764,7 +4754,9 @@ __webpack_require__.r(__webpack_exports__);
       console.log(error);
     });
   },
-  methods: {}
+  components: {
+    Delete: _Delete__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
 });
 
 /***/ }),
@@ -4779,17 +4771,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Delete__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Delete */ "./resources/js/views/courses/Delete.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -103541,11 +103522,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "el-button",
-    {
-      staticStyle: { float: "right" },
-      attrs: { type: "danger", circle: "" },
-      on: { click: _vm.open }
-    },
+    { attrs: { type: "danger", circle: "" }, on: { click: _vm.open } },
     [_c("i", { staticClass: "el-icon-delete" })]
   )
 }
@@ -104032,44 +104009,7 @@ var render = function() {
                           1
                         ),
                         _vm._v(" "),
-                        _c(
-                          "el-col",
-                          { attrs: { span: 8 } },
-                          [
-                            _c(
-                              "el-button",
-                              {
-                                attrs: {
-                                  index: "`/courses/edit/${items.id}`",
-                                  type: "danger",
-                                  circle: ""
-                                },
-                                on: {
-                                  click: function($event) {
-                                    "/courses/edit/" + _vm.items.id
-                                  }
-                                }
-                              },
-                              [
-                                _c(
-                                  "router-link",
-                                  {
-                                    staticStyle: {
-                                      "text-decoration": "none",
-                                      color: "white"
-                                    },
-                                    attrs: {
-                                      to: "/courses/edit/" + _vm.items.id
-                                    }
-                                  },
-                                  [_c("i", { staticClass: "el-icon-delete" })]
-                                )
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        )
+                        _c("el-col", { attrs: { span: 8 } }, [_c("Delete")], 1)
                       ]
                     ],
                     2
