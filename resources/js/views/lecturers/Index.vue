@@ -62,13 +62,13 @@
                         <!-- View -->
                         <el-col :span="8">
                             <el-button
-                                @click="`/lecturers/edit/${items.id}`"
-                                index="`/lecturers/edit/${items.id}`"
+                                @click="`/lecturers/show/${items.id}`"
+                                index="`/lecturers/show/${items.id}`"
                                 type="primary">
                                 
                                 <router-link 
                                     style="text-decoration:none; color:white;" 
-                                    :to="`/lecturers/edit/${items.id}`">
+                                    :to="`/lecturers/show/${items.id}`">
                                     <i class="el-icon-data-line"></i> View
                                 </router-link>
                             </el-button>
@@ -91,18 +91,7 @@
 
                         <!-- Delete -->
                         <el-col :span="8">
-                            <el-button
-                                @click="`/lecturers/edit/${items.id}`"
-                                index="`/lecturers/edit/${items.id}`"
-                                type="danger"
-                                circle>
-                                
-                                <router-link 
-                                    style="text-decoration:none; color:white;" 
-                                    :to="`/lecturers/edit/${items.id}`">
-                                    <i class="el-icon-delete"></i>
-                                </router-link>
-                            </el-button>
+                            <Delete />
                         </el-col>
                     </template>
                 </el-table-column>
@@ -142,6 +131,8 @@
 </template>
 
 <script>
+import Delete from './Delete'
+
 export default {
     data() {
         return {
@@ -164,6 +155,10 @@ export default {
         .catch(function (error) {
             console.log(error);
         })
+    },
+
+    components: {
+        Delete
     }
 }
 </script>

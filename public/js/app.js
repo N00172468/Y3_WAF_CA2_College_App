@@ -6234,6 +6234,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Delete__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Delete */ "./resources/js/views/lecturers/Delete.vue");
 //
 //
 //
@@ -6366,17 +6367,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6396,6 +6387,9 @@ __webpack_require__.r(__webpack_exports__);
     })["catch"](function (error) {
       console.log(error);
     });
+  },
+  components: {
+    Delete: _Delete__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -105732,12 +105726,12 @@ var render = function() {
                               "el-button",
                               {
                                 attrs: {
-                                  index: "`/lecturers/edit/${items.id}`",
+                                  index: "`/lecturers/show/${items.id}`",
                                   type: "primary"
                                 },
                                 on: {
                                   click: function($event) {
-                                    "/lecturers/edit/" + _vm.items.id
+                                    "/lecturers/show/" + _vm.items.id
                                   }
                                 }
                               },
@@ -105750,7 +105744,7 @@ var render = function() {
                                       color: "white"
                                     },
                                     attrs: {
-                                      to: "/lecturers/edit/" + _vm.items.id
+                                      to: "/lecturers/show/" + _vm.items.id
                                     }
                                   },
                                   [
@@ -105812,44 +105806,7 @@ var render = function() {
                           1
                         ),
                         _vm._v(" "),
-                        _c(
-                          "el-col",
-                          { attrs: { span: 8 } },
-                          [
-                            _c(
-                              "el-button",
-                              {
-                                attrs: {
-                                  index: "`/lecturers/edit/${items.id}`",
-                                  type: "danger",
-                                  circle: ""
-                                },
-                                on: {
-                                  click: function($event) {
-                                    "/lecturers/edit/" + _vm.items.id
-                                  }
-                                }
-                              },
-                              [
-                                _c(
-                                  "router-link",
-                                  {
-                                    staticStyle: {
-                                      "text-decoration": "none",
-                                      color: "white"
-                                    },
-                                    attrs: {
-                                      to: "/lecturers/edit/" + _vm.items.id
-                                    }
-                                  },
-                                  [_c("i", { staticClass: "el-icon-delete" })]
-                                )
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        )
+                        _c("el-col", { attrs: { span: 8 } }, [_c("Delete")], 1)
                       ]
                     ],
                     2
