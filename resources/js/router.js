@@ -5,9 +5,10 @@ import Index from './views/Index'
 import Example from './views/Example'
 
 import CoursesIndex from './views/courses/Index'
-import CoursesEdit from './views/courses/Edit'
-import CoursesShow from './views/courses/Show'
 import CoursesCreate from './views/courses/Create'
+import CoursesShow from './views/courses/Show'
+import CoursesEdit from './views/courses/Edit'
+import CoursesDelete from './views/courses/Delete'
 
 import LecturersIndex from './views/lecturers/Index'
 import LecturersEdit from './views/lecturers/Edit'
@@ -41,6 +42,11 @@ export default new Router({
       component: CoursesIndex
     },
     {
+      path: '/courses/create',
+      name: 'coursesCreate',
+      component: CoursesCreate
+    },
+    {
       path: '/courses/edit/:id',
       name: 'coursesEdit',
       component: CoursesEdit
@@ -51,9 +57,9 @@ export default new Router({
       component: CoursesShow
     },
     {
-      path: '/courses/create',
-      name: 'coursesCreate',
-      component: CoursesCreate
+      path: '/courses/delete/:id',
+      name: 'coursesDelete',
+      component: CoursesDelete
     },
 
     // Lecturers
