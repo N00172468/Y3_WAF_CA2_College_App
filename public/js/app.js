@@ -4706,6 +4706,104 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -103881,7 +103979,210 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "el-row",
+    { staticStyle: { margin: "auto" } },
+    [
+      _c(
+        "el-col",
+        { attrs: { span: 24, xs: 24, sm: 24, md: 24, lg: 24, xl: 24 } },
+        [
+          _c("el-card", { staticClass: "box-card" }, [
+            _c(
+              "div",
+              [
+                _c(
+                  "el-row",
+                  { attrs: { gutter: 50 } },
+                  [
+                    _c("el-col", { attrs: { span: 20 } }, [
+                      _c(
+                        "h1",
+                        { staticStyle: { "text-transform": "uppercase" } },
+                        [_vm._v(_vm._s(_vm.course.title))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "el-col",
+                      { attrs: { span: 4 } },
+                      [
+                        _c(
+                          "el-button",
+                          {
+                            staticStyle: { float: "right" },
+                            attrs: { type: "warning" }
+                          },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticStyle: {
+                                  "text-decoration": "none",
+                                  color: "white"
+                                },
+                                attrs: { to: "/courses/edit/" + _vm.course.id }
+                              },
+                              [
+                                _c("i", { staticClass: "el-icon-edit" }),
+                                _vm._v(" Edit\r\n                            ")
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              [
+                _c("el-divider", [
+                  _c(
+                    "span",
+                    { staticStyle: { color: "#409EFF", "font-size": "1.6em" } },
+                    [_vm._v("Code")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "el-row",
+                  { staticStyle: { padding: "1%" } },
+                  [
+                    _c("el-col", { attrs: { span: 24 } }, [
+                      _c("h4", { staticStyle: { "text-align": "center" } }, [
+                        _vm._v(_vm._s(_vm.course.code))
+                      ])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("el-divider", [
+                  _c(
+                    "span",
+                    { staticStyle: { color: "#409EFF", "font-size": "1.6em" } },
+                    [_vm._v("Description")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "el-row",
+                  { staticStyle: { padding: "1.5%" } },
+                  [
+                    _c("el-col", { attrs: { span: 24 } }, [
+                      _c("h5", { staticStyle: { "text-align": "center" } }, [
+                        _vm._v(_vm._s(_vm.course.description))
+                      ])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("el-divider", [
+                  _c(
+                    "span",
+                    { staticStyle: { color: "#409EFF", "font-size": "1.6em" } },
+                    [_vm._v("Points")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "el-row",
+                  { staticStyle: { padding: "1.5%" } },
+                  [
+                    _c("el-col", { attrs: { span: 24 } }, [
+                      _c("h4", { staticStyle: { "text-align": "center" } }, [
+                        _vm._v(
+                          "\r\n                            " +
+                            _vm._s(_vm.course.points) +
+                            "\r\n                        "
+                        )
+                      ])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("el-divider", [
+                  _c(
+                    "span",
+                    { staticStyle: { color: "#409EFF", "font-size": "1.6em" } },
+                    [_vm._v("Level")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "el-row",
+                  { staticStyle: { padding: "1.5%" } },
+                  [
+                    _c("el-col", { attrs: { span: 24 } }, [
+                      _c("h4", { staticStyle: { "text-align": "center" } }, [
+                        _vm._v(
+                          "\r\n                            " +
+                            _vm._s(_vm.course.level) +
+                            "\r\n                        "
+                        )
+                      ])
+                    ])
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "el-row",
+            [
+              _c(
+                "el-col",
+                { attrs: { span: 24 } },
+                [
+                  _c(
+                    "el-button",
+                    {
+                      staticStyle: { width: "100%" },
+                      attrs: { type: "primary" }
+                    },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticStyle: {
+                            "text-decoration": "none",
+                            color: "white"
+                          },
+                          attrs: { to: "/courses" }
+                        },
+                        [
+                          _c("i", { staticClass: "el-icon-s-management" }),
+                          _vm._v(" Show More Courses\r\n                    ")
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
