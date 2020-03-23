@@ -1,5 +1,11 @@
 <template>
-    
+    <el-button
+        @click="open"
+        type="danger"
+        circle>
+
+        <i class="el-icon-delete"></i>
+    </el-button>
 </template>
 
 <script>
