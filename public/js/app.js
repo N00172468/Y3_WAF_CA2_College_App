@@ -3738,6 +3738,10 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     handleSelect: function handleSelect(key, keyPath) {
       console.log(key, keyPath);
+    },
+    logout: function logout() {
+      localStorage.removeItem('token');
+      console.log("Logged Out");
     }
   }
 });

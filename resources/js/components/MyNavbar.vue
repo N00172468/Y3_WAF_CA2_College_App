@@ -143,9 +143,15 @@
 <script>
 export default {
   name: "myNavbar",
+
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
+    },
+
+    logout() {
+      localStorage.removeItem('token');
+      console.log("Logged Out");
     }
   }
 };
