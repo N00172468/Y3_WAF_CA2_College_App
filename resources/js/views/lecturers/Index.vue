@@ -58,17 +58,15 @@
                     width="300"
                     router="true">
 
-                    <template>
+                    <template slot-scope="scope">
                         <!-- View -->
                         <el-col :span="8">
                             <el-button
-                                @click="`/lecturers/show/${items.id}`"
-                                index="`/lecturers/show/${items.id}`"
                                 type="primary">
                                 
                                 <router-link 
                                     style="text-decoration:none; color:white;" 
-                                    :to="`/lecturers/show/${items.id}`">
+                                    :to="`/lecturers/show/${scope.row.id}`">
                                     <i class="el-icon-data-line"></i> View
                                 </router-link>
                             </el-button>
@@ -77,13 +75,11 @@
                         <!-- Edit -->
                         <el-col :span="8">
                             <el-button
-                                @click="`/lecturers/edit/${items.id}`"
-                                index="`/lecturers/edit/${items.id}`"
                                 type="warning">
                                 
                                 <router-link 
                                     style="text-decoration:none; color:white;" 
-                                    :to="`/lecturers/edit/${items.id}`">
+                                    :to="`/lecturers/edit/${scope.row.id}`">
                                     <i class="el-icon-edit"></i> Edit
                                 </router-link>
                             </el-button>
@@ -91,7 +87,7 @@
 
                         <!-- Delete -->
                         <el-col :span="8">
-                            <Delete />
+                            <Delete v-bind:id="scope.row.id" />
                         </el-col>
                     </template>
                 </el-table-column>
