@@ -3872,14 +3872,100 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'index',
-  components: {},
   data: function data() {
     return {
       form: {
         email: "",
         password: ""
+      },
+      rules: {
+        email: [{
+          required: true,
+          message: 'Please input Email',
+          trigger: 'blur'
+        }],
+        password: [{
+          required: true,
+          message: 'Please input Password',
+          trigger: 'blur'
+        }]
       },
       loggedIn: false
     };
@@ -3906,7 +3992,8 @@ __webpack_require__.r(__webpack_exports__);
         console.log(error);
       });
     }
-  }
+  },
+  components: {}
 });
 
 /***/ }),
@@ -103545,80 +103632,158 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "el-row",
+    { staticStyle: { margin: "auto" } },
     [
-      _vm.loggedIn
-        ? _c("h1", [_vm._v("You are Logged In!")])
-        : _c(
-            "b-form",
-            { on: { submit: _vm.onSubmit } },
-            [
-              _c(
-                "b-form-group",
-                {
-                  attrs: {
-                    id: "input-group-1",
-                    label: "Email",
-                    "label-for": "input-1"
-                  }
-                },
+      _c(
+        "el-col",
+        { attrs: { span: 24, xs: 24, sm: 24, md: 24, lg: 24, xl: 24 } },
+        [
+          _vm.loggedIn
+            ? _c("h1", [_vm._v("Log In, Complete")])
+            : _c(
+                "el-card",
+                { staticClass: "box-card", on: { submit: _vm.onSubmit } },
                 [
-                  _c("b-form-input", {
-                    attrs: {
-                      id: "input-1",
-                      type: "email",
-                      placeholder: "Email",
-                      required: ""
+                  _c(
+                    "div",
+                    {
+                      staticClass: "clearfix",
+                      attrs: { slot: "header" },
+                      slot: "header"
                     },
-                    model: {
-                      value: _vm.form.email,
-                      callback: function($$v) {
-                        _vm.$set(_vm.form, "email", $$v)
-                      },
-                      expression: "form.email"
-                    }
-                  })
+                    [_c("span", [_vm._v("Log In")])]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-form",
+                    {
+                      ref: "form",
+                      staticClass: "demo-ruleForm",
+                      attrs: { model: _vm.form, rules: _vm.rules },
+                      on: { submit: _vm.onSubmit }
+                    },
+                    [
+                      _c(
+                        "el-row",
+                        [
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-1",
+                                    "label-for": "input-1",
+                                    prop: "email",
+                                    label: "Email"
+                                  }
+                                },
+                                [
+                                  _c("el-input", {
+                                    attrs: {
+                                      id: "input-1",
+                                      type: "email",
+                                      placeholder: "Email"
+                                    },
+                                    model: {
+                                      value: _vm.form.email,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.form, "email", $$v)
+                                      },
+                                      expression: "form.email"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "el-row",
+                        [
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                {
+                                  attrs: {
+                                    id: "input-group-2",
+                                    "label-for": "input-2",
+                                    prop: "password",
+                                    label: "Password"
+                                  }
+                                },
+                                [
+                                  _c("el-input", {
+                                    attrs: {
+                                      id: "input-2",
+                                      type: "password",
+                                      placeholder: "Password"
+                                    },
+                                    model: {
+                                      value: _vm.form.password,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.form, "password", $$v)
+                                      },
+                                      expression: "form.password"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "el-row",
+                        [
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c(
+                                "el-form-item",
+                                [
+                                  _c(
+                                    "el-button",
+                                    {
+                                      attrs: { type: "primary" },
+                                      on: { click: _vm.onSubmit }
+                                    },
+                                    [_vm._v("Log In")]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-form-group",
-                {
-                  attrs: {
-                    id: "input-group-2",
-                    label: "Password",
-                    "label-for": "input-2"
-                  }
-                },
-                [
-                  _c("b-form-input", {
-                    attrs: {
-                      id: "input-2",
-                      type: "password",
-                      placeholder: "Password",
-                      required: ""
-                    },
-                    model: {
-                      value: _vm.form.password,
-                      callback: function($$v) {
-                        _vm.$set(_vm.form, "password", $$v)
-                      },
-                      expression: "form.password"
-                    }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-button",
-                { attrs: { type: "submit", variant: "primary" } },
-                [_vm._v("\r\n        Submit\r\n    ")]
               )
-            ],
-            1
-          )
+        ],
+        1
+      )
     ],
     1
   )

@@ -1,10 +1,85 @@
 <template>
-<div>
-  <h1 v-if="loggedIn">You are Logged In!</h1>
+<el-row style="margin:auto;">
+  <el-col :span="24" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+
+    <h1 v-if="loggedIn">Log In, Complete</h1>
+
+    <!-- Card -->
+    <el-card v-else @submit="onSubmit" class="box-card">
+
+      <!-- Card Title -->
+      <div slot="header" class="clearfix">
+        <span>Log In</span>
+      </div>
+
+      <!-- Form -->
+      <el-form 
+        @submit="onSubmit"
+        :model="form" 
+        :rules="rules"
+        ref="form" 
+        class="demo-ruleForm">
+      
+        <!-- Row 1 -->
+        <el-row>
+          <!-- Email -->
+          <el-col :span="24">
+            <el-form-item 
+              id="input-group-1"
+              label-for="input-1" 
+              prop="email" 
+              label="Email">
+              
+              <el-input 
+                id="input-1"
+                type="email"
+                placeholder="Email" 
+                v-model="form.email">
+              </el-input>
+            </el-form-item>
+          </el-col>
+        </el-row>
+
+        <!-- Row 2 -->
+        <el-row>
+          <!-- Email -->
+          <el-col :span="24">
+            <el-form-item 
+              id="input-group-2"
+              label-for="input-2" 
+              prop="password" 
+              label="Password">
+              
+              <el-input 
+                id="input-2"
+                type="password"
+                placeholder="Password" 
+                v-model="form.password">
+              </el-input>
+            </el-form-item>
+          </el-col>
+        </el-row>
+
+        <!-- Row 3 -->
+        <el-row>
+          <el-col :span="24">
+            <el-form-item>
+              <el-button @click="onSubmit" type="primary">Log In</el-button>
+            </el-form-item>
+          </el-col>
+        </el-row>
+      </el-form>
+
+    </el-card>
+
+  </el-col>
+</el-row>
+<!-- <h1> -->
+  <!-- <h1 v-if="loggedIn">You are Logged In!</!--> 
   
-  <b-form v-else @submit="onSubmit">
+  <!-- <b-form v-else @submit="onSubmit"> -->
     <!-- Email -->
-    <b-form-group 
+    <!-- <b-form-group 
         id="input-group-1" 
         label="Email" 
         label-for="input-1">
@@ -16,10 +91,10 @@
             placeholder="Email"
             required>
         </b-form-input>
-    </b-form-group>
+    </b-form-group> -->
 
     <!-- Password -->
-    <b-form-group 
+    <!-- <b-form-group 
         id="input-group-2" 
         label="Password" 
         label-for="input-2">
@@ -31,31 +106,46 @@
             placeholder="Password"
             required>
         </b-form-input>
-    </b-form-group>
+    </b-form-group> -->
 
     <!-- Submit Button -->
-    <b-button type="submit" variant="primary">
+    <!-- <b-button type="submit" variant="primary">
         Submit
-    </b-button>
-  </b-form>
-</div>
+    </!-->
+  <!-- </b-form>
+</div> --> 
 </template>
 
 <script>
 export default {
   name: 'index',
-  components: {
 
-  },
   data() {
     return {
       form: {
         email: "",
         password: ""
       },
+      rules: {
+        email: [
+          {
+            required: true,
+            message: 'Please input Email',
+            trigger: 'blur'
+          }
+        ],
+        password: [
+          {
+            required: true,
+            message: 'Please input Password',
+            trigger: 'blur'
+          }
+        ]
+      },
       loggedIn: false
     }
   },
+
   created() {
     if(localStorage.getItem('token')) {
       this.loggedIn = true;
@@ -64,6 +154,7 @@ export default {
       app.$router.push('/');
     }
   },
+
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
@@ -82,6 +173,10 @@ export default {
         console.log(error);
       })
     }
+  },
+
+  components: {
+
   }
 }
 </script>
