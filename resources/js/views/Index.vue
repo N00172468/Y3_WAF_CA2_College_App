@@ -1,5 +1,5 @@
 <template>
-<el-row style="width:97%; margin:auto;">
+<el-row style="width:98%; margin:auto;">
   <el-col :span="24" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
 
     <h1 v-if="loggedIn">Log In, Complete</h1>
