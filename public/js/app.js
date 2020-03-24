@@ -103633,7 +103633,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "el-row",
-    { staticStyle: { margin: "auto" } },
+    { staticStyle: { width: "50%", margin: "auto" } },
     [
       _c(
         "el-col",
