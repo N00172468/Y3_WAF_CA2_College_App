@@ -61,18 +61,16 @@
           label="Operations"
           width="300"
           router="true">
-
-          <template>
+ 
+          <template slot-scope="scope">
             <!-- View -->
             <el-col :span="8">
               <el-button
-                @click="`/courses/show/${items.id}`"
-                index="`/courses/show/${items.id}`"
                 type="primary">
                   
                   <router-link 
                     style="text-decoration:none; color:white;" 
-                    :to="`/courses/show/${items.id}`">
+                    :to="`/courses/show/${scope.row.id}`">
                       <i class="el-icon-data-line"></i> View
                   </router-link>
               </el-button>
@@ -81,13 +79,11 @@
             <!-- Edit -->
             <el-col :span="8">
               <el-button
-                @click="`/courses/edit/${items.id}`"
-                index="`/courses/edit/${items.id}`"
                 type="warning">
                   
                   <router-link 
                     style="text-decoration:none; color:white;" 
-                    :to="`/courses/edit/${items.id}`">
+                    :to="`/courses/edit/${scope.row.id}`">
                       <i class="el-icon-edit"></i> Edit
                   </router-link>
               </el-button>
@@ -95,7 +91,7 @@
 
             <!-- Delete -->
             <el-col :span="8">
-              <Delete/>
+              <Delete v-bind:id="scope.row.id" />
             </el-col>
           </template>
         </el-table-column>
@@ -144,7 +140,7 @@ export default {
     }
   },
 
-  created(){
+  mounted(){
     let app = this;
     let token = localStorage.getItem('token');
     

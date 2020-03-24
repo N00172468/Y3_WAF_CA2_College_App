@@ -4252,7 +4252,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  // props: ['id'],
+  props: ['id'],
   data: function data() {
     return {
       course: [],
@@ -4261,23 +4261,23 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    if (localStorage.getItem('token')) {
-      this.loggedIn = true;
-    } else {
-      this.loggedIn = false;
-    }
-
-    var app = this;
-    var token = localStorage.getItem('token');
-    axios.get("/api/courses/".concat(app.$route.params.id), {
-      headers: {
-        Authorization: "Bearer " + token
-      }
-    }).then(function (response) {
-      app.course = response.data.data;
-    })["catch"](function (error) {
-      console.log(error);
-    });
+    console.log("Delete component!", this.id); // if (localStorage.getItem('token')) {
+    //     this.loggedIn = true;
+    // }
+    // else {
+    //     this.loggedIn = false;
+    // }
+    // let app = this;
+    // let token = localStorage.getItem('token');
+    // axios.get(`/api/courses/${app.$route.params.id}`, {
+    //     headers: { Authorization: "Bearer " + token }
+    // })
+    // .then(function (response) {
+    //     app.course = response.data.data;
+    // })
+    // .catch(function (error) {
+    //     console.log(error);
+    // });
   },
   methods: {
     open: function open() {
@@ -4729,10 +4729,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -4740,7 +4736,7 @@ __webpack_require__.r(__webpack_exports__);
       items: []
     };
   },
-  created: function created() {
+  mounted: function mounted() {
     var app = this;
     var token = localStorage.getItem('token');
     axios.get('/api/courses', {
@@ -104338,107 +104334,95 @@ var render = function() {
                     attrs: { prop: "level", label: "Level", width: "60" }
                   }),
                   _vm._v(" "),
-                  _c(
-                    "el-table-column",
-                    {
-                      attrs: {
-                        fixed: "right",
-                        label: "Operations",
-                        width: "300",
-                        router: "true"
-                      }
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "right",
+                      label: "Operations",
+                      width: "300",
+                      router: "true"
                     },
-                    [
-                      [
-                        _c(
-                          "el-col",
-                          { attrs: { span: 8 } },
-                          [
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function(scope) {
+                          return [
                             _c(
-                              "el-button",
-                              {
-                                attrs: {
-                                  index: "`/courses/show/${items.id}`",
-                                  type: "primary"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    "/courses/show/" + _vm.items.id
-                                  }
-                                }
-                              },
+                              "el-col",
+                              { attrs: { span: 8 } },
                               [
                                 _c(
-                                  "router-link",
-                                  {
-                                    staticStyle: {
-                                      "text-decoration": "none",
-                                      color: "white"
-                                    },
-                                    attrs: {
-                                      to: "/courses/show/" + _vm.items.id
-                                    }
-                                  },
+                                  "el-button",
+                                  { attrs: { type: "primary" } },
                                   [
-                                    _c("i", {
-                                      staticClass: "el-icon-data-line"
-                                    }),
-                                    _vm._v(" View\r\n                  ")
-                                  ]
+                                    _c(
+                                      "router-link",
+                                      {
+                                        staticStyle: {
+                                          "text-decoration": "none",
+                                          color: "white"
+                                        },
+                                        attrs: {
+                                          to: "/courses/show/" + scope.row.id
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "el-icon-data-line"
+                                        }),
+                                        _vm._v(" View\r\n                  ")
+                                      ]
+                                    )
+                                  ],
+                                  1
                                 )
                               ],
                               1
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "el-col",
-                          { attrs: { span: 8 } },
-                          [
+                            ),
+                            _vm._v(" "),
                             _c(
-                              "el-button",
-                              {
-                                attrs: {
-                                  index: "`/courses/edit/${items.id}`",
-                                  type: "warning"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    "/courses/edit/" + _vm.items.id
-                                  }
-                                }
-                              },
+                              "el-col",
+                              { attrs: { span: 8 } },
                               [
                                 _c(
-                                  "router-link",
-                                  {
-                                    staticStyle: {
-                                      "text-decoration": "none",
-                                      color: "white"
-                                    },
-                                    attrs: {
-                                      to: "/courses/edit/" + _vm.items.id
-                                    }
-                                  },
+                                  "el-button",
+                                  { attrs: { type: "warning" } },
                                   [
-                                    _c("i", { staticClass: "el-icon-edit" }),
-                                    _vm._v(" Edit\r\n                  ")
-                                  ]
+                                    _c(
+                                      "router-link",
+                                      {
+                                        staticStyle: {
+                                          "text-decoration": "none",
+                                          color: "white"
+                                        },
+                                        attrs: {
+                                          to: "/courses/edit/" + scope.row.id
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "el-icon-edit"
+                                        }),
+                                        _vm._v(" Edit\r\n                  ")
+                                      ]
+                                    )
+                                  ],
+                                  1
                                 )
                               ],
                               1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "el-col",
+                              { attrs: { span: 8 } },
+                              [_c("Delete", { attrs: { id: scope.row.id } })],
+                              1
                             )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("el-col", { attrs: { span: 8 } }, [_c("Delete")], 1)
-                      ]
-                    ],
-                    2
-                  )
+                          ]
+                        }
+                      }
+                    ])
+                  })
                 ],
                 1
               )
