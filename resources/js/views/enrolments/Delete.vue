@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    // props: ['id'],
+    props: ['id'],
 
     data() {
         return {
@@ -21,25 +21,26 @@ export default {
     },
 
     created() {
-        if (localStorage.getItem('token')) {
-            this.loggedIn = true;
-        }
-        else {
-            this.loggedIn = false;
-        }
+        // console.log("Delete component!", this.id)
+        // if (localStorage.getItem('token')) {
+        //     this.loggedIn = true;
+        // }
+        // else {
+        //     this.loggedIn = false;
+        // }
 
-        let app = this;
-        let token = localStorage.getItem('token');
+        // let app = this;
+        // let token = localStorage.getItem('token');
         
-        axios.get(`/api/enrolments/${app.$route.params.id}`, {
-            headers: { Authorization: "Bearer " + token }
-        })
-        .then(function (response) {
-            app.course = response.data.data;
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+        // axios.get(`/api/enrolments/${app.$route.params.id}`, {
+        //     headers: { Authorization: "Bearer " + token }
+        // })
+        // .then(function (response) {
+        //     app.course = response.data.data;
+        // })
+        // .catch(function (error) {
+        //     console.log(error);
+        // });
     },
 
     methods: {

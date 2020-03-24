@@ -21,7 +21,7 @@ export default {
     },
 
     created() {
-        console.log("Delete component!", this.id)
+        // console.log("Delete component!", this.id)
         // if (localStorage.getItem('token')) {
         //     this.loggedIn = true;
         // }

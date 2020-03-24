@@ -4260,8 +4260,8 @@ __webpack_require__.r(__webpack_exports__);
       loggedIn: false
     };
   },
-  created: function created() {
-    console.log("Delete component!", this.id); // if (localStorage.getItem('token')) {
+  created: function created() {// console.log("Delete component!", this.id)
+    // if (localStorage.getItem('token')) {
     //     this.loggedIn = true;
     // }
     // else {
@@ -5235,7 +5235,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  // props: ['id'],
+  props: ['id'],
   data: function data() {
     return {
       enrolment: [],
@@ -5243,24 +5243,24 @@ __webpack_require__.r(__webpack_exports__);
       loggedIn: false
     };
   },
-  created: function created() {
-    if (localStorage.getItem('token')) {
-      this.loggedIn = true;
-    } else {
-      this.loggedIn = false;
-    }
-
-    var app = this;
-    var token = localStorage.getItem('token');
-    axios.get("/api/enrolments/".concat(app.$route.params.id), {
-      headers: {
-        Authorization: "Bearer " + token
-      }
-    }).then(function (response) {
-      app.course = response.data.data;
-    })["catch"](function (error) {
-      console.log(error);
-    });
+  created: function created() {// console.log("Delete component!", this.id)
+    // if (localStorage.getItem('token')) {
+    //     this.loggedIn = true;
+    // }
+    // else {
+    //     this.loggedIn = false;
+    // }
+    // let app = this;
+    // let token = localStorage.getItem('token');
+    // axios.get(`/api/enrolments/${app.$route.params.id}`, {
+    //     headers: { Authorization: "Bearer " + token }
+    // })
+    // .then(function (response) {
+    //     app.course = response.data.data;
+    // })
+    // .catch(function (error) {
+    //     console.log(error);
+    // });
   },
   methods: {
     open: function open() {
@@ -5582,10 +5582,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Delete__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Delete */ "./resources/js/views/enrolments/Delete.vue");
-//
-//
-//
-//
 //
 //
 //
@@ -6207,8 +6203,8 @@ __webpack_require__.r(__webpack_exports__);
       loggedIn: false
     };
   },
-  created: function created() {
-    console.log("Delete component!", this.id); // if (localStorage.getItem('token')) {
+  created: function created() {// console.log("Delete component!", this.id)
+    // if (localStorage.getItem('token')) {
     //     this.loggedIn = true;
     // }
     // else {
@@ -105380,111 +105376,99 @@ var render = function() {
                     }
                   }),
                   _vm._v(" "),
-                  _c(
-                    "el-table-column",
-                    {
-                      attrs: {
-                        fixed: "right",
-                        label: "Operations",
-                        width: "300",
-                        router: "true"
-                      }
+                  _c("el-table-column", {
+                    attrs: {
+                      fixed: "right",
+                      label: "Operations",
+                      width: "300",
+                      router: "true"
                     },
-                    [
-                      [
-                        _c(
-                          "el-col",
-                          { attrs: { span: 8 } },
-                          [
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function(scope) {
+                          return [
                             _c(
-                              "el-button",
-                              {
-                                attrs: {
-                                  index: "`/enrolments/show/${items.id}`",
-                                  type: "primary"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    "/enrolments/show/" + _vm.items.id
-                                  }
-                                }
-                              },
+                              "el-col",
+                              { attrs: { span: 8 } },
                               [
                                 _c(
-                                  "router-link",
-                                  {
-                                    staticStyle: {
-                                      "text-decoration": "none",
-                                      color: "white"
-                                    },
-                                    attrs: {
-                                      to: "/enrolments/show/" + _vm.items.id
-                                    }
-                                  },
+                                  "el-button",
+                                  { attrs: { type: "primary" } },
                                   [
-                                    _c("i", {
-                                      staticClass: "el-icon-data-line"
-                                    }),
-                                    _vm._v(
-                                      " View\r\n                                "
+                                    _c(
+                                      "router-link",
+                                      {
+                                        staticStyle: {
+                                          "text-decoration": "none",
+                                          color: "white"
+                                        },
+                                        attrs: {
+                                          to: "/enrolments/show/" + scope.row.id
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "el-icon-data-line"
+                                        }),
+                                        _vm._v(
+                                          " View\r\n                                "
+                                        )
+                                      ]
                                     )
-                                  ]
+                                  ],
+                                  1
                                 )
                               ],
                               1
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "el-col",
-                          { attrs: { span: 8 } },
-                          [
+                            ),
+                            _vm._v(" "),
                             _c(
-                              "el-button",
-                              {
-                                attrs: {
-                                  index: "`/enrolments/edit/${items.id}`",
-                                  type: "warning"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    "/enrolments/edit/" + _vm.items.id
-                                  }
-                                }
-                              },
+                              "el-col",
+                              { attrs: { span: 8 } },
                               [
                                 _c(
-                                  "router-link",
-                                  {
-                                    staticStyle: {
-                                      "text-decoration": "none",
-                                      color: "white"
-                                    },
-                                    attrs: {
-                                      to: "/enrolments/edit/" + _vm.items.id
-                                    }
-                                  },
+                                  "el-button",
+                                  { attrs: { type: "warning" } },
                                   [
-                                    _c("i", { staticClass: "el-icon-edit" }),
-                                    _vm._v(
-                                      " Edit\r\n                                "
+                                    _c(
+                                      "router-link",
+                                      {
+                                        staticStyle: {
+                                          "text-decoration": "none",
+                                          color: "white"
+                                        },
+                                        attrs: {
+                                          to: "/enrolments/edit/" + scope.row.id
+                                        }
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "el-icon-edit"
+                                        }),
+                                        _vm._v(
+                                          " Edit\r\n                                "
+                                        )
+                                      ]
                                     )
-                                  ]
+                                  ],
+                                  1
                                 )
                               ],
                               1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "el-col",
+                              { attrs: { span: 8 } },
+                              [_c("Delete", { attrs: { id: scope.row.id } })],
+                              1
                             )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("el-col", { attrs: { span: 8 } }, [_c("Delete")], 1)
-                      ]
-                    ],
-                    2
-                  )
+                          ]
+                        }
+                      }
+                    ])
+                  })
                 ],
                 1
               )
