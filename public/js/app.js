@@ -5008,6 +5008,12 @@ __webpack_require__.r(__webpack_exports__);
       console.log(error);
     });
   },
+  methods: {
+    routeBack: function routeBack() {
+      var app = this;
+      app.$router.push('/courses');
+    }
+  },
   components: {
     Delete: _Delete__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -104700,7 +104706,20 @@ var render = function() {
                       1
                     ),
                     _vm._v(" "),
-                    _c("el-col", { attrs: { span: 1 } }, [_c("Delete")], 1)
+                    _c(
+                      "el-col",
+                      { attrs: { span: 1 } },
+                      [
+                        _c("Delete", {
+                          on: {
+                            "row-deleted": function($event) {
+                              return _vm.routeBack()
+                            }
+                          }
+                        })
+                      ],
+                      1
+                    )
                   ],
                   1
                 )
