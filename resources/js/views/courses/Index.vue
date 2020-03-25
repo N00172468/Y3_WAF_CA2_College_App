@@ -91,7 +91,7 @@
 
             <!-- Delete -->
             <el-col :span="8">
-              <Delete v-bind:id="scope.row.id" />
+              <Delete v-bind:id="scope.row.id" v-on:row-deleted="deleteRow(scope.$index, items)" />
             </el-col>
           </template>
         </el-table-column>
@@ -137,6 +137,11 @@ export default {
   data() {
     return {
       items: []
+    }
+  },
+  methods : {
+    deleteRow(index){
+      this.items.splice(index, 1);
     }
   },
 

@@ -51,7 +51,15 @@ export default {
                 type: 'warning'
             })
             .then(() => {
-                axios.delete(`/api/courses/${this.id}`)
+                let app = this;
+                let token = localStorage.getItem('token');
+                let id = (this.$route.params.id) ? this.$route.params.id : this.id;
+                axios.delete(`/api/courses/${id}`, {
+                    headers: { Authorization: "Bearer " + token }
+                }).then(function(){
+                    app.$emit('row-deleted');
+                })
+                
             })
             .then(() => {
                 // app.$router.push('/courses');

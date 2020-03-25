@@ -4379,7 +4379,16 @@ __webpack_require__.r(__webpack_exports__);
         cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(function () {
-        axios["delete"]("/api/courses/".concat(_this.id));
+        var app = _this;
+        var token = localStorage.getItem('token');
+        var id = _this.$route.params.id ? _this.$route.params.id : _this.id;
+        axios["delete"]("/api/courses/".concat(id), {
+          headers: {
+            Authorization: "Bearer " + token
+          }
+        }).then(function () {
+          app.$emit('row-deleted');
+        });
       }).then(function () {
         // app.$router.push('/courses');
         _this.$message({
@@ -4826,6 +4835,11 @@ __webpack_require__.r(__webpack_exports__);
     return {
       items: []
     };
+  },
+  methods: {
+    deleteRow: function deleteRow(index) {
+      this.items.splice(index, 1);
+    }
   },
   mounted: function mounted() {
     var app = this;
@@ -104576,7 +104590,19 @@ var render = function() {
                             _c(
                               "el-col",
                               { attrs: { span: 8 } },
-                              [_c("Delete", { attrs: { id: scope.row.id } })],
+                              [
+                                _c("Delete", {
+                                  attrs: { id: scope.row.id },
+                                  on: {
+                                    "row-deleted": function($event) {
+                                      return _vm.deleteRow(
+                                        scope.$index,
+                                        _vm.items
+                                      )
+                                    }
+                                  }
+                                })
+                              ],
                               1
                             )
                           ]
