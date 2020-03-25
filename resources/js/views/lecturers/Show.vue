@@ -28,7 +28,7 @@
 
                     <!-- Delete -->
                     <el-col :span="1">
-                        <Delete />
+                        <Delete v-on:row-deleted="routeBack()" />
                     </el-col>
                 </el-row>
             </div>
@@ -121,6 +121,13 @@ export default {
         .catch(function(error) {
             console.log(error);
         })
+    },
+
+    methods: {
+        routeBack() {
+            let app = this;
+            app.$router.push('/lecturers');
+        }
     },
 
     components: {

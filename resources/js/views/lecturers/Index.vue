@@ -87,7 +87,7 @@
 
                         <!-- Delete -->
                         <el-col :span="8">
-                            <Delete v-bind:id="scope.row.id" />
+                            <Delete v-bind:id="scope.row.id" v-on:row-deleted="deleteRow(scope.$index, items)" />
                         </el-col>
                     </template>
                 </el-table-column>
@@ -136,7 +136,13 @@ export default {
         }
     },
 
-    created() {
+    methods : {
+        deleteRow(index){
+            this.items.splice(index, 1);
+        }
+    },
+
+    mounted() {
         let app = this;
         let token = localStorage.getItem('token');
         axios.get('/api/lecturers', {
