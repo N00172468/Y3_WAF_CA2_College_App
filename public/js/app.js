@@ -5382,7 +5382,16 @@ __webpack_require__.r(__webpack_exports__);
         cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(function () {
-        axios["delete"]("/api/enrolments/".concat(_this.id));
+        var app = _this;
+        var token = localStorage.getItem('token');
+        var id = _this.$route.params.id ? _this.$route.params.id : _this.id;
+        axios["delete"]("/api/enrolments/".concat(_this.id), {
+          headers: {
+            Authorization: "Bearer " + token
+          }
+        }).then(function () {
+          app.emit('row-deleted');
+        });
       }).then(function () {
         // app.$router.push('/courses');
         _this.$message({
@@ -5836,6 +5845,11 @@ __webpack_require__.r(__webpack_exports__);
       items: []
     };
   },
+  methods: {
+    deleteRow: function deleteRow(index) {
+      this.items.splice(index, 1);
+    }
+  },
   created: function created() {
     var app = this;
     var token = localStorage.getItem('token');
@@ -5998,6 +6012,12 @@ __webpack_require__.r(__webpack_exports__);
     })["catch"](function (error) {
       console.log(error);
     });
+  },
+  methods: {
+    routeBack: function routeBack() {
+      var app = this;
+      app.$router.push('/enrolments');
+    }
   },
   components: {
     Delete: _Delete__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -105695,7 +105715,19 @@ var render = function() {
                             _c(
                               "el-col",
                               { attrs: { span: 8 } },
-                              [_c("Delete", { attrs: { id: scope.row.id } })],
+                              [
+                                _c("Delete", {
+                                  attrs: { id: scope.row.id },
+                                  on: {
+                                    "row-deleted": function($event) {
+                                      return _vm.deleteRow(
+                                        scope.$index,
+                                        _vm.items
+                                      )
+                                    }
+                                  }
+                                })
+                              ],
                               1
                             )
                           ]
@@ -105795,7 +105827,20 @@ var render = function() {
                       1
                     ),
                     _vm._v(" "),
-                    _c("el-col", { attrs: { span: 1 } }, [_c("Delete")], 1)
+                    _c(
+                      "el-col",
+                      { attrs: { span: 1 } },
+                      [
+                        _c("Delete", {
+                          on: {
+                            "row-deleted": function($event) {
+                              return _vm.routeBack()
+                            }
+                          }
+                        })
+                      ],
+                      1
+                    )
                   ],
                   1
                 )
