@@ -5945,25 +5945,6 @@ __webpack_require__.r(__webpack_exports__);
       loggedIn: false
     };
   },
-  created: function created() {// console.log("Delete component!", this.id)
-    // if (localStorage.getItem('token')) {
-    //     this.loggedIn = true;
-    // }
-    // else {
-    //     this.loggedIn = false;
-    // }
-    // let app = this;
-    // let token = localStorage.getItem('token');
-    // axios.get(`/api/lecturers/${app.$route.params.id}`, {
-    //     headers: { Authorization: "Bearer " + token }
-    // })
-    // .then(function (response) {
-    //     app.course = response.data.data;
-    // })
-    // .catch(function (error) {
-    //     console.log(error);
-    // });
-  },
   methods: {
     open: function open() {
       var _this = this;
