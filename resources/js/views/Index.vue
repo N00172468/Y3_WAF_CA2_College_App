@@ -168,6 +168,7 @@ export default {
       .then(function(response) {
         console.log(response);
         localStorage.setItem('token', response.data.token)
+        location.reload();
       })
       .catch(function(error) {
         console.log(error);

@@ -3741,6 +3741,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     logout: function logout() {
       localStorage.removeItem('token');
+      location.reload();
       console.log("Logged Out");
     }
   }
@@ -3992,6 +3993,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         console.log(response);
         localStorage.setItem('token', response.data.token);
+        location.reload();
       })["catch"](function (error) {
         console.log(error);
       });

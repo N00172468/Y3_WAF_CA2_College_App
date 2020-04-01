@@ -151,6 +151,7 @@ export default {
 
     logout() {
       localStorage.removeItem('token');
+      location.reload();
       console.log("Logged Out");
     }
   }
