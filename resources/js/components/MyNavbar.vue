@@ -6,7 +6,7 @@
       class="el-menu"
       mode="horizontal"
       @select="handleSelect"
-      background-color="#545c64"
+      background-color="#171c24"
       text-color="#fff"
       active-text-color="#ffd04b"
       router="true">
