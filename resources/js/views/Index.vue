@@ -51,9 +51,13 @@
 
       <!-- Carousel for Tables -->
       <el-main>
-        <el-carousel :interval="4000" type="card" height="200px">
-          <el-carousel-item v-for="item in 6" :key="item">
-            <h3 class="medium">{{ item }}</h3>
+        <el-carousel :interval="4000" type="card" height="600px">
+          <el-carousel-item v-for="item in 3" :key="item">
+            <!-- <h3 class="medium">{{ item }}</h3> -->
+            <IndexCourse />
+            <!-- <IndexCourse height="200px">{{ item }}</IndexCourse> -->
+            <!-- <IndexLects height="200px">{{ item }}</IndexLects> -->
+            <!-- <IndexEnrol height="200px">{{ item }}</IndexEnrol> -->
           </el-carousel-item>
         </el-carousel>
       </el-main>
@@ -134,6 +138,10 @@
 </template>
 
 <script>
+import IndexCourse from './courses/Index'
+import IndexLects from './lecturers/Index'
+import IndexEnrol from './enrolments/Index'
+
 export default {
   name: 'index',
 
@@ -196,25 +204,9 @@ export default {
   },
 
   components: {
-
+    IndexCourse,
+    IndexLects,
+    IndexEnrol
   }
 }
 </script>
-
-<style>
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
-</style>
