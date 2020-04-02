@@ -103098,7 +103098,7 @@ var render = function() {
                 [
                   _c(
                     "el-aside",
-                    { attrs: { width: "25%" } },
+                    { attrs: { width: "17%" } },
                     [
                       _c(
                         "el-collapse",
