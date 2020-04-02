@@ -3,6 +3,7 @@
   <el-col :span="24" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
     
     <el-menu
+      v-if="loggedIn"
       class="el-menu"
       mode="horizontal"
       @select="handleSelect"
@@ -101,6 +102,21 @@
 <script>
 export default {
   name: "myNavbar",
+
+  data() {
+    return {
+      loggedIn: false
+    }
+  },
+
+  created() {
+    if(localStorage.getItem('token')) {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+      app.$router.push('/');
+    }
+  },
 
   methods: {
     handleSelect(key, keyPath) {

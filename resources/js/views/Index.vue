@@ -1,5 +1,5 @@
 <template>
-<el-row style="width:98%; margin:auto;">
+<el-row class="bgOverride" style="margin:auto;">
   <el-col :span="24" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
 
     <!-- ***IF LOGGED IN*** -->
@@ -124,7 +124,7 @@
     </el-container>
 
     <!-- ***IF LOGGED OUT*** -->
-    <el-card v-else @submit="onSubmit" class="box-card">
+    <el-card v-else @submit="onSubmit" style="width:100%!important;" class="box-card">
 
       <!-- Card Title -->
       <div slot="header" class="clearfix">
@@ -270,3 +270,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .bgOverride {
+    background: #171c24 !important;
+  }
+</style>

@@ -1,5 +1,5 @@
 <template>
-<el-row style="margin:auto;" type="flex" justify="center" align="middle">
+<el-row class="bgReset" style="margin:auto;" type="flex" justify="center" align="middle">
   <el-col :span="24" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
 
     <!-- Card -->
@@ -138,3 +138,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  body {
+    background: none !important;
+  }
+</style>
