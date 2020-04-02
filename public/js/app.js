@@ -103113,7 +103113,7 @@ var render = function() {
                               attrs: { title: "About the Project", name: "1" }
                             },
                             [
-                              _c("h5", [
+                              _c("div", [
                                 _vm._v(
                                   "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
                                 )
@@ -103125,7 +103125,7 @@ var render = function() {
                             "el-collapse-item",
                             { attrs: { title: "Dashboard", name: "2" } },
                             [
-                              _c("h5", [
+                              _c("div", [
                                 _vm._v(
                                   "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
                                 )
@@ -103142,7 +103142,7 @@ var render = function() {
                               }
                             },
                             [
-                              _c("h5", [
+                              _c("div", [
                                 _vm._v(
                                   "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
                                 )
@@ -103154,7 +103154,7 @@ var render = function() {
                             "el-collapse-item",
                             { attrs: { title: "Vue.js", name: "4" } },
                             [
-                              _c("h5", [
+                              _c("div", [
                                 _vm._v(
                                   "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
                                 )
@@ -103166,7 +103166,7 @@ var render = function() {
                             "el-collapse-item",
                             { attrs: { title: "Element U.I", name: "5" } },
                             [
-                              _c("h5", [
+                              _c("div", [
                                 _vm._v(
                                   "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
                                 )

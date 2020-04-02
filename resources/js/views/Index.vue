@@ -14,37 +14,37 @@
           
           <!-- About the Project -->
           <el-collapse-item title="About the Project" name="1">
-            <h5>
+            <div>
               Ipsum Lipsum Lipsy Ipsy
-            </h5>
+            </div>
           </el-collapse-item>
 
           <!-- Dashboard -->
           <el-collapse-item title="Dashboard" name="2">
-            <h5>
+            <div>
               Ipsum Lipsum Lipsy Ipsy
-            </h5>
+            </div>
           </el-collapse-item>
 
           <!-- CRUD -->
           <el-collapse-item title="C.R.U.D Functionalities" name="3">
-            <h5>
+            <div>
               Ipsum Lipsum Lipsy Ipsy
-            </h5>
+            </div>
           </el-collapse-item>
 
           <!-- Vue.js -->
           <el-collapse-item title="Vue.js" name="4">
-            <h5>
+            <div>
               Ipsum Lipsum Lipsy Ipsy
-            </h5>
+            </div>
           </el-collapse-item>
 
           <!-- Element UI -->
           <el-collapse-item title="Element U.I" name="5">
-            <h5>
+            <div>
               Ipsum Lipsum Lipsy Ipsy
-            </h5>
+            </div>
           </el-collapse-item>
         
         </el-collapse>
