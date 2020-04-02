@@ -9,7 +9,7 @@
       <!-- <h1 >Log In, Complete</h1> -->
 
       <!-- Accordian Details -->
-      <el-aside width="17%">
+      <el-aside width="17%" style="padding-left:1%;">
         <el-collapse accordion>
           
           <!-- About the Project -->

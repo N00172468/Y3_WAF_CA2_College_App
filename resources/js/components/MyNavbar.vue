@@ -125,6 +125,8 @@ export default {
 
     logout() {
       localStorage.removeItem('token');
+      let app = this;
+      app.$router.push('/');
       location.reload();
       console.log("Logged Out");
     }
