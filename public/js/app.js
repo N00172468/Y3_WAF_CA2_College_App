@@ -3870,6 +3870,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'index',
   data: function data() {
@@ -102973,7 +103026,94 @@ var render = function() {
         { attrs: { span: 24, xs: 24, sm: 24, md: 24, lg: 24, xl: 24 } },
         [
           _vm.loggedIn
-            ? _c("h1", [_vm._v("Log In, Complete")])
+            ? _c(
+                "el-container",
+                [
+                  _c(
+                    "el-aside",
+                    { attrs: { width: "25%" } },
+                    [
+                      _c(
+                        "el-collapse",
+                        { attrs: { accordion: "" } },
+                        [
+                          _c(
+                            "el-collapse-item",
+                            {
+                              attrs: { title: "About the Project", name: "1" }
+                            },
+                            [
+                              _c("h5", [
+                                _vm._v(
+                                  "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-collapse-item",
+                            { attrs: { title: "Dashboard", name: "2" } },
+                            [
+                              _c("h5", [
+                                _vm._v(
+                                  "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-collapse-item",
+                            {
+                              attrs: {
+                                title: "C.R.U.D Functionalities",
+                                name: "3"
+                              }
+                            },
+                            [
+                              _c("h5", [
+                                _vm._v(
+                                  "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-collapse-item",
+                            { attrs: { title: "Vue.js", name: "4" } },
+                            [
+                              _c("h5", [
+                                _vm._v(
+                                  "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-collapse-item",
+                            { attrs: { title: "Element U.I", name: "5" } },
+                            [
+                              _c("h5", [
+                                _vm._v(
+                                  "\r\n              Ipsum Lipsum Lipsy Ipsy\r\n            "
+                                )
+                              ])
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("el-main")
+                ],
+                1
+              )
             : _c(
                 "el-card",
                 { staticClass: "box-card", on: { submit: _vm.onSubmit } },

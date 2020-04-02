@@ -2,9 +2,62 @@
 <el-row style="width:98%; margin:auto;">
   <el-col :span="24" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
 
-    <h1 v-if="loggedIn">Log In, Complete</h1>
+    <!-- ***IF LOGGED IN*** -->
+    <el-container v-if="loggedIn">
 
-    <!-- Card -->
+      <!-- <h1 >Log In, Complete</h1> -->
+
+      <!-- Accordian Details -->
+      <el-aside width="25%">
+        <el-collapse accordion>
+          
+          <!-- About the Project -->
+          <el-collapse-item title="About the Project" name="1">
+            <h5>
+              Ipsum Lipsum Lipsy Ipsy
+            </h5>
+          </el-collapse-item>
+
+          <!-- Dashboard -->
+          <el-collapse-item title="Dashboard" name="2">
+            <h5>
+              Ipsum Lipsum Lipsy Ipsy
+            </h5>
+          </el-collapse-item>
+
+          <!-- CRUD -->
+          <el-collapse-item title="C.R.U.D Functionalities" name="3">
+            <h5>
+              Ipsum Lipsum Lipsy Ipsy
+            </h5>
+          </el-collapse-item>
+
+          <!-- Vue.js -->
+          <el-collapse-item title="Vue.js" name="4">
+            <h5>
+              Ipsum Lipsum Lipsy Ipsy
+            </h5>
+          </el-collapse-item>
+
+          <!-- Element UI -->
+          <el-collapse-item title="Element U.I" name="5">
+            <h5>
+              Ipsum Lipsum Lipsy Ipsy
+            </h5>
+          </el-collapse-item>
+        
+        </el-collapse>
+      </el-aside>
+
+      <!-- Carousel for Tables -->
+      <el-main>
+
+      </el-main>
+    
+    </el-container>
+
+
+    <!-- ***IF LOGGED OUT*** -->
     <el-card v-else @submit="onSubmit" class="box-card">
 
       <!-- Card Title -->
@@ -86,6 +139,7 @@ export default {
         email: "",
         password: ""
       },
+
       rules: {
         email: [
           {
@@ -102,6 +156,7 @@ export default {
           }
         ]
       },
+
       loggedIn: false
     }
   },
