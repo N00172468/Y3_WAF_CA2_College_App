@@ -7,7 +7,7 @@
       class="el-menu"
       mode="horizontal"
       @select="handleSelect"
-      background-color="#171c24"
+      background-color="#1d2740"
       text-color="#fff"
       active-text-color="#ffd04b"
       router="true">
@@ -80,11 +80,6 @@
               <i class="el-icon-setting"></i>
               <span>Options</span>
             </template>
-
-            <!-- Profile -->
-            <el-menu-item-group title="View Your Profile">
-              <el-menu-item index="`/users/1`">Profile</el-menu-item>
-            </el-menu-item-group>
 
             <!-- Logout -->
             <el-menu-item-group title="Goodbye For Now">
