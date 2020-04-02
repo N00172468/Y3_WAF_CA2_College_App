@@ -53,12 +53,19 @@
       <!-- Carousel for Tables -->
       <el-main>
         <el-carousel :interval="4000" type="card" height="600px">
-          <el-carousel-item v-for="item in 3" :key="item">
-            <!-- <h3 class="medium">{{ item }}</h3> -->
-            <IndexCourse />
-            <!-- <IndexCourse height="200px">{{ item }}</IndexCourse> -->
-            <!-- <IndexLects height="200px">{{ item }}</IndexLects> -->
-            <!-- <IndexEnrol height="200px">{{ item }}</IndexEnrol> -->
+          <!-- Course Table -->
+          <el-carousel-item>
+            <IndexCourse/>
+          </el-carousel-item>
+
+          <!-- Lects Table -->
+          <el-carousel-item>
+            <IndexLects/>
+          </el-carousel-item>
+
+          <!-- Enrol Table -->
+          <el-carousel-item>
+            <IndexEnrol/>
           </el-carousel-item>
         </el-carousel>
       </el-main>

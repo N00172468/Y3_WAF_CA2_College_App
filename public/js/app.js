@@ -3985,6 +3985,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -103192,14 +103199,13 @@ var render = function() {
                             height: "600px"
                           }
                         },
-                        _vm._l(3, function(item) {
-                          return _c(
-                            "el-carousel-item",
-                            { key: item },
-                            [_c("IndexCourse")],
-                            1
-                          )
-                        }),
+                        [
+                          _c("el-carousel-item", [_c("IndexCourse")], 1),
+                          _vm._v(" "),
+                          _c("el-carousel-item", [_c("IndexLects")], 1),
+                          _vm._v(" "),
+                          _c("el-carousel-item", [_c("IndexEnrol")], 1)
+                        ],
                         1
                       )
                     ],
