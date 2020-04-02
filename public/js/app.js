@@ -4008,7 +4008,8 @@ __webpack_require__.r(__webpack_exports__);
           trigger: 'blur'
         }]
       },
-      loggedIn: false
+      loggedIn: false,
+      value: new Date()
     };
   },
   created: function created() {
@@ -103225,6 +103226,7 @@ var render = function() {
                               "el-timeline-item",
                               {
                                 attrs: {
+                                  type: "success",
                                   timestamp: "1/1/2020",
                                   placement: "top"
                                 }
@@ -103245,6 +103247,7 @@ var render = function() {
                               "el-timeline-item",
                               {
                                 attrs: {
+                                  type: "success",
                                   timestamp: "15/2/2020",
                                   placement: "top"
                                 }
@@ -103265,6 +103268,7 @@ var render = function() {
                               "el-timeline-item",
                               {
                                 attrs: {
+                                  type: "warning",
                                   timestamp: "21/3/2020",
                                   placement: "top"
                                 }
@@ -103285,6 +103289,7 @@ var render = function() {
                               "el-timeline-item",
                               {
                                 attrs: {
+                                  type: "danger",
                                   timestamp: "1/4/2020",
                                   placement: "top"
                                 }
@@ -103308,7 +103313,21 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c("el-main")
+                  _c(
+                    "el-main",
+                    [
+                      _c("el-calendar", {
+                        model: {
+                          value: _vm.value,
+                          callback: function($$v) {
+                            _vm.value = $$v
+                          },
+                          expression: "value"
+                        }
+                      })
+                    ],
+                    1
+                  )
                 ],
                 1
               )
