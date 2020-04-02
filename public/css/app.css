@@ -4,6 +4,106 @@
   color: #409EFF;
 }
 
+.elSuccess {
+  color: #67C23A;
+}
+
+.elWarning {
+  color: #E6A23C;
+}
+
+.elDanger {
+  color: #F56C6C;
+}
+
+.elInfo {
+  color: #909399;
+}
+
+.elNeutralOne {
+  color: #303133;
+}
+
+.elNeutralTwo {
+  color: #606266;
+}
+
+.elNeutralThree {
+  color: #909399;
+}
+
+.elNeutralFour {
+  color: #C0C4CC;
+}
+
+.elNeutralFive {
+  color: #DCDFE6;
+}
+
+.elNeutralSix {
+  color: #E4E7ED;
+}
+
+.elNeutralSeven {
+  color: #EBEEF5;
+}
+
+.elNeutralEight {
+  color: #F2F6FC;
+}
+
+.elMainBg {
+  background-color: #409EFF;
+}
+
+.elSuccessBg {
+  background-color: #67C23A;
+}
+
+.elWarningBg {
+  background-color: #E6A23C;
+}
+
+.elDangerBg {
+  background-color: #F56C6C;
+}
+
+.elInfoBg {
+  background-color: #909399;
+}
+
+.elNeutralOneBg {
+  background-color: #303133;
+}
+
+.elNeutralTwoBg {
+  background-color: #606266;
+}
+
+.elNeutralThreeBg {
+  background-color: #909399;
+}
+
+.elNeutralFourBg {
+  background-color: #C0C4CC;
+}
+
+.elNeutralFiveBg {
+  background-color: #DCDFE6;
+}
+
+.elNeutralSixBg {
+  background-color: #E4E7ED;
+}
+
+.elNeutralSevenBg {
+  background-color: #EBEEF5;
+}
+
+.elNeutralEightBg {
+  background-color: #F2F6FC;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
