@@ -4650,7 +4650,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -5441,11 +5440,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -6086,10 +6080,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Delete__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Delete */ "./resources/js/views/lecturers/Delete.vue");
-//
-//
-//
-//
 //
 //
 //
@@ -104159,12 +104149,7 @@ var render = function() {
                 },
                 [
                   _c("el-table-column", {
-                    attrs: {
-                      fixed: "",
-                      prop: "title",
-                      label: "Title",
-                      width: "240"
-                    }
+                    attrs: { prop: "title", label: "Title", width: "240" }
                   }),
                   _vm._v(" "),
                   _c("el-table-column", {
@@ -105218,35 +105203,19 @@ var render = function() {
                 },
                 [
                   _c("el-table-column", {
-                    attrs: {
-                      fixed: "",
-                      prop: "date",
-                      label: "Date",
-                      width: "140"
-                    }
+                    attrs: { prop: "date", label: "Date", width: "140" }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: { prop: "time", label: "Time", width: "120" }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: { prop: "status", label: "Status", width: "160" }
                   }),
                   _vm._v(" "),
                   _c("el-table-column", {
                     attrs: {
-                      fixed: "",
-                      prop: "time",
-                      label: "Time",
-                      width: "120"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("el-table-column", {
-                    attrs: {
-                      fixed: "",
-                      prop: "status",
-                      label: "Status",
-                      width: "160"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("el-table-column", {
-                    attrs: {
-                      fixed: "",
                       prop: "course_id",
                       label: "Course I.D",
                       width: "90"
@@ -105255,7 +105224,6 @@ var render = function() {
                   _vm._v(" "),
                   _c("el-table-column", {
                     attrs: {
-                      fixed: "",
                       prop: "lecturer_id",
                       label: "Lecturer I.D",
                       width: "100"
@@ -106220,35 +106188,19 @@ var render = function() {
                 },
                 [
                   _c("el-table-column", {
-                    attrs: {
-                      fixed: "",
-                      prop: "name",
-                      label: "Name",
-                      width: "240"
-                    }
+                    attrs: { prop: "name", label: "Name", width: "240" }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: { prop: "address", label: "Address", width: "320" }
+                  }),
+                  _vm._v(" "),
+                  _c("el-table-column", {
+                    attrs: { prop: "email", label: "Email", width: "260" }
                   }),
                   _vm._v(" "),
                   _c("el-table-column", {
                     attrs: {
-                      fixed: "",
-                      prop: "address",
-                      label: "Address",
-                      width: "320"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("el-table-column", {
-                    attrs: {
-                      fixed: "",
-                      prop: "email",
-                      label: "Email",
-                      width: "260"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("el-table-column", {
-                    attrs: {
-                      fixed: "",
                       prop: "phone",
                       label: "Phone Number",
                       width: "150"

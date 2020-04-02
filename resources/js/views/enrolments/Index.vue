@@ -21,7 +21,6 @@
             
                 <!-- Date -->
                 <el-table-column
-                    fixed
                     prop="date"
                     label="Date"
                     width="140">
@@ -29,7 +28,6 @@
 
                 <!-- Time -->
                 <el-table-column
-                    fixed
                     prop="time"
                     label="Time"
                     width="120">
@@ -37,7 +35,6 @@
 
                 <!-- Status -->
                 <el-table-column
-                    fixed
                     prop="status"
                     label="Status"
                     width="160">
@@ -45,7 +42,6 @@
 
                 <!-- Course ID -->
                 <el-table-column
-                    fixed
                     prop="course_id"
                     label="Course I.D"
                     width="90">
@@ -53,7 +49,6 @@
 
                 <!-- Lect ID -->
                 <el-table-column
-                    fixed
                     prop="lecturer_id"
                     label="Lecturer I.D"
                     width="100">

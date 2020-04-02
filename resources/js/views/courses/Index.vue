@@ -21,7 +21,6 @@
 
         <!-- Title -->
         <el-table-column
-          fixed
           prop="title"
           label="Title"
           width="240">

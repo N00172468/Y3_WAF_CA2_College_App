@@ -21,7 +21,6 @@
             
                 <!-- Name -->
                 <el-table-column
-                    fixed
                     prop="name"
                     label="Name"
                     width="240">
@@ -29,7 +28,6 @@
 
                 <!-- Address -->
                 <el-table-column
-                    fixed
                     prop="address"
                     label="Address"
                     width="320">
@@ -37,7 +35,6 @@
 
                 <!-- Email -->
                 <el-table-column
-                    fixed
                     prop="email"
                     label="Email"
                     width="260">
@@ -45,7 +42,6 @@
 
                 <!-- Phone -->
                 <el-table-column
-                    fixed
                     prop="phone"
                     label="Phone Number"
                     width="150">
