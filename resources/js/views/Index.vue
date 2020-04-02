@@ -3,6 +3,7 @@
   <el-col :span="24" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
 
     <!-- ***IF LOGGED IN*** -->
+    <!-- Before Fold -->
     <el-container v-if="loggedIn">
 
       <!-- <h1 >Log In, Complete</h1> -->
@@ -64,6 +65,56 @@
     
     </el-container>
 
+    <!-- After Fold -->
+    <el-container v-if="loggedIn">
+    
+      <!-- Static Timestamp (For Aesthetics Only (Filler)) -->
+      <el-aside width="50%">
+        <div class="block">
+          <el-timeline>
+
+            <!-- Timestamp 1 -->
+            <el-timeline-item timestamp="1/1/2020" placement="top">
+              <el-card>
+                <h4>Test 1</h4>
+                <p>Ipsy Lipsy Shimmy Shimmy Yaaa</p>
+              </el-card>
+            </el-timeline-item>
+
+            <!-- Timestamp 2 -->
+            <el-timeline-item timestamp="15/2/2020" placement="top">
+              <el-card>
+                <h4>Test 2</h4>
+                <p>Ipsy Lipsy Shimmy Shimmy Yaaa</p>
+              </el-card>
+            </el-timeline-item>
+
+            <!-- Timestamp 3 -->
+            <el-timeline-item timestamp="21/3/2020" placement="top">
+              <el-card>
+                <h4>Test 3</h4>
+                <p>Ipsy Lipsy Shimmy Shimmy Yaaa</p>
+              </el-card>
+            </el-timeline-item>
+
+            <!-- Timestamp 4 -->
+            <el-timeline-item timestamp="1/4/2020" placement="top">
+              <el-card>
+                <h4>Test 4</h4>
+                <p>Ipsy Lipsy Shimmy Shimmy Yaaa</p>
+              </el-card>
+            </el-timeline-item>
+
+          </el-timeline>
+        </div>
+      </el-aside>
+
+      <!-- Calendar -->
+      <el-main>
+        
+      </el-main>
+
+    </el-container>
 
     <!-- ***IF LOGGED OUT*** -->
     <el-card v-else @submit="onSubmit" class="box-card">

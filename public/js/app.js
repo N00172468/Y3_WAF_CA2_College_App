@@ -3934,6 +3934,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -103153,6 +103204,111 @@ var render = function() {
                     ],
                     1
                   )
+                ],
+                1
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.loggedIn
+            ? _c(
+                "el-container",
+                [
+                  _c("el-aside", { attrs: { width: "50%" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "block" },
+                      [
+                        _c(
+                          "el-timeline",
+                          [
+                            _c(
+                              "el-timeline-item",
+                              {
+                                attrs: {
+                                  timestamp: "1/1/2020",
+                                  placement: "top"
+                                }
+                              },
+                              [
+                                _c("el-card", [
+                                  _c("h4", [_vm._v("Test 1")]),
+                                  _vm._v(" "),
+                                  _c("p", [
+                                    _vm._v("Ipsy Lipsy Shimmy Shimmy Yaaa")
+                                  ])
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "el-timeline-item",
+                              {
+                                attrs: {
+                                  timestamp: "15/2/2020",
+                                  placement: "top"
+                                }
+                              },
+                              [
+                                _c("el-card", [
+                                  _c("h4", [_vm._v("Test 2")]),
+                                  _vm._v(" "),
+                                  _c("p", [
+                                    _vm._v("Ipsy Lipsy Shimmy Shimmy Yaaa")
+                                  ])
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "el-timeline-item",
+                              {
+                                attrs: {
+                                  timestamp: "21/3/2020",
+                                  placement: "top"
+                                }
+                              },
+                              [
+                                _c("el-card", [
+                                  _c("h4", [_vm._v("Test 3")]),
+                                  _vm._v(" "),
+                                  _c("p", [
+                                    _vm._v("Ipsy Lipsy Shimmy Shimmy Yaaa")
+                                  ])
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "el-timeline-item",
+                              {
+                                attrs: {
+                                  timestamp: "1/4/2020",
+                                  placement: "top"
+                                }
+                              },
+                              [
+                                _c("el-card", [
+                                  _c("h4", [_vm._v("Test 4")]),
+                                  _vm._v(" "),
+                                  _c("p", [
+                                    _vm._v("Ipsy Lipsy Shimmy Shimmy Yaaa")
+                                  ])
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("el-main")
                 ],
                 1
               )
