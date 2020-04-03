@@ -9,7 +9,7 @@
             <div>
                 <el-row>
                     <el-col :span="16">
-                        <h1 style="text-transform:uppercase;">{{ enrolment.date }}</h1>
+                        <h1 style="text-transform:uppercase;"> Enrolment for {{ enrolment.date }}</h1>
                     </el-col>
 
                     <!-- Edit -->
