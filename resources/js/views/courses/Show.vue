@@ -152,3 +152,9 @@ export default {
     }
 }
 </script>
+
+<style>
+    .el-divider__text {
+        background: #222933 !important;
+    }
+</style>
