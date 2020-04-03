@@ -30,7 +30,7 @@
 
       <!-- Calendar -->
       <el-main>
-        <el-calendar v-model="value"></el-calendar>
+        <Calendar />
       </el-main>
 
     </el-container>
@@ -113,6 +113,7 @@
 import Accordion from '../components/Accordion'
 import Carousel from '../components/Carousel'
 import Timestamp from '../components/Timestamp'
+import Calendar from '../components/Calendar'
 
 export default {
   name: 'index',
@@ -180,7 +181,8 @@ export default {
   components: {
     Accordion,
     Carousel,
-    Timestamp
+    Timestamp,
+    Calendar
   }
 }
 </script>
