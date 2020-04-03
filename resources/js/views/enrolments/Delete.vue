@@ -32,10 +32,10 @@ export default {
                 let token = localStorage.getItem('token');
                 let id = (this.$route.params.id) ? this.$route.params.id : this.id;
                 
-                axios.delete(`/api/enrolments/${this.id}`, {
+                axios.delete(`/api/enrolments/${id}`, {
                     headers: { Authorization: "Bearer " + token }
                 }).then(function() {
-                    app.emit('row-deleted');
+                    app.$emit('row-deleted');
                 })
             })
             .then(() => {

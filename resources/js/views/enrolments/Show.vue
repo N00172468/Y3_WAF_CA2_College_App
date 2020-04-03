@@ -59,23 +59,23 @@
 
                 <!-- Course ID -->
                 <el-divider>
-                    <span style="color:#409EFF; font-size:1.6em;">Course I.D</span>
+                    <span style="color:#409EFF; font-size:1.6em;">Course</span>
                 </el-divider>
                 
                 <el-row style="padding:1%;">
                     <el-col :span="24">
-                        <h4 style="text-align:center;">{{ enrolment.course_id }}</h4>
+                        <h4 style="text-align:center;">{{ enrolment.course.title }}</h4>
                     </el-col>
                 </el-row>
 
                 <!-- Lect ID -->
                 <el-divider>
-                    <span style="color:#409EFF; font-size:1.6em;">Lecturer I.D</span>
+                    <span style="color:#409EFF; font-size:1.6em;">Lecturer</span>
                 </el-divider>
                 
                 <el-row style="padding:1%;">
                     <el-col :span="24">
-                        <h4 style="text-align:center;">{{ enrolment.lecturer_id }}</h4>
+                        <h4 style="text-align:center;">{{ enrolment.lecturer.name}}</h4>
                     </el-col>
                 </el-row>
             </div>
@@ -110,7 +110,7 @@ export default {
         return {
             enrolment: {},
             show: true,
-            loggedIn: false
+            loggedIn: false,
         }
     },
 
@@ -134,6 +134,7 @@ export default {
         .catch(function (error) {
             console.log(error);
         });
+
     },
 
     methods: {

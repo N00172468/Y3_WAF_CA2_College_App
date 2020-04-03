@@ -23,36 +23,40 @@
                     <!-- Date -->
                     <el-col :span="12">
                         <el-form-item 
-                        id="input-group-1"
-                        label-for="input-1" 
-                        prop="date" 
-                        label="Date">
-                        
-                        <el-date-picker
-                            style="width:350px;"
-                            id="input-1"
-                            type="date"
-                            placeholder="Date" 
-                            v-model="form.date">
-                        </el-date-picker>
+                            id="input-group-1"
+                            label-for="input-1" 
+                            prop="date" 
+                            label="Date">
+                            
+                            <el-date-picker
+                                style="width:350px;"
+                                id="input-1"
+                                type="date"
+                                placeholder="Date" 
+                                format="yyyy/MM/dd"
+                                value-format="yyyy-MM-dd"
+                                v-model="form.date">
+                            </el-date-picker>
                         </el-form-item>
                     </el-col>
 
                     <!-- Time -->
                     <el-col :span="12">
                         <el-form-item 
-                        id="input-group-2"
-                        label-for="input-2" 
-                        prop="time" 
-                        label="Time">
-                        
-                        <el-time-picker
-                            style="width:350px;"
-                            id="input-2"
-                            type="time"
-                            placeholder="Time" 
-                            v-model="form.time">
-                        </el-time-picker>
+                            id="input-group-2"
+                            label-for="input-2" 
+                            prop="time" 
+                            label="Time">
+                            
+                            <el-time-picker
+                                format="HH:mm:ss"
+                                value-format="HH:mm:ss"
+                                style="width:350px;"
+                                id="input-2"
+                                type="time"
+                                placeholder="Time" 
+                                v-model="form.time">
+                            </el-time-picker>
                         </el-form-item>
                     </el-col>
                 </el-row>
@@ -67,12 +71,32 @@
                             prop="status" 
                             label="Status">
 
-                            <el-input
+                            <el-select
+                                style="width:100%;"
                                 id="input-3"
-                                type="text"
-                                placeholder="Status" 
+                                placeholder="Please Choose Status"
                                 v-model="form.status">
-                            </el-input>
+                                
+                                <el-option
+                                    label="Interested"
+                                    value="interested">
+                                </el-option>
+
+                                <el-option
+                                    label="Assigned"
+                                    value="assigned">
+                                </el-option>
+                                
+                                <el-option
+                                    label="Associated"
+                                    value="associate">
+                                </el-option>
+
+                                <el-option
+                                    label="Career Break"
+                                    value="career_break">
+                                </el-option>
+                            </el-select>
                         </el-form-item>
                     </el-col>
                 </el-row>
@@ -85,13 +109,21 @@
                             id="input-group-4"
                             label-for="input-4"
                             prop="course_id" 
-                            label="Course I.D">
+                            label="Course">
                             
-                            <el-input-number
+                            <el-select
                                 style="width:350px;"
                                 id="input-4"
-                                v-model.number="form.course_id">
-                            </el-input-number>
+                                placeholder="Please Choose Course"
+                                v-model="form.course_id">
+                                
+                                    <el-option
+                                        v-for="item in courses"
+                                        :key="item.id"
+                                        :label="item.title"
+                                        :value="item.id">
+                                    </el-option>
+                            </el-select>
                         </el-form-item>
                     </el-col>
 
@@ -102,12 +134,19 @@
                             label-for="input-5"
                             prop="lecturer_id" 
                             label="Lecturer I.D">
-                            
-                            <el-input-number
+
+                            <el-select
                                 style="width:350px;"
-                                id="input-5"
-                                v-model.number="form.lecturer_id">
-                            </el-input-number>
+                                id="input-4"
+                                placeholder="Please Choose Lecturer"
+                                v-model="form.lecturer_id">
+                                    <el-option
+                                        v-for="item in lecturers"
+                                        :key="item.id"
+                                        :label="item.name"
+                                        :value="item.id">
+                                    </el-option>
+                            </el-select>
                         </el-form-item>
                     </el-col>
                 </el-row>
@@ -165,31 +204,25 @@ export default {
                 ],
                 course_id: [
                     { 
-                        type: 'number',
                         required: true, 
-                        messgae: 'Please input Course I.D', 
+                        messgae: 'Please input Course', 
                         trigger: 'blur' 
                     }
                 ],
-                lecture_id: [
+                lecturer_id: [
                     { 
-                        type: 'number',
                         required: true, 
-                        messgae: 'Please input Lecturer I.D', 
+                        messgae: 'Please input Lecturer', 
                         trigger: 'blur' 
                     }
                 ]
             },
             loggedIn: false,
-            errors: []
+            errors: [],
+            courses: [],
+            lecturers: []
         }
     },
-
-    // computed: {
-    //     codeValid() {
-    //         return this.form.code.length <= 5 && this.form.code.length > 0
-    //     }
-    // },
 
     created() {
         if(localStorage.getItem('token')) {
@@ -198,6 +231,33 @@ export default {
             this.loggedIn = false;
             app.$router.push('/');
         }
+
+        let app = this;
+        let token = localStorage.getItem('token');
+        
+        axios.get('/api/courses', {
+            headers: { Authorization: "Bearer " + token }
+        })
+        .then(function (response) {
+            console.log(response.data);
+            app.courses = response.data.data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+
+        axios.get('/api/lecturers', {
+            headers: {
+                Authorization: "Bearer " + token
+            }
+        })
+        .then(function (response) {
+            console.log(response.data);
+            app.lecturers = response.data.data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
     },
 
     methods: {

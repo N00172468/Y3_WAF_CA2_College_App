@@ -42,16 +42,16 @@
 
                 <!-- Course ID -->
                 <el-table-column
-                    prop="course_id"
-                    label="Course I.D"
-                    width="90">
+                    prop="course.title"
+                    label="Course"
+                    width="240">
                 </el-table-column>
 
                 <!-- Lect ID -->
                 <el-table-column
-                    prop="lecturer_id"
-                    label="Lecturer I.D"
-                    width="100">
+                    prop="lecturer.name"
+                    label="Lecturer"
+                    width="240">
                 </el-table-column>    
 
                 <!-- Buttons -->
