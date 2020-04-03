@@ -15,22 +15,7 @@
 
       <!-- Carousel for Tables -->
       <el-main>
-        <el-carousel :interval="4000" type="card" height="600px">
-          <!-- Course Table -->
-          <el-carousel-item>
-            <IndexCourse/>
-          </el-carousel-item>
-
-          <!-- Lects Table -->
-          <el-carousel-item>
-            <IndexLects/>
-          </el-carousel-item>
-
-          <!-- Enrol Table -->
-          <el-carousel-item>
-            <IndexEnrol/>
-          </el-carousel-item>
-        </el-carousel>
+        <Carousel />
       </el-main>
     
     </el-container>
@@ -161,11 +146,8 @@
 </template>
 
 <script>
-import IndexCourse from './courses/Index'
-import IndexLects from './lecturers/Index'
-import IndexEnrol from './enrolments/Index'
-
 import Accordion from '../components/Accordion'
+import Carousel from '../components/Carousel'
 
 export default {
   name: 'index',
@@ -231,10 +213,8 @@ export default {
   },
 
   components: {
-    IndexCourse,
-    IndexLects,
-    IndexEnrol,
     Accordion,
+    Carousel
   }
 }
 </script>
