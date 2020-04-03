@@ -10,44 +10,7 @@
 
       <!-- Accordian Details -->
       <el-aside width="17%" style="padding-left:1%;">
-        <el-collapse accordion>
-          
-          <!-- About the Project -->
-          <el-collapse-item title="About the Project" name="1">
-            <div>
-              Ipsum Lipsum Lipsy Ipsy
-            </div>
-          </el-collapse-item>
-
-          <!-- Dashboard -->
-          <el-collapse-item title="Dashboard" name="2">
-            <div>
-              Ipsum Lipsum Lipsy Ipsy
-            </div>
-          </el-collapse-item>
-
-          <!-- CRUD -->
-          <el-collapse-item title="C.R.U.D Functionalities" name="3">
-            <div>
-              Ipsum Lipsum Lipsy Ipsy
-            </div>
-          </el-collapse-item>
-
-          <!-- Vue.js -->
-          <el-collapse-item title="Vue.js" name="4">
-            <div>
-              Ipsum Lipsum Lipsy Ipsy
-            </div>
-          </el-collapse-item>
-
-          <!-- Element UI -->
-          <el-collapse-item title="Element U.I" name="5">
-            <div>
-              Ipsum Lipsum Lipsy Ipsy
-            </div>
-          </el-collapse-item>
-        
-        </el-collapse>
+        <Accordion />
       </el-aside>
 
       <!-- Carousel for Tables -->
@@ -202,6 +165,8 @@ import IndexCourse from './courses/Index'
 import IndexLects from './lecturers/Index'
 import IndexEnrol from './enrolments/Index'
 
+import Accordion from '../components/Accordion'
+
 export default {
   name: 'index',
 
@@ -268,7 +233,8 @@ export default {
   components: {
     IndexCourse,
     IndexLects,
-    IndexEnrol
+    IndexEnrol,
+    Accordion,
   }
 }
 </script>
