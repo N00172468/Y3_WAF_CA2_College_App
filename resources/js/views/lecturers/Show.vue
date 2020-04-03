@@ -20,7 +20,7 @@
 
                             <router-link
                                 style="text-decoration:none; color:white;" 
-                                :to="`/courses/edit/${ lecture.id }`">
+                                :to="`/lecturers/edit/${ lecture.id }`">
                                     <i class="el-icon-edit"></i> Edit
                             </router-link>
                         </el-button>
