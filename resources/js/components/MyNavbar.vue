@@ -81,6 +81,18 @@
               <span>Options</span>
             </template>
 
+            <!-- Github Repo -->
+            <el-menu-item-group title="View Repo of EduBoard">
+              <el-menu-item>
+                <a 
+                  href="https://github.com/N00172468/Y3_WAF_CA2_College_App" 
+                  style="text-decoration:none;color:white;" 
+                  target="_blank">
+                  EduBoard Repository
+                </a>
+              </el-menu-item>
+            </el-menu-item-group>
+
             <!-- Logout -->
             <el-menu-item-group title="Goodbye For Now">
               <el-menu-item @click="logout">Logout</el-menu-item>
