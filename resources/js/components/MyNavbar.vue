@@ -6,14 +6,15 @@
       v-if="loggedIn"
       class="el-menu"
       mode="horizontal"
-      @select="handleSelect"
+      @select="handleSelect" 
       background-color="#1d2740"
       text-color="#fff"
       active-text-color="#ffd04b"
-      router="true">
+      router="true"> <!-- "@select" Activate method once something in Navbar has been selected (See Script).
+                          "router="true"" is an Element UI prop to allow for router access -->
 
       <!-- Home -->
-      <el-menu-item index="/">
+      <el-menu-item index="/"> <!-- "index=" requires router link -->
         <i class="el-icon-menu"></i>
         <span>Home</span>
       </el-menu-item>
@@ -73,7 +74,7 @@
       </el-submenu>
 
       <!-- User Menu -->
-      <el-row type="flex" justify="end">
+      <el-row type="flex" justify="end"> <!-- "type=flex" is from Element UI which allows the row to be customised (i.e. "justify="end""). -->
         <el-col :span="4" :xl="3" :lg="4" :md="6" :sm="12" :xs="24">
           <el-submenu index="5">
             <template slot="title">
