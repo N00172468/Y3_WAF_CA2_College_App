@@ -36,7 +36,7 @@
                                 format="yyyy/MM/dd"
                                 value-format="yyyy-MM-dd"
                                 v-model="form.date">
-                            </el-date-picker>
+                            </el-date-picker> <!-- "format" and "value-format" is used to format the date structure to allow the backend to read the dates properly -->
                         </el-form-item>
                     </el-col>
 
@@ -56,7 +56,7 @@
                                 type="time"
                                 placeholder="Time" 
                                 v-model="form.time">
-                            </el-time-picker>
+                            </el-time-picker> <!-- "format" and "value-format" is used to format the date structure to allow the backend to read the dates properly -->
                         </el-form-item>
                     </el-col>
                 </el-row>
@@ -121,8 +121,10 @@
                                         v-for="item in courses"
                                         :key="item.id"
                                         :label="item.title"
-                                        :value="item.id">
-                                    </el-option>
+                                        :value="item.id"> <!-- Using the courses API, each course can be called out by fetching their ID and title.
+                                                        To fetch each individual courses, a singular data must initialised (i.e. v-for="item in courses"). 
+                                                        ":key" attribute is needed to give Vue a hint to allow it to track each ID -->
+                                    </el-option> 
                             </el-select>
                         </el-form-item>
                     </el-col>
@@ -144,7 +146,9 @@
                                         v-for="item in lecturers"
                                         :key="item.id"
                                         :label="item.name"
-                                        :value="item.id">
+                                        :value="item.id"> <!-- Using the lects API, each lect can be called out by fetching their ID and name.
+                                                        To fetch each individual lects, a singular data must initialised (i.e. v-for="item in lecturers"). 
+                                                        ":key" attribute is needed to give Vue a hint to allow it to track each ID -->
                                     </el-option>
                             </el-select>
                         </el-form-item>
@@ -235,7 +239,7 @@ export default {
         let app = this;
         let token = localStorage.getItem('token');
         
-        axios.get('/api/courses', {
+        axios.get('/api/courses', { // Fetching Courses
             headers: { Authorization: "Bearer " + token }
         })
         .then(function (response) {
@@ -246,7 +250,7 @@ export default {
             console.log(error);
         })
 
-        axios.get('/api/lecturers', {
+        axios.get('/api/lecturers', { // Fetching Lects
             headers: {
                 Authorization: "Bearer " + token
             }
