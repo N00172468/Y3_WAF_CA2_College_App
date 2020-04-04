@@ -45,14 +45,14 @@
                     prop="course.title"
                     label="Course"
                     width="240">
-                </el-table-column>
+                </el-table-column> <!-- As the course I.D has a relationship with the course table (in database), this allows the contents of courses to be fetched within the enrolments table -->
 
                 <!-- Lect ID -->
                 <el-table-column
                     prop="lecturer.name"
                     label="Lecturer"
                     width="240">
-                </el-table-column>    
+                </el-table-column> <!-- As the lect I.D has a relationship with the course table (in database), this allows the contents of lects to be fetched within the enrolments table -->
 
                 <!-- Buttons -->
                 <el-table-column
