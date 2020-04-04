@@ -6,7 +6,7 @@
 export default {
     data() {
         return {
-            value: new Date()
+            value: new Date() // Displays and updates current date of current day.
         }
     }
 }
