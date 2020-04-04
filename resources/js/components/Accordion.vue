@@ -1,5 +1,5 @@
 <template>
-    <el-collapse accordion>
+    <el-collapse accordion> <!-- "accordion" is an Element UI attribute to allow the Collapsable component act as an Accordion -->
             
             <!-- About the Project -->
             <el-collapse-item title="About the Project" name="1">
