@@ -142,6 +142,7 @@ export default {
                 points: "",
                 level: ""
             },
+
             rules: {
                 title: [
                     { 
@@ -185,11 +186,7 @@ export default {
             errors: []
         }
     },
-    computed: {
-        codeValid() {
-            return this.form.code.length <= 5 && this.form.code.length > 0
-        }
-    },
+
     created() {
         if(localStorage.getItem('token')) {
             this.loggedIn = true;
@@ -198,6 +195,7 @@ export default {
             app.$router.push('/');
         }
     },
+    
     methods: {
         onSubmit(evt) {
             evt.preventDefault()
