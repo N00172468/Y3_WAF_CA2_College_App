@@ -6,7 +6,7 @@
     <el-card class="box-card">
 
       <!-- Card Title -->
-        <div slot="header" class="clearfix">
+        <div slot="header" class="clearfix"> <!-- "slot" attribute based on Element UI docs. "clearfix" class is part of Flexbox. It confines contains together (i.e. acts as a div) -->
             <span>Courses</span>
         </div>
 
@@ -17,13 +17,13 @@
         max-height="550"
         router="true"
         stripe="true"
-        border="true">
+        border="true"> <!-- ":data" fetches contents of items array (see Script). -->
 
         <!-- Title -->
         <el-table-column
-          prop="title"
+          prop="title" 
           label="Title"
-          width="240">
+          width="240"> <!-- In Element UI,"prop" allows to display the chosen content within the "items" of data -->
         </el-table-column>
 
         <!-- Code -->
@@ -61,15 +61,14 @@
           width="300"
           router="true">
  
-          <template slot-scope="scope">
+          <template slot-scope="scope"> <!-- "slot-scope" attribute allows to receive props passed to a slot -->
             <!-- View -->
             <el-col :span="8">
-              <el-button
-                type="primary">
+              <el-button type="primary">
                   
                   <router-link 
                     style="text-decoration:none; color:white;" 
-                    :to="`/courses/show/${scope.row.id}`">
+                    :to="`/courses/show/${scope.row.id}`"> <!-- "${scope.row.id}" specifies the ID of the object within the row -->
                       <i class="el-icon-data-line"></i> View
                   </router-link>
               </el-button>
@@ -90,7 +89,9 @@
 
             <!-- Delete -->
             <el-col :span="8">
-              <Delete v-bind:id="scope.row.id" v-on:row-deleted="deleteRow(scope.$index, items)" />
+              <Delete v-bind:id="scope.row.id" v-on:row-deleted="deleteRow(scope.$index, items)" /> <!-- "v-bind" dynamically toggle classes. "v-on" listens for a DOM event/s and runs JS when they're triggered. 
+                                                                                                         "row-deleted" is the DOM event that needs to be listened to (see Delete.vue componenet). 
+                                                                                                         Once the event has been heard, activate "deleteRow" method (see Script) -->
             </el-col>
           </template>
         </el-table-column>
@@ -108,12 +109,12 @@ import Delete from './Delete'
 export default {
   data() {
     return {
-      items: []
+      items: [] // Array to hold the API contents.
     }
   },
   methods : {
     deleteRow(index){
-      this.items.splice(index, 1);
+      this.items.splice(index, 1); // Once column has been deleted, remove column (i.e. splice) by refreshing after method has been activated.
     }
   },
 
