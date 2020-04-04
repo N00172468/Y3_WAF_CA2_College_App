@@ -25,7 +25,7 @@ import EnrolmentsDelete from './views/enrolments/Delete'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history', // Allows to revert back to previous page. This also makes the URL look normal (e.g. http://...)
+  mode: 'history', // Allows to revert back to previous page. This also makes the URL look normal (e.g. http://...).
   base: process.env.BASE_URL, 
   routes: [
     {
