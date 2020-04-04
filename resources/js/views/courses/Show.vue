@@ -28,7 +28,7 @@
 
                     <!-- Delete -->
                     <el-col :span="1">
-                        <Delete v-on:row-deleted="routeBack()" />
+                        <Delete v-on:row-deleted="routeBack()" /> <!-- When event has been heard, activate method (see Script) -->
                     </el-col>
                 </el-row>
             </div>
@@ -141,7 +141,7 @@ export default {
     },
 
     methods: {
-        routeBack() {
+        routeBack() { // This method is activated once the content has been deleted. When the content is deleted, this method would route back to the Index page.
             let app = this;
             app.$router.push('/courses');
         }
@@ -154,6 +154,8 @@ export default {
 </script>
 
 <style>
+    /* This global override fixes Element's ".el-divider__text" class due to the error of the custom dark theme. 
+    Without it, the backgrounds of each "el-divider" text will be white by default. */
     .el-divider__text {
         background: #222933 !important;
     }

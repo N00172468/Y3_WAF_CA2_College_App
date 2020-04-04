@@ -90,8 +90,8 @@
             <!-- Delete -->
             <el-col :span="8">
               <Delete v-bind:id="scope.row.id" v-on:row-deleted="deleteRow(scope.$index, items)" /> <!-- "v-bind" dynamically toggle classes. "v-on" listens for a DOM event/s and runs JS when they're triggered. 
-                                                                                                         "row-deleted" is the DOM event that needs to be listened to (see Delete.vue componenet). 
-                                                                                                         Once the event has been heard, activate "deleteRow" method (see Script) -->
+                                                                                                          "row-deleted" is the DOM event that needs to be listened to (see Delete.vue componenet). 
+                                                                                                          Once the event has been heard, activate "deleteRow" method (see Script) -->
             </el-col>
           </template>
         </el-table-column>
@@ -122,7 +122,7 @@ export default {
     let app = this;
     let token = localStorage.getItem('token');
     
-    axios.get('/api/courses', {
+    axios.get('/api/courses', {  // GET request within Axios. Used to retrieve data. 
       headers: { Authorization: "Bearer " + token}
     })
     .then(function (response) {
