@@ -64,6 +64,7 @@
                 
                 <el-row style="padding:1%;">
                     <el-col :span="24">
+                        <!-- As the course I.D has a relationship with the course table (in database), this allows the contents of courses to be fetched within the enrolments table -->
                         <h4 style="text-align:center;">{{ enrolment.course.title }}</h4>
                     </el-col>
                 </el-row>
@@ -75,6 +76,7 @@
                 
                 <el-row style="padding:1%;">
                     <el-col :span="24">
+                        <!-- As the lect I.D has a relationship with the lect table (in database), this allows the contents of lects to be fetched within the enrolments table -->
                         <h4 style="text-align:center;">{{ enrolment.lecturer.name}}</h4>
                     </el-col>
                 </el-row>
