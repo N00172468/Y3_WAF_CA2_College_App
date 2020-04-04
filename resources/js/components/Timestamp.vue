@@ -22,7 +22,7 @@
                 <el-timeline-item type="warning" timestamp="21/3/2020" placement="top">
                     <el-card>
                         <h4>Enrolments</h4>
-                        <p>Must create new enrolment for <a href="https://www.linkedin.com/in/john-carlo-ramos-1a587b195/" style="text-decoration:none;color:white" target="_blank">John Doe</a> in UI/UX Design. Due on 1/4/2020!</p>
+                        <p>Must create new enrolment for <a href="https://www.linkedin.com/in/john-carlo-ramos-1a587b195/" style="text-decoration:none;color:white" target="_blank">John Doe</a> in UI/UX Design. Due on 1/4/2020!</p> <!-- Easter Egg -->
                     </el-card>
                 </el-timeline-item>
 
@@ -30,7 +30,7 @@
                 <el-timeline-item type="danger" timestamp="22/3/2020" placement="top">
                     <el-card>
                         <h4>ALERT!</h4>
-                        <p>A lecturer has retired. Please remove information of lecturer. A new lecturer has taken place for <a href="https://www.instagram.com/jc_ramos_photography/" style="text-decoration:none;color:white" target="_blank">business</a>.</p>
+                        <p>A lecturer has retired. Please remove information of lecturer. A new lecturer has taken place for <a href="https://www.instagram.com/jc_ramos_photography/" style="text-decoration:none;color:white" target="_blank">business</a>.</p> <!-- Easter Egg -->
                     </el-card>
                 </el-timeline-item>
 
