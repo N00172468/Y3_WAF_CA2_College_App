@@ -38,11 +38,30 @@
 
 
     <!-- ***IF LOGGED OUT*** -->
-    <el-card v-else @submit="onSubmit" style="width:80%; position:fixed; margin:9%!important; background:#171c24" class="box-card">
+    <el-card 
+      v-else 
+      @submit="onSubmit" 
+      style="width:80%; position:fixed; margin:9%!important; background:#171c24" 
+      class="box-card">
 
       <!-- Card Title -->
       <div slot="header" class="clearfix">
-        <span>Log In</span>
+        <span>
+          <h1 
+            style="text-align:center;">
+            Welcome to Edu<span style="color:#409EFF;">Board</span>
+          </h1>
+          <br/>
+            <el-col :span="12">
+              Please log in with your provided credentials. 
+            </el-col>
+
+            <el-col :span="12" style="text-align:right;">
+              <span style="font-size:0.6em; color:#29313d;">
+                (Pssst! Your credentials are sam@bloggs.com / secret)
+              </span>
+            </el-col>
+        </span>
       </div>
 
       <!-- Form -->
